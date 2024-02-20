@@ -1,18 +1,23 @@
 package Branch.Blocks;
-import java.util.Scanner;
+import java.util.*;
 public class Debits {
-    public  static void main(String [] args) {
-        int transactions;
-        String dep, cre, dep1;
-        Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i <= 10; i++) {
-            System.out.println("Enter the transaction history");
-            dep = scanner.nextLine();
-            cre = scanner.nextLine();
-            System.out.printf("Enter the debited amount=" + dep + "");
-            System.out.printf("Enter the Credited amount=" + cre + "");
-            dep1 = dep + 1;
-            System.out.println("Total number of debits=" + dep1 + "");
+    public static void main(String[] args) {
+        int i = 10, n = 1, debit = 0;
+        double presentBal, TBal, transactions;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Total Balance");
+        TBal = sc.nextDouble();
+        while(i != 0) {
+             i-= 1;
+            System.out.println("Enter the updated balance amount" + n);
+            n += 1;
+            presentBal = sc.nextDouble();
+            if (presentBal < TBal) {
+                debit += 1;
+                TBal = presentBal;
+            }
+            TBal = presentBal;
         }
+        System.out.println("The no of debit transaction is" + debit);
     }
 }
