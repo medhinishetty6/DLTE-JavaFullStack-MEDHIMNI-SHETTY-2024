@@ -2,8 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13b5ac23-6b99-4716-a6f5-68c699b67215" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/basics/service/Flexipay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java002/.idea/DLTE-Java002.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/DLTE-Java002.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/src/main/java/Branch/Blocks/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/src/main/java/Branch/Blocks/Debits.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/src/main/java/Branch/Blocks/Sip.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/src/test/java/Branch/Blocks/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/target/DLTE-Java002-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/target/classes/Branch/Blocks/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/target/classes/Branch/Blocks/Debits.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/target/surefire-reports/Branch.Blocks.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/target/surefire-reports/TEST-Branch.Blocks.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002/target/test-classes/Branch/Blocks/AppTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Medhini Shetty.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +55,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DLTE-Java002/DLTE-Java002" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -135,6 +159,8 @@
       <workItem from="1708304665722" duration="1301000" />
       <workItem from="1708314979181" duration="2292000" />
       <workItem from="1708320845381" duration="2346000" />
+      <workItem from="1708360954499" duration="26000" />
+      <workItem from="1708400108741" duration="40000" />
     </task>
     <servers />
   </component>
@@ -142,10 +168,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1708078777995">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1708360978200">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1708078777995" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1708360978200" />
     <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1708085564538">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
