@@ -1,13 +1,12 @@
 package basics.service;
-// Command line
-
 import java.util.Scanner;
+// Command line
 
 /*
 Personal Details: name, aadhaar, pan, address,mobile, email
 Income: salaried, self-employed: ITR
 */
-public class Interactions {
+public class PersonalLoan {
     public  static void main(String[] args){
         String borrowerName="", borrowerPan="", borrowerAddress="", borrowerEmail="", borrowerIncometype="";
         Long mobileNumber=0L, aadhaar=0L;
@@ -23,8 +22,8 @@ public class Interactions {
         borrowerIncometype=scanner.next();
         System.out.println("Mention the mobile number");
         mobileNumber=scanner.nextLong();
-        System.out.println("Enter the mail address");
+        System.out.println("Enter the email address");
         borrowerAddress=scanner.nextLine();
-        System.out.println("Thanks for showing interest on taking the car loan further details will be sent to your registered mobile number");
+        System.out.println("Dear"+borrowerName+"Thanks for showing interest on taking the personal loan further details will be sent to your registered mobile number");
     }
 }
