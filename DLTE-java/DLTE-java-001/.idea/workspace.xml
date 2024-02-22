@@ -2,12 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13b5ac23-6b99-4716-a6f5-68c699b67215" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/basics/service/Internetbanking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/basics/service/PersonalLoan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/basics/service/fdcalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/DLTE-Java-004.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/DLTE-Java-004-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/classes/explore/oop/executions/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/surefire-reports/TEST-explore.oop.executions.AppTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/surefire-reports/explore.oop.executions.AppTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/test-classes/explore/oop/executions/AppTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/basics/service/Interactions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/basics/service/Blocks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/basics/service/Blocks.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +50,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DLTE-Java002" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DLTE-Java-003" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -162,7 +173,7 @@
       <workItem from="1708450968910" duration="1412000" />
       <workItem from="1708479964373" duration="573000" />
       <workItem from="1708480568197" duration="2350000" />
-      <workItem from="1708485716046" duration="2493000" />
+      <workItem from="1708485716046" duration="3325000" />
     </task>
     <servers />
   </component>
@@ -173,26 +184,26 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1708480986987">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1708489055476">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1708480986987" />
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1708488135882">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1708489055476" />
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1708489058745">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1708488135882" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1708488135882">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1708489058745" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1708489058745">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1708488135882" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1708488135882">
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1708489058745" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1708489058745">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1708488135882" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1708488135882">
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1708489058745" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1708489058745">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1708488135882" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1708489058745" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1708078866913">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -201,10 +212,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="477" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.816@0.0.1536.816" timestamp="1708485720654" />
-    <state x="209" y="114" key="new project wizard" timestamp="1708325252523">
+    <state x="209" y="114" key="new project wizard" timestamp="1708488710781">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="209" y="114" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1708325252523" />
+    <state x="209" y="114" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1708488710781" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DLTE_java_001$Blocks.ic" NAME="Blocks Coverage Results" MODIFIED="1708081103214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

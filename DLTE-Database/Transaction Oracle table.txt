@@ -1,0 +1,245 @@
+ create table Transaction(Transaction_id number primary key,transaction_date date not null,transaction_to varchar(255) not null, transaction_amount number not null, transaction_remarks varchar(255) not null);
+
+insert into Transaction values(01,'18feb2024','medhini','90000','education');
+insert into Transaction values(02,'23feb2024','prajothi','100000','family');
+insert into Transaction values(03,'20feb2024','Babu','100000','emergency');
+insert into Transaction values(04,'02feb2024','meghana','10000','family');
+insert into Transaction values(05,'28feb2024','mothi','130000','education');
+
+select * from Transaction;
+select * from Transaction where transaction_date between '02feb2024' and '28feb2024';
+select min(transaction_amount)from Transaction;
+select max(transaction_amount)from Transaction;
+select count(transaction_to) from Transaction where transaction_to='meghana';
+select * from Transaction where transaction_remarks='family';
+
+
+
+
+
+
+
+
+SQL> create table Transaction(Transaction_id number primary key,transaction_date date not null,transaction_to varchar(255) not null, transaction_amount number not null, transaction_remarks varchar(255) not null);
+
+Table created.
+
+SQL> insert into Transaction values(01,'18feb2024','medhini','90000','education');
+
+1 row created.
+
+SQL> insert into Transaction values(02,'23feb2024','prajothi','100000','fami
+ly');
+
+1 row created.
+
+SQL> insert into Transaction values(03,'20feb2024','Babu','100000','emergency');
+
+1 row created.
+
+SQL> insert into Transaction values(04,'02feb2024','meghana','10000','family');
+
+1 row created.
+
+SQL> insert into Transaction values(05,'28feb2024','mothi','130000','education');
+
+1 row created.
+
+SQL> select * from Transaction;
+
+TRANSACTION_ID TRANSACTI
+-------------- ---------
+TRANSACTION_TO
+--------------------------------------------------------------------------------
+TRANSACTION_AMOUNT
+------------------
+TRANSACTION_REMARKS
+--------------------------------------------------------------------------------
+             1 18-FEB-24
+medhini
+             90000
+education
+
+
+TRANSACTION_ID TRANSACTI
+-------------- ---------
+TRANSACTION_TO
+--------------------------------------------------------------------------------
+TRANSACTION_AMOUNT
+------------------
+TRANSACTION_REMARKS
+--------------------------------------------------------------------------------
+             2 23-FEB-24
+prajothi
+            100000
+family
+
+
+TRANSACTION_ID TRANSACTI
+-------------- ---------
+TRANSACTION_TO
+--------------------------------------------------------------------------------
+TRANSACTION_AMOUNT
+------------------
+TRANSACTION_REMARKS
+--------------------------------------------------------------------------------
+             3 20-FEB-24
+Babu
+            100000
+emergency
+
+
+TRANSACTION_ID TRANSACTI
+-------------- ---------
+TRANSACTION_TO
+--------------------------------------------------------------------------------
+TRANSACTION_AMOUNT
+------------------
+TRANSACTION_REMARKS
+--------------------------------------------------------------------------------
+             4 02-FEB-24
+meghana
+             10000
+family
+
+
+TRANSACTION_ID TRANSACTI
+-------------- ---------
+TRANSACTION_TO
+--------------------------------------------------------------------------------
+TRANSACTION_AMOUNT
+------------------
+TRANSACTION_REMARKS
+--------------------------------------------------------------------------------
+             5 28-FEB-24
+mothi
+            130000
+education
+
+
+SQL> select * from Transaction where transaction_date between '02feb2024' and '28feb2024';
+
+TRANSACTION_ID TRANSACTI
+-------------- ---------
+TRANSACTION_TO
+--------------------------------------------------------------------------------
+TRANSACTION_AMOUNT
+------------------
+TRANSACTION_REMARKS
+--------------------------------------------------------------------------------
+             1 18-FEB-24
+medhini
+             90000
+education
+
+
+TRANSACTION_ID TRANSACTI
+-------------- ---------
+TRANSACTION_TO
+--------------------------------------------------------------------------------
+TRANSACTION_AMOUNT
+------------------
+TRANSACTION_REMARKS
+--------------------------------------------------------------------------------
+             2 23-FEB-24
+prajothi
+            100000
+family
+
+
+TRANSACTION_ID TRANSACTI
+-------------- ---------
+TRANSACTION_TO
+--------------------------------------------------------------------------------
+TRANSACTION_AMOUNT
+------------------
+TRANSACTION_REMARKS
+--------------------------------------------------------------------------------
+             3 20-FEB-24
+Babu
+            100000
+emergency
+
+
+TRANSACTION_ID TRANSACTI
+-------------- ---------
+TRANSACTION_TO
+--------------------------------------------------------------------------------
+TRANSACTION_AMOUNT
+------------------
+TRANSACTION_REMARKS
+--------------------------------------------------------------------------------
+             4 02-FEB-24
+meghana
+             10000
+family
+
+
+TRANSACTION_ID TRANSACTI
+-------------- ---------
+TRANSACTION_TO
+--------------------------------------------------------------------------------
+TRANSACTION_AMOUNT
+------------------
+TRANSACTION_REMARKS
+--------------------------------------------------------------------------------
+             5 28-FEB-24
+mothi
+            130000
+education
+
+
+SQL> select min(transaction_amount)from Transaction;
+
+MIN(TRANSACTION_AMOUNT)
+-----------------------
+                  10000
+
+SQL> select max(transaction_amount)from Transaction;
+
+MAX(TRANSACTION_AMOUNT)
+-----------------------
+                 130000
+
+SQL> select count(transaction_to) from Transaction where transaction_to='meg
+hana';
+
+COUNT(TRANSACTION_TO)
+---------------------
+                    1
+
+SQL> select * from Transaction where transaction_remarks='family';
+
+TRANSACTION_ID TRANSACTI
+-------------- ---------
+TRANSACTION_TO
+--------------------------------------------------------------------------------
+TRANSACTION_AMOUNT
+------------------
+TRANSACTION_REMARKS
+--------------------------------------------------------------------------------
+             2 23-FEB-24
+prajothi
+            100000
+family
+
+
+TRANSACTION_ID TRANSACTI
+-------------- ---------
+TRANSACTION_TO
+--------------------------------------------------------------------------------
+TRANSACTION_AMOUNT
+------------------
+TRANSACTION_REMARKS
+--------------------------------------------------------------------------------
+             4 02-FEB-24
+meghana
+             10000
+family
+
+
+SQL>
+
+
+
+
