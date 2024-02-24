@@ -106,7 +106,7 @@ public class TransactionAnalysis {
         Transaction backup = null;
         for (int select = 0; select < array.length; select++) {
             for (int next = 0; next < array.length - next - 1; next++) {
-                if (array[next + 1].getTransactionamount().compareTo(array[next].getTransactionamount()) > 0) {
+                if (array[next + 1].getRemarks().compareTo(array[next].getRemarks()) > 0) {
                     backup = array[next];
                     array[next] = array[next + 1];
                     array[next + 1] = backup;

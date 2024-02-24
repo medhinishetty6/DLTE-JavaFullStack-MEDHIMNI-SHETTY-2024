@@ -1,12 +1,7 @@
 package branch.blocks;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 import java.util.Date;
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 
 public class creditcard {
     private Long creditCardNo;
@@ -15,8 +10,19 @@ public class creditcard {
     private  Integer creditCardCvv;
     private  Integer CreditCardLimit;
     private Date BillGenerationDate;
-    private  Integer BillPaymentDate;
+    private  Date BillPaymentDate;
     private  Integer Pin;
+
+    public creditcard(Long creditCardNo, String creditCardHolder, Date creditCardExpiry, Integer creditCardCvv, Integer creditCardLimit, Date billGenerationDate, Date billPaymentDate, Integer pin) {
+        this.creditCardNo = creditCardNo;
+        this.creditCardHolder = creditCardHolder;
+        this.creditCardExpiry = creditCardExpiry;
+        this.creditCardCvv = creditCardCvv;
+        CreditCardLimit = creditCardLimit;
+        BillGenerationDate = billGenerationDate;
+        BillPaymentDate = billPaymentDate;
+        Pin = pin;
+    }
 
     @Override
     public String toString() {
@@ -80,11 +86,11 @@ public class creditcard {
         BillGenerationDate = billGenerationDate;
     }
 
-    public Integer getBillPaymentDate() {
+    public Date getBillPaymentDate() {
         return BillPaymentDate;
     }
 
-    public void setBillPaymentDate(Integer billPaymentDate) {
+    public void setBillPaymentDate(Date billPaymentDate) {
         BillPaymentDate = billPaymentDate;
     }
 

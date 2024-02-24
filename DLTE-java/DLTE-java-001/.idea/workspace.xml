@@ -2,23 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13b5ac23-6b99-4716-a6f5-68c699b67215" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/DLTE-Java-004.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/DLTE-Java-004-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/classes/explore/oop/executions/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/surefire-reports/TEST-explore.oop.executions.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/surefire-reports/explore.oop.executions.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/test-classes/explore/oop/executions/AppTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/branch/blocks/CustomerSupport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/src/main/java/explore/oop/executions/accountsDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/src/main/java/explore/oop/executions/debitCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Java-004/src/main/java/explore/oop/executions/gpay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/branch/blocks/CreditCardAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/branch/blocks/CreditCardAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/branch/blocks/TransactionAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/branch/blocks/TransactionAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/branch/blocks/bondAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/branch/blocks/bondAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/branch/blocks/creditcard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-003/src/main/java/branch/blocks/creditcard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/branch/blocks/TransactionAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/branch/blocks/TransactionAnalysis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/branch/blocks/bondAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-003/target/classes/branch/blocks/bondAnalysis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/DLTE-Java-004.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/src/main/java/explore/oop/executions/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/src/test/java/explore/oop/executions/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/DLTE-Java-004-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/classes/explore/oop/executions/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/surefire-reports/TEST-explore.oop.executions.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/surefire-reports/explore.oop.executions.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Java-004/DLTE-Java-004/target/test-classes/explore/oop/executions/AppTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Report on Agile Methodology and Banking Domain.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Report on Agile Methodology and Banking Domain.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Report on Agile Methodology and Banking Domain.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +65,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DLTE-Java-003" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DLTE-Java-004" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -60,6 +75,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RunManager" selected="Application.fdcalculator">
     <configuration name="Blocks" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -174,6 +190,7 @@
       <workItem from="1708479964373" duration="573000" />
       <workItem from="1708480568197" duration="2350000" />
       <workItem from="1708485716046" duration="3325000" />
+      <workItem from="1708665946846" duration="1979000" />
     </task>
     <servers />
   </component>
@@ -184,10 +201,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1708489055476">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1708671700383">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1708489055476" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1708671700383" />
     <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1708489058745">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -204,10 +221,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1708489058745" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1708078866913">
+    <state x="249" y="0" key="SettingsEditor" timestamp="1708667017633">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1708078866913" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1708667017633" />
     <state x="477" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1708485720654">
       <screen x="0" y="0" width="1536" height="816" />
     </state>

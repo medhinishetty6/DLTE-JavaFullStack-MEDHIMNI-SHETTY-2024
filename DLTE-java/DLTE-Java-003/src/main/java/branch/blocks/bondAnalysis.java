@@ -19,7 +19,7 @@ public class bondAnalysis {
         }
         for (int select = 0; select < bondarray.length; select++) {
             for (int next = 0; next < bondarray.length - select - 1; next++) {
-                if (bondarray[select].getInterestrate().compareTo(bondarray[next].getInterestrate()) > 0) {
+                if (bondarray[next].getInterestrate().compareTo(bondarray[next +1].getInterestrate()) < 0) {
                     Bonds backup = bondarray[next];
                     bondarray[next] = bondarray[next + 1];
                     bondarray[next + 1] = backup;
