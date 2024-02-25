@@ -36,3 +36,7 @@ public class accountsDetail {
         this.accountHolder = accountHolder;
     }
 }
+
+
+
+
