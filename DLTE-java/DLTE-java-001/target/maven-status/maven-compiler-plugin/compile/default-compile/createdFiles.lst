@@ -1,1 +1,9 @@
 basics\service\App.class
+basics\service\Blocks.class
+basics\service\Device.class
+basics\service\PersonalLoan.class
+basics\service\Flexipay.class
+basics\service\fdcalculator.class
+basics\service\Facility.class
+basics\service\Internetbanking.class
+basics\service\MobileBanking.class
