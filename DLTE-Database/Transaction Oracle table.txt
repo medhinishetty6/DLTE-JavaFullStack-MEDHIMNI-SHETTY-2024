@@ -1,4 +1,4 @@
- create table Transaction(Transaction_id number primary key,transaction_date date not null,transaction_to varchar(255) not null, transaction_amount number not null, transaction_remarks varchar(255) not null);
+create table Transaction(Transaction_id number primary key,transaction_date date not null,transaction_to varchar(255) not null, transaction_amount number not null, transaction_remarks varchar(255) not null);
 
 insert into Transaction values(01,'18feb2024','medhini','90000','education');
 insert into Transaction values(02,'23feb2024','prajothi','100000','family');

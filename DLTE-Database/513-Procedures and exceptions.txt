@@ -1,0 +1,70 @@
+
+Transaction: date_of_transaction, amount_in_transaction, to, remarks(Family, Education, Emergency, Bills, Friend)
+
+perform followings with exception handling using procedures
+
+insert new transaction
+delete transaction of given TO
+filter transaction those done for Education
+
+
+
+
+//create
+create or replace procedure insert_transaction(
+    t_id number,
+    t_date date,
+    t_to varchar2,
+    t_amount number,
+    t_remark varchar2,
+    t_info out varchar2
+    )
+as
+begin 
+insert into Transaction(transaction_id,transaction_date,transaction_to,transaction_amount,transaction_remarks) 
+values(t_id,t_date,t_to,t_amount,t_remark);
+t_info:='transaction inserted';
+exception 
+when others then 
+t_info:='insertion failed'||SQLERRM;
+end;
+/
+
+variable t_info varchar2;
+execute insert_transaction(5,'18-FEB-2024','medhini',90000,'family',:t_info);
+print t_info;
+
+//delete
+create or replace procedure delete_transaction (transaction_Id number, transaction_info out varchar2)
+as
+begin
+delete from transaction where transaction_id = transaction_Id;
+transaction_info := 'no error';
+exception
+    when no_data_found then
+    transaction_info := 'no match';
+    when others then
+    transaction_info := 'Error due to' || SQLERRM;
+end;
+
+variable t_err varchar2(255);
+execute delete_transaction(1,:t_err);
+print t_err
+
+//filter
+create or replace PROCEDURE filter_transaction(t_to out VARCHAR2,f_err out VARCHAR2)
+as 
+ begin select transaction_to into t_to from transaction where transaction_remarks='Education';
+ f_err:='filtered';
+ exception
+  when no_data_found then
+  f_err:='No data found';
+  when others then
+  f_err:='error due to'||SQLERRM;
+end;
+/
+variable t_name varchar;
+variable f_error varchar2;
+execute filter_transactions(:t_name,:f_error);
+print t_name;
+print f_error;
