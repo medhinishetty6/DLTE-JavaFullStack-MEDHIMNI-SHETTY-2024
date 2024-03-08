@@ -13,6 +13,13 @@ select max(transaction_amount)from Transaction;
 select count(transaction_to) from Transaction where transaction_to='meghana';
 select * from Transaction where transaction_remarks='family';
 
+create view filterdate1 as select * from Transaction where transaction_date between '02-FEB-24' and '20-FEB-24';
+create view Remark as select * from Transaction where transaction_remarks='education ';
+create view transactioncount as select count(transaction_to) from Transaction where transaction_to='meghana';
+create view minamount as select min(transaction_amount) from Transaction;
+create view maxamount as select max(transaction_amount) from Transaction;
+
+
 
 
 
