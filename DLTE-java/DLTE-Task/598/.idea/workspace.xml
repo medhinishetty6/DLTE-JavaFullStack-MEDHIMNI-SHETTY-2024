@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="556678bc-5648-4922-a644-2a2956de0b67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../598/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/src/main/java/org/example/Activity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/src/main/java/org/example/CreditCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/src/main/java/org/example/MAIN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/src/main/java/org/example/MyBankDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/src/main/java/org/example/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/src/test/java/org/example/AppTest.java" afterDir="false" />
+    <list default="true" id="661aa731-3f52-4414-9a5a-7dc7c2715453" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Activity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CreditCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MAIN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MyBankDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../600/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../600/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../600/.idea/encodings.xml" afterDir="false" />
@@ -26,7 +26,7 @@
       <change afterPath="$PROJECT_DIR$/../600/src/main/java/org/example/generic/Transaction.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../600/src/main/java/org/example/generic/TransactionAnalysis.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../600/src/test/java/org/example/generic/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../550/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../550/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +36,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -43,7 +44,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectId" id="2dPg6wlJdouGEQRLfRWluk5om3q" />
+  <component name="ProjectId" id="2dReJ5CMIAFVuiSU9XO1SOV1A02" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -55,10 +56,9 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../550" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -86,13 +86,14 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="556678bc-5648-4922-a644-2a2956de0b67" name="Default Changelist" comment="" />
-      <created>1709914955703</created>
+      <changelist id="661aa731-3f52-4414-9a5a-7dc7c2715453" name="Default Changelist" comment="" />
+      <created>1709975242483</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1709914955703</updated>
-      <workItem from="1709914958764" duration="10942000" />
-      <workItem from="1709991983685" duration="1462000" />
+      <updated>1709975242483</updated>
+      <workItem from="1709975245690" duration="2520000" />
+      <workItem from="1709983604018" duration="2097000" />
+      <workItem from="1709987256638" duration="5205000" />
     </task>
     <servers />
   </component>
@@ -103,45 +104,41 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="74" key="#Project_Structure" timestamp="1709974519192">
+    <state x="0" y="71" key="#Project_Structure" timestamp="1709984200099">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="0" y="74" key="#Project_Structure/0.0.1536.816@0.0.1536.816" timestamp="1709974519192" />
-    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1709961160967">
+    <state x="0" y="71" key="#Project_Structure/0.0.1536.816@0.0.1536.816" timestamp="1709984200099" />
+    <state x="190" y="105" key="#com.intellij.ide.util.MemberChooser" timestamp="1709984922251">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.816@0.0.1536.816" timestamp="1709961160967" />
-    <state x="190" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1709964000410">
+    <state x="190" y="105" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1709984922251" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1709991980362">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="190" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1709964000410" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1709992719127">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1709991980362" />
+    <state width="723" height="205" key="GridCell.Tab.0.bottom" timestamp="1709983577674">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1709992719127" />
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1709974918234">
+    <state width="723" height="205" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1709983577674" />
+    <state width="723" height="205" key="GridCell.Tab.0.center" timestamp="1709983577674">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1709974918234" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1709974918234">
+    <state width="723" height="205" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1709983577674" />
+    <state width="723" height="205" key="GridCell.Tab.0.left" timestamp="1709983577674">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1709974918234" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1709974918234">
+    <state width="723" height="205" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1709983577674" />
+    <state width="723" height="205" key="GridCell.Tab.0.right" timestamp="1709983577674">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1709974918234" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1709974918234">
+    <state width="723" height="205" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1709983577674" />
+    <state x="100" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1709987258810">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1709974918234" />
-    <state x="209" y="114" key="new project wizard" timestamp="1709992748390">
+    <state x="100" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.816@0.0.1536.816" timestamp="1709987258810" />
+    <state x="46" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1709983319252">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="209" y="114" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1709992748390" />
-    <state x="46" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1709974211785">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="46" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1709974211785" />
+    <state x="46" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1709983319252" />
   </component>
 </project>
