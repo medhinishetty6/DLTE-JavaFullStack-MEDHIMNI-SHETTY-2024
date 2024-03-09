@@ -9,7 +9,7 @@ public class AnalysisTransaction {
         try {
             manager.insertTransaction(new Date(2024,01,21), 100.0, "Medh", "family");
             manager.insertTransaction(new Date(2024,02,12), 200.0, "peh", "Education");
-            manager.insertTransaction(new Date(2024,01,05), -300.0, "poh", "Emergency"); //this will thro an exseption
+            manager.insertTransaction(new Date(2024,01,05), 300.0, "poh", "Emergency"); //this will thro an exseption
             manager.insertTransaction(new Date(2024,03,01), 400.0, "bob", "Education");
         } catch (IllegalArgumentException e) {
             System.out.println("Exception occured: " + e.getMessage());
