@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="661aa731-3f52-4414-9a5a-7dc7c2715453" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Activity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CreditCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MAIN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MyBankDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/600.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/src/main/java/org/example/generic/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/src/main/java/org/example/generic/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/src/main/java/org/example/generic/TransactionAnalysis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/src/test/java/org/example/generic/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../550/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../550/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="661aa731-3f52-4414-9a5a-7dc7c2715453" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -2,31 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="556678bc-5648-4922-a644-2a2956de0b67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../598/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/src/main/java/org/example/Activity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/src/main/java/org/example/CreditCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/src/main/java/org/example/MAIN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/src/main/java/org/example/MyBankDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/src/main/java/org/example/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../598/src/test/java/org/example/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/600.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/src/main/java/org/example/generic/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/src/main/java/org/example/generic/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/src/main/java/org/example/generic/TransactionAnalysis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../600/src/test/java/org/example/generic/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../790/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../790/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../790/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../790/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../790/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../790/790.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../790/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../790/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../790/src/main/java/org/example/ConcurrencyAnalysis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../790/src/main/java/org/example/Schedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../790/src/main/java/org/example/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../790/src/main/java/org/example/TransactionAnalysis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../790/src/test/java/org/example/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../598/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../598/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +48,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../598" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -92,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1709914955703</updated>
       <workItem from="1709914958764" duration="10942000" />
-      <workItem from="1709991983685" duration="1462000" />
+      <workItem from="1709991983685" duration="3891000" />
     </task>
     <servers />
   </component>
@@ -115,10 +105,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="190" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1709964000410" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1709992719127">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1710014635318">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1709992719127" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1710014635318" />
     <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1709974918234">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -135,10 +125,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1709974918234" />
-    <state x="209" y="114" key="new project wizard" timestamp="1709992748390">
+    <state x="209" y="114" key="new project wizard" timestamp="1710010773229">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="209" y="114" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1709992748390" />
+    <state x="209" y="114" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1710010773229" />
     <state x="46" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1709974211785">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
