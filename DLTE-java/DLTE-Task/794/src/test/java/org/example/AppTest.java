@@ -1,11 +1,15 @@
 package org.example;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -32,8 +36,17 @@ public class AppTest
     @Test
     public void testavail(){
 //        assertTrue(true);
+        assertEquals(new Loan(895009988L,800.00,new Date(2024,03,19),"Open","Medh",6864986588L));
     }
 
-    private void assertTrue(boolean b) {
+    private void assertEquals(Loan loan) {
     }
+
+    @Test
+    public void testClosed(){
+        assertEquals(new Loan(456009988L,700.00,new Date(2024,02,19),"Closed","Medh",6864986588L));
+    }
+
+
+
 }

@@ -2,6 +2,10 @@ package org.example;
 
 import java.io.*;
 import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 import static org.example.MyBank.loan;
@@ -71,12 +75,8 @@ public class MAIN implements MyBank{
         e.printStackTrace();
     }
         assert stream() != null;
-        List<Loan> available=stream().filter(each-> {
-            return each.getLoanStatus().equals("Open");
-        }).collect(Collectors.toList());
-    available.forEach(Loan->{
-        System.out.println(Loan.toString());
-    });
+        List<Loan> available=stream().filter(each-> each.getLoanStatus().equals("Open")).collect(Collectors.toList());
+    available.forEach(Loan-> System.out.println(Loan.toString()));
     }
 
     private Locale stream() {
