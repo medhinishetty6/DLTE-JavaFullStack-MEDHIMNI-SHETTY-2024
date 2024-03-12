@@ -1,0 +1,152 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3B64CD2B-D2BD-D352-03CC-6C0AA2C0A280" schemaObject="D634F088-36FF-9CC9-61EA-E9C736858679" name="BANKING">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>FIRST</sourceObjSchema>
+<sourceObjName>BANKING</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>273C1D30-0807-6D47-7938-98810E634BB7</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USERNAME" id="B5E190DC-EB34-8D07-5765-DA95CB039DAE">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>BANKING</sourceObjSchema>
+<sourceObjName>USERNAME</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>D47C762A-8C23-B18B-CE86-2210DA98625D</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UPI" id="CFA6C136-5F57-96A1-848D-9A697757E8A5">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>BANKING</sourceObjSchema>
+<sourceObjName>UPI</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>D0428BFC-7E57-F26D-9367-5FFDCD03DA2D</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MOBILE_NUMBER" id="CD6A8ADA-D49A-D020-A3C2-48AD78E9226F">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>BANKING</sourceObjSchema>
+<sourceObjName>MOBILE_NUMBER</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>82412F4E-6141-88EC-05B2-3DAA457C1FD6</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EAMIL" id="52051148-FBC7-A230-DBC0-77918C688DEE">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>BANKING</sourceObjSchema>
+<sourceObjName>EAMIL</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>AAAD646D-663B-CC18-DD27-96EF9F92F802</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WALLET_TYPE" id="D6D2945D-CB70-10C7-015D-B65C4E54DD71">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>BANKING</sourceObjSchema>
+<sourceObjName>WALLET_TYPE</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>56795045-816C-68E7-CF88-BCB5F31A92D1</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RECHARGED_DATE" id="F09F4027-43E4-D5E1-6AA9-6E30F0BEC16D">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>BANKING</sourceObjSchema>
+<sourceObjName>RECHARGED_DATE</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>08A71322-84C1-8E25-8E0E-B8EE0A33353B</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RECHARGED_PROVIDER" id="B84A60CF-3682-52AA-A531-D930FFF50B6A">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>BANKING</sourceObjSchema>
+<sourceObjName>RECHARGED_PROVIDER</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>A70407E8-1321-3580-B24D-9431502AFCBD</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RECHARGED_TO" id="BBF5156C-2064-7CFB-C0FA-D82241B7ECD9">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>BANKING</sourceObjSchema>
+<sourceObjName>RECHARGED_TO</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>BC51A772-B490-DDE0-B838-241A691E8B5E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RECHARGED_AMOUNT" id="921BECD9-B64D-A2FA-C803-F3A1E485A726">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>BANKING</sourceObjSchema>
+<sourceObjName>RECHARGED_AMOUNT</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>83FC8E78-8D9B-F54C-7946-EBCC7DA1B8C9</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

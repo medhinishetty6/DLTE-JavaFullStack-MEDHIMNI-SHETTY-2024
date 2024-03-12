@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="FIRST" directorySegmentName="seg_0" id="FF8D8CE0-0795-31C1-BADA-2794BFF1D299">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjName>FIRST</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:31:54 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<schemaObject>D634F088-36FF-9CC9-61EA-E9C736858679</schemaObject>
+<defTableSpace>B0D03170-4C32-18CC-1AD1-D1C838D6705E</defTableSpace>
+<privileges>CREATE SYNONYM, CREATE MATERIALIZED VIEW, CREATE SESSION, CREATE JOB, CREATE VIEW, CREATE TYPE, CREATE TRIGGER, CREATE PROCEDURE, CREATE OPERATOR, CREATE ANY CONTEXT, CREATE TABLE, CREATE SEQUENCE, CREATE INDEXTYPE, CREATE CLUSTER, CREATE DIMENSION</privileges>
+<quotaItems>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem1" id="7A56A015-55BA-6836-BFCA-E74F08ED40A8">
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<tableSpace>B0D03170-4C32-18CC-1AD1-D1C838D6705E</tableSpace>
+</QuotaItem>
+</quotaItems>
+</UserOraclev10g>

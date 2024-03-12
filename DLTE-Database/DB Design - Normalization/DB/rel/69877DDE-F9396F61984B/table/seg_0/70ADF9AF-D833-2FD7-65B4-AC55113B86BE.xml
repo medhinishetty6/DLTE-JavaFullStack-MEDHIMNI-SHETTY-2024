@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="70ADF9AF-D833-2FD7-65B4-AC55113B86BE" schemaObject="D634F088-36FF-9CC9-61EA-E9C736858679" name="USSER1_WALLET">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>FIRST</sourceObjSchema>
+<sourceObjName>USSER1_WALLET</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>E4F21FFF-F080-FB73-FCB2-AEC527E47F03</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="UPI" id="71F77440-F66B-1D0A-79A0-227F4AEEB26E">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>USSER1_WALLET</sourceObjSchema>
+<sourceObjName>UPI</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>660C16D4-8C44-EB48-A8C5-74686AF47FB2</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8D7CFE68-B926-2152-ED54-4DE842CEDBFA" referredColumn="1507B20F-9FCE-4258-2CF4-60426D62B39C"/>
+</associations>
+</Column>
+<Column name="WALLET_TYPE" id="62CD4B33-DE5C-9B89-964D-F34BFDB09846">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>USSER1_WALLET</sourceObjSchema>
+<sourceObjName>WALLET_TYPE</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>F8B48396-87AC-B0FB-D4DA-73B83A6F6443</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MOBILE_NUMBER" id="B8541055-62B0-45B4-DC40-9F3AAEC29B4C">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>USSER1_WALLET</sourceObjSchema>
+<sourceObjName>MOBILE_NUMBER</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>F2CFBD48-5393-6660-4E4E-31C4C269DD65</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CF67FE94-44DC-A8BB-67E1-DFCE49F1BC57" referredColumn="132B4D59-4989-F04D-97B5-8A1D3DC1E5CA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="499BDC88-5368-B6D7-8603-A59E51919FD5" schemaObject="D634F088-36FF-9CC9-61EA-E9C736858679" name="USSER1_WALLET_PK">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>FIRST</sourceObjSchema>
+<sourceObjName>SYS_C007262</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>EEF135EB-3553-9649-3768-B2C9E4814654</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="71F77440-F66B-1D0A-79A0-227F4AEEB26E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D4F6FD57-4BEA-B81C-F0DB-1C0C20DA9F18" name="SYS_C007268">
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B8541055-62B0-45B4-DC40-9F3AAEC29B4C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="85089294-18D6-1CFC-7535-345AE497EA74" name="SYS_C007269">
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="71F77440-F66B-1D0A-79A0-227F4AEEB26E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

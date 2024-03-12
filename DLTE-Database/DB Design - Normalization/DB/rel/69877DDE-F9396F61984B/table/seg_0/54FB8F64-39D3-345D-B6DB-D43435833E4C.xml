@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="54FB8F64-39D3-345D-B6DB-D43435833E4C" schemaObject="D634F088-36FF-9CC9-61EA-E9C736858679" name="USER1">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>FIRST</sourceObjSchema>
+<sourceObjName>USER1</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>EF6AA2D0-9913-F97F-7460-335B903FEB2E</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USERNAME" id="B43BDB55-ECE4-A5E5-5E06-FE2C81F089BA">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>USER1</sourceObjSchema>
+<sourceObjName>USERNAME</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>0C9CA55D-F9CC-BD5D-3A6B-F35AD0BD5004</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MOBILE_NUMBER" id="132B4D59-4989-F04D-97B5-8A1D3DC1E5CA">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>USER1</sourceObjSchema>
+<sourceObjName>MOBILE_NUMBER</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>38FB2D22-815A-42BC-2345-15C3B17FE7CC</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="2D007A30-71C8-75B4-82E1-5C634550C9A6">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>USER1</sourceObjSchema>
+<sourceObjName>EMAIL</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>C1A557BE-C996-7713-7FDC-140CFD490129</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="36AEC171-5CD6-E8EE-2E62-D88BC291B95D" schemaObject="D634F088-36FF-9CC9-61EA-E9C736858679" name="USER1_PK">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>FIRST</sourceObjSchema>
+<sourceObjName>SYS_C007259</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>21C5185E-3B39-35FE-58D7-B068110A9681</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="132B4D59-4989-F04D-97B5-8A1D3DC1E5CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

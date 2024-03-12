@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8D7CFE68-B926-2152-ED54-4DE842CEDBFA" containerWithKeyObject="70ADF9AF-D833-2FD7-65B4-AC55113B86BE" localFKIndex="85089294-18D6-1CFC-7535-345AE497EA74" name="SYS_C007269">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>FIRST</sourceObjSchema>
+<sourceObjName>SYS_C007269</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>CECA5477-B65F-5C80-E0FD-54FD8BEB912D</importedID>
+<referredTableLongName>FIRST.RECHARGE_WALLET</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6EE180CE-ED02-5B73-6D03-CB21AEE49344</referredTableID>
+<keyObject>DF3F8022-85C9-2DB2-99DF-58EEA6C40071</keyObject>
+<referredKeyID>DF3F8022-85C9-2DB2-99DF-58EEA6C40071</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>UPI</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

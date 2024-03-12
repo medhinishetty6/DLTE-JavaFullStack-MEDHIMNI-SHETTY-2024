@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6EE180CE-ED02-5B73-6D03-CB21AEE49344" schemaObject="D634F088-36FF-9CC9-61EA-E9C736858679" name="RECHARGE_WALLET">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>FIRST</sourceObjSchema>
+<sourceObjName>RECHARGE_WALLET</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>6BB07ED0-F59C-01E5-DDA0-B2BB49DA45B8</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="UPI" id="1507B20F-9FCE-4258-2CF4-60426D62B39C">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>RECHARGE_WALLET</sourceObjSchema>
+<sourceObjName>UPI</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>C584F12F-4400-470D-F3F8-EE7E5C4A9AA9</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RECHARGED_DATE" id="A0B5F773-41A1-ACC2-7FAE-DEB79D69A3EA">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>RECHARGE_WALLET</sourceObjSchema>
+<sourceObjName>RECHARGED_DATE</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>38BB3FAC-4F34-808A-AC15-7D24E75100FF</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RECHARGED_PROVIDER" id="671AFC96-38ED-A2B5-891F-F5714243FBC1">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>RECHARGE_WALLET</sourceObjSchema>
+<sourceObjName>RECHARGED_PROVIDER</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>788ECC83-1D38-6819-3C8C-5940CA3E6737</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RECHARGED_TO" id="ABD7624A-0E82-5FCE-75D2-AD094C1A50A0">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>RECHARGE_WALLET</sourceObjSchema>
+<sourceObjName>RECHARGED_TO</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>863A687E-F11C-355A-2DF3-B6C2DF81E011</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RECHARGED_AMOUNT" id="04D372B1-5511-221E-C05B-5211A65B0F93">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>RECHARGE_WALLET</sourceObjSchema>
+<sourceObjName>RECHARGED_AMOUNT</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>3D7071BB-F7F1-7352-7A0C-B0F359DC76E1</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DF3F8022-85C9-2DB2-99DF-58EEA6C40071" schemaObject="D634F088-36FF-9CC9-61EA-E9C736858679" name="RECHARGE_WALLET_PK">
+<sourceConnName>Oracle</sourceConnName>
+<sourceObjSchema>FIRST</sourceObjSchema>
+<sourceObjName>SYS_C007267</sourceObjName>
+<createdBy>xxshetvm</createdBy>
+<createdTime>2024-03-11 12:33:20 UTC</createdTime>
+<ownerDesignName>DB</ownerDesignName>
+<importedID>6D1AA602-ABD9-187B-8F2A-6F700BD964FD</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1507B20F-9FCE-4258-2CF4-60426D62B39C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
