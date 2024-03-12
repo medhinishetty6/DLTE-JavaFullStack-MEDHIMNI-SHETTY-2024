@@ -4,9 +4,13 @@ import java.util.Date;
 
 public class Transaction {
     private Date dateoftransaction;
-    private  Double transactionamount;
+    private  Double amount;
     private  String  to;
     private  String remarks=" ";
+
+    public Transaction(double amount) {
+    }
+
 
 
     public Date getDateoftransaction() {
@@ -18,11 +22,11 @@ public class Transaction {
     }
 
     public Double getTransactionamount() {
-        return transactionamount;
+        return amount;
     }
 
     public void setTransactionamount(Double transactionamount) {
-        this.transactionamount = transactionamount;
+        this.amount = transactionamount;
     }
 
     public String getTo() {
@@ -45,7 +49,7 @@ public class Transaction {
     public String toString() {
         return "Transaction{" +
                 "dateoftransaction=" + dateoftransaction +
-                ", transactionamount=" + transactionamount +
+                ", transactionamount=" + amount +
                 ", to='" + to + '\'' +
                 ", remarks='" + remarks + '\'' +
                 '}';
@@ -53,9 +57,12 @@ public class Transaction {
 
     public Transaction(Date dateoftransaction, Double transactionamount, String transactionto, String remarks) {
         this.dateoftransaction = dateoftransaction;
-        this.transactionamount = transactionamount;
+        this.amount = transactionamount;
         this.to = to;
         this.remarks = remarks;
     }
 
+    public void add(Transaction transaction) {
+
+    }
 }

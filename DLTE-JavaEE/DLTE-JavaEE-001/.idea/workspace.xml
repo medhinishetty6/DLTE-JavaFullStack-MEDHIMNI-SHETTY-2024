@@ -7,26 +7,70 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a4f8994-f226-4e8a-b123-f9e1b824c878" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/834-Rest_Webservice_Transaction_Module.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/src/main/java/Rest/RestWebserviceTransaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/src/main/java/Rest/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/target/834-Rest_Webservice_Transaction_Module.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/target/834-Rest_Webservice_Transaction_Module/WEB-INF/lib/gson-2.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/target/834-Rest_Webservice_Transaction_Module/WEB-INF/lib/javax.ws.rs-api-2.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/target/834-Rest_Webservice_Transaction_Module/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/target/834-Rest_Webservice_Transaction_Module/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/833-Web SIP Calculator and Tax slab.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/lib/javax.annotation.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/lib/javax.ejb.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/lib/javax.jms.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/lib/javax.persistence.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/lib/javax.resource.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/lib/javax.servlet.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/lib/javax.servlet.jsp.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/lib/javax.transaction.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/src/main/java/First/MyServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/target/833-Web-SIP-Calculator-and-Tax-slab.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/target/833-Web-SIP-Calculator-and-Tax-slab/WEB-INF/classes/First/MyServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/target/833-Web-SIP-Calculator-and-Tax-slab/WEB-INF/lib/gson-2.10.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/target/833-Web-SIP-Calculator-and-Tax-slab/WEB-INF/lib/javax.ws.rs-api-2.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/target/833-Web-SIP-Calculator-and-Tax-slab/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/target/833-Web-SIP-Calculator-and-Tax-slab/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/target/classes/First/MyServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/src/main/java/Rest/TransactionServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DLTE-java/DLTE-Task/794/src/main/java/org/example/MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-java/DLTE-Task/794/src/main/java/org/example/MAIN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/.idea/libraries/Java_EE_6_Java_EE_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/833-Web SIP Calculator and Tax slab.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/lib/javax.annotation.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/lib/javax.ejb.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/lib/javax.jms.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/lib/javax.persistence.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/lib/javax.resource.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/lib/javax.servlet.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/lib/javax.servlet.jsp.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/lib/javax.servlet.jsp.jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/lib/javax.transaction.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/src/main/java/First/MyServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/target/833-Web SIP Calculator and Tax slab.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/target/833-Web SIP Calculator and Tax slab/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/target/833-Web SIP Calculator and Tax slab/WEB-INF/classes/First/MyServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/target/833-Web SIP Calculator and Tax slab/WEB-INF/lib/gson-2.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/target/833-Web SIP Calculator and Tax slab/WEB-INF/lib/javax.ws.rs-api-2.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/target/833-Web SIP Calculator and Tax slab/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/target/833-Web SIP Calculator and Tax slab/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-Web SIP Calculator and Tax slab/target/classes/First/MyServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/src/main/java/Rest/RestWebserviceTransaction.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +102,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../DLTE-java/DLTE-Task/794" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -173,7 +217,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710138427851</updated>
-      <workItem from="1710138430816" duration="13371000" />
+      <workItem from="1710138430816" duration="15672000" />
     </task>
     <servers />
   </component>
@@ -196,26 +240,26 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1710147257879" />
-    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1710207079377">
+    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1710215388591">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1710207079377" />
-    <state width="1024" height="208" key="GridCell.Tab.0.bottom" timestamp="1710148520979">
+    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1710215388591" />
+    <state width="1024" height="208" key="GridCell.Tab.0.bottom" timestamp="1710221610298">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1024" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1710148520979" />
-    <state width="1024" height="208" key="GridCell.Tab.0.center" timestamp="1710148520979">
+    <state width="1024" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1710221610298" />
+    <state width="1024" height="208" key="GridCell.Tab.0.center" timestamp="1710221610298">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1024" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1710148520979" />
-    <state width="1024" height="208" key="GridCell.Tab.0.left" timestamp="1710148520979">
+    <state width="1024" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1710221610298" />
+    <state width="1024" height="208" key="GridCell.Tab.0.left" timestamp="1710221610298">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1024" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1710148520979" />
-    <state width="1024" height="208" key="GridCell.Tab.0.right" timestamp="1710148520979">
+    <state width="1024" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1710221610298" />
+    <state width="1024" height="208" key="GridCell.Tab.0.right" timestamp="1710221610298">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1024" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1710148520979" />
+    <state width="1024" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1710221610298" />
     <state x="279" y="54" key="SettingsEditor" timestamp="1710139089313">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
