@@ -16,12 +16,12 @@ import java.util.stream.Stream;
 @WebServlet("/transaction/*")
 public class TransactionServlet extends HttpServlet {
     ArrayList<Transaction> transactions= (ArrayList<Transaction>) Stream.of(
-            new Transaction(new Date(2024,04,04),2500.00,"Sinchana","Friend"),
-            new Transaction(new Date(2024,04,10),5500.00,"Sahana","Family"),
-            new Transaction(new Date(2024,03,06),1000.00,"Sherly","Emergency"),
-            new Transaction(new Date(2024,04,01),3000.00,"Zoya","Education"),
-            new Transaction(new Date(2024,02,12),2500.00,"Duke","Bills"),
-            new Transaction(new Date(2024,03,2),1100.00,"Sony","Friend")
+            new Transaction(new Date(2024,02,04),2500.00,"Medhini","Friend"),
+            new Transaction(new Date(2024,02,10),5500.00,"Meghana","Emergency"),
+            new Transaction(new Date(2024,03,26),1000.00,"Mothi","Emergency"),
+            new Transaction(new Date(2024,04,21),3000.00,"Pakathi","Education"),
+            new Transaction(new Date(2024,01,12),2500.00,"Rocky","Bills"),
+            new Transaction(new Date(2024,03,29),1100.00,"Mangali","Friend")
     ).collect(Collectors.toList());
 
     @Override
