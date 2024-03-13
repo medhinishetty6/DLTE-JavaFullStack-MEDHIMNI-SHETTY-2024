@@ -8,11 +8,21 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-@WebServlet("/transaction")
+@WebServlet("/transaction/*")
 public class TransactionServlet extends HttpServlet {
-    private List<Transaction> transactions=new ArrayList<>();
+    ArrayList<Transaction> transactions= (ArrayList<Transaction>) Stream.of(
+            new Transaction(new Date(2024,04,04),2500.00,"Sinchana","Friend"),
+            new Transaction(new Date(2024,04,10),5500.00,"Sahana","Family"),
+            new Transaction(new Date(2024,03,06),1000.00,"Sherly","Emergency"),
+            new Transaction(new Date(2024,04,01),3000.00,"Zoya","Education"),
+            new Transaction(new Date(2024,02,12),2500.00,"Duke","Bills"),
+            new Transaction(new Date(2024,03,2),1100.00,"Sony","Friend")
+    ).collect(Collectors.toList());
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
