@@ -2,20 +2,17 @@
 <transactionsWrapper>
     <transaction>
         <amount>700.0</amount>
-        <date>2024-03-17T08:20:21.364+05:30</date>
-        <receiver>Medhini</receiver>
+        <date>2024-03-18T12:34:41.943+05:30</date>
         <user>Meghana</user>
     </transaction>
     <transaction>
         <amount>900.0</amount>
-        <date>2024-03-17T08:20:21.364+05:30</date>
-        <receiver>Divija</receiver>
+        <date>2024-03-18T12:34:41.943+05:30</date>
         <user>Vani</user>
     </transaction>
     <transaction>
         <amount>660.0</amount>
-        <date>2024-03-17T08:20:21.364+05:30</date>
-        <receiver>Pooja</receiver>
+        <date>2024-03-18T12:34:41.943+05:30</date>
         <user>Ankitha</user>
     </transaction>
 </transactionsWrapper>

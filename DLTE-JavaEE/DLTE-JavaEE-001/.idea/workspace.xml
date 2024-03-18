@@ -7,7 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a4f8994-f226-4e8a-b123-f9e1b824c878" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Console app/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/965-JaxParsing/transaction.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-Task/965-JaxParsing/transactions.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Java-Task/966/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-Task/966/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +153,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710138427851</updated>
       <workItem from="1710138430816" duration="15672000" />
-      <workItem from="1710740303622" duration="687000" />
+      <workItem from="1710740303622" duration="1281000" />
     </task>
     <servers />
   </component>
