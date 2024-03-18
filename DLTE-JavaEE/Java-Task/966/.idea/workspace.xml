@@ -6,32 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa67dfdd-a992-4d49-a7a5-e878c1a90c8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../ConsoleApp/.idea/ConsoleApp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../861-Rest Get mapping of Transactions/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../861-Rest Get mapping of Transactions/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../861-Rest Get mapping of Transactions/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../861-Rest Get mapping of Transactions/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../861-Rest Get mapping of Transactions/861-Rest Get mapping of Transactions.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../861-Rest Get mapping of Transactions/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../861-Rest Get mapping of Transactions/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../861-Rest Get mapping of Transactions/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/DLTE-Spring-001/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/DLTE-Spring-001/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/DLTE-Spring-001/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/DLTE-Spring-001/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/DLTE-Spring-001/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/DLTE-Spring-001/SpringDispatch.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/DLTE-Spring-001/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/DLTE-Spring-001/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/DLTE-Spring-001/src/main/java/org/example/Branch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/DLTE-Spring-001/src/main/java/org/example/MyBankContent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/DLTE-Spring-001/src/test/java/org/example/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleApp/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleApp/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-001/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-JavaEE-001/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="aa67dfdd-a992-4d49-a7a5-e878c1a90c8d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
