@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa67dfdd-a992-4d49-a7a5-e878c1a90c8d" name="Default Changelist" comment="" />
+    <list default="true" id="aa67dfdd-a992-4d49-a7a5-e878c1a90c8d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE-001/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-JavaEE-001/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +35,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../DLTE-JavaEE-001" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710733307185</updated>
       <workItem from="1710733310018" duration="695000" />
-      <workItem from="1710735427552" duration="1335000" />
+      <workItem from="1710735427552" duration="1954000" />
     </task>
     <servers />
   </component>
@@ -73,10 +77,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1710735567304">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1710740300306">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1710735567304" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1710740300306" />
     <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1710733899693">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
