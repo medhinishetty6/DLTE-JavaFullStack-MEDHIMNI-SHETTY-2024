@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <transactionsWrapper>
     <transaction>
-        <amount>500.0</amount>
+        <amount>700.0</amount>
         <date>2024-03-17T08:20:21.364+05:30</date>
         <receiver>Medhini</receiver>
         <user>Meghana</user>
     </transaction>
     <transaction>
-        <amount>200.0</amount>
+        <amount>900.0</amount>
         <date>2024-03-17T08:20:21.364+05:30</date>
         <receiver>Divija</receiver>
         <user>Vani</user>
     </transaction>
     <transaction>
-        <amount>350.0</amount>
+        <amount>660.0</amount>
         <date>2024-03-17T08:20:21.364+05:30</date>
         <receiver>Pooja</receiver>
         <user>Ankitha</user>

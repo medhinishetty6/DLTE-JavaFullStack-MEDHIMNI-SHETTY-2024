@@ -1,133 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa67dfdd-a992-4d49-a7a5-e878c1a90c8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../Console app/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/Console app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/account.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/src/main/java/org/example/entity/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/src/main/java/org/example/entity/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/src/main/java/org/example/exceptions/InsufficientFundsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/src/main/java/org/example/exceptions/InvalidCredentialsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/src/main/java/org/example/exceptions/ReceiverNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/src/main/java/org/example/middleware/AuthenticationMiddleware.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/src/main/java/org/example/remotes/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/src/main/java/org/example/remotes/FileAccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/src/main/java/org/example/services/TransactionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/src/main/java/org/example/services/TransactionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/src/test/java/org/example/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/target/classes/org/example/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/target/classes/org/example/entity/Account.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/target/classes/org/example/entity/Transaction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/target/classes/org/example/exceptions/InsufficientFundsException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/target/classes/org/example/exceptions/InvalidCredentialsException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/target/classes/org/example/exceptions/ReceiverNotFoundException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/target/classes/org/example/middleware/AuthenticationMiddleware.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/target/classes/org/example/remotes/AccountService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/target/classes/org/example/remotes/FileAccountService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/target/classes/org/example/services/TransactionService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/target/classes/org/example/services/TransactionServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Console app/target/test-classes/org/example/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ConsoleAppNew/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ConsoleAppNew/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JMS-MQ/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JMS-MQ/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JMS-MQ/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JMS-MQ/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JMS-MQ/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JMS-MQ/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JMS-MQ/DLTE-javaEE-JMS-MQ.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JMS-MQ/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JMS-MQ/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JMS-MQ/src/test/java/org/example/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/DLTE-javaEE-JNDI.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/lib/javax.annotation.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/lib/javax.ejb.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/lib/javax.jms.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/lib/javax.persistence.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/lib/javax.resource.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/lib/javax.servlet.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/lib/javax.servlet.jsp.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/lib/javax.transaction.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/src/main/java/lookingup/PrimitiveServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-JNDI/src/main/java/lookingup/ReadCreditCards.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-RMI/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-RMI/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-RMI/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-RMI/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-RMI/DLTE-javaEE-RMI.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-RMI/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-RMI/src/main/java/rmi/MyCardOfficial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-RMI/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-javaEE-RMI/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/965-JaxParsing.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/src/main/java/org/example/CreateTransaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/src/main/java/org/example/FilterTransactionByUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/src/main/java/org/example/RetrieveAllTransaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/src/main/java/org/example/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/src/test/java/org/example/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/target/965-JaxParsing-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/target/classes/org/example/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/target/classes/org/example/CreateTransaction$TransactionsWrapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/target/classes/org/example/CreateTransaction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/target/classes/org/example/FilterTransactionByUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/target/classes/org/example/RetrieveAllTransaction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/target/classes/org/example/Transaction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/target/surefire-reports/TEST-org.example.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/target/surefire-reports/org.example.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/target/test-classes/org/example/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../965-JaxParsing/transaction.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/966.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.annotation.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.ejb.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.jms.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.persistence.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.resource.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.transaction.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jndi/UpdateServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../833-WebSIPCalculatorandTaxslab/target/833-WebSIPCalculatorandTaxslab.war" beforeDir="false" afterPath="$PROJECT_DIR$/../833-WebSIPCalculatorandTaxslab/target/833-WebSIPCalculatorandTaxslab.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../833-WebSIPCalculatorandTaxslab/target/833-WebSIPCalculatorandTaxslab/META-INF/MANIFEST.MF" beforeDir="false" />
-    </list>
+    <list default="true" id="aa67dfdd-a992-4d49-a7a5-e878c1a90c8d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,6 +32,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
