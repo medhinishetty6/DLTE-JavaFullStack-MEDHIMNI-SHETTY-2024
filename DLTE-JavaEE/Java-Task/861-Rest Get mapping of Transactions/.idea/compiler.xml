@@ -6,9 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ConsoleApp" />
-        <module name="mav" />
-        <module name="ConsoleAppFile" />
+        <module name="861-Rest Get mapping of Transactions" />
       </profile>
     </annotationProcessing>
   </component>
