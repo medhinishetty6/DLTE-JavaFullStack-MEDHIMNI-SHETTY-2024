@@ -7,9 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a4f8994-f226-4e8a-b123-f9e1b824c878" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Console app/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/966/target/966.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/966/target/966/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/966/target/966/WEB-INF/classes/jndi/UpdateServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/966/target/966/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java-Task/966/target/966/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java-Task/965-JaxParsing/transaction.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-Task/965-JaxParsing/transactions.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Java-Task/966/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-Task/966/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
