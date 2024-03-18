@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="21d16ba4-b967-4c1e-8a3f-2a40093f1ffd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Console app/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/Console app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/account.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/src/main/java/org/example/entity/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/src/main/java/org/example/entity/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/src/main/java/org/example/exceptions/InsufficientFundsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/src/main/java/org/example/exceptions/InvalidCredentialsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/src/main/java/org/example/exceptions/ReceiverNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/src/main/java/org/example/middleware/AuthenticationMiddleware.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/src/main/java/org/example/remotes/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/src/main/java/org/example/remotes/FileAccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/src/main/java/org/example/services/TransactionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/src/main/java/org/example/services/TransactionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/target/classes/org/example/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/target/classes/org/example/entity/Account.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/target/classes/org/example/entity/Transaction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/target/classes/org/example/exceptions/InsufficientFundsException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/target/classes/org/example/exceptions/InvalidCredentialsException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/target/classes/org/example/exceptions/ReceiverNotFoundException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/target/classes/org/example/middleware/AuthenticationMiddleware.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/target/classes/org/example/remotes/AccountService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/target/classes/org/example/remotes/FileAccountService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/target/classes/org/example/services/TransactionService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/target/classes/org/example/services/TransactionServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Console app/target/test-classes/org/example/AppTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ConsoleAppNew/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ConsoleAppNew/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DLTE-javaEE-JMS-MQ.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/DLTE-javaEE-JNDI.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/lib/javax.annotation.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/lib/javax.ejb.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/lib/javax.jms.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/lib/javax.persistence.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/lib/javax.resource.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/lib/javax.servlet.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/lib/javax.servlet.jsp.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/lib/javax.transaction.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/src/main/java/lookingup/PrimitiveServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-JNDI/src/main/java/lookingup/ReadCreditCards.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-RMI/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-RMI/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-RMI/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-RMI/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-RMI/DLTE-javaEE-RMI.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-RMI/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-RMI/src/main/java/rmi/MyCardOfficial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-RMI/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-javaEE-RMI/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/target/833-WebSIPCalculatorandTaxslab.war" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/target/833-WebSIPCalculatorandTaxslab.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Task/833-WebSIPCalculatorandTaxslab/target/833-WebSIPCalculatorandTaxslab/META-INF/MANIFEST.MF" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2diKZxrs96XoLGvioTnVhQvGpxD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21d16ba4-b967-4c1e-8a3f-2a40093f1ffd" name="Default Changelist" comment="" />
+      <created>1710485518035</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710485518035</updated>
+      <workItem from="1710485521006" duration="2502000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1710733313191">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1710733313191" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1710733313191">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1710733313191" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1710733313189">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1710733313189" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1710733313191">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1710733313191" />
+  </component>
+</project>
