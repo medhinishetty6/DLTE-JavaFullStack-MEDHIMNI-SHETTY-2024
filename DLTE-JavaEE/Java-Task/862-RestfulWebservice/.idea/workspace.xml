@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d2becce5-5376-449b-acd5-139177ad81cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/.idea/ConsoleAppFinal.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/middleware/FileStorageTarget.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Remote/FileStorageTarget.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/surefire-reports/TEST-org.example.AppTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/surefire-reports/org.example.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Console app/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/.idea/ConsoleApp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/account.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/inputDetails.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/src/main/java/org/example/Entity/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/src/main/java/org/example/Entity/Transaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/src/main/java/org/example/Exceptions/InsufficientFundsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/src/main/java/org/example/Exceptions/InvalidCredentialsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/src/main/java/org/example/Exceptions/ReceiverNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/src/main/java/org/example/Middleware/FileStorageTarget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/src/main/java/org/example/Middleware/UserDetailsFileRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/src/main/java/org/example/Remote/StorageTarget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/src/main/java/org/example/Remote/UserDetailsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/src/main/java/org/example/Services/AccountServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/src/main/resources/inputDetails.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/ConsoleAppFile-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/classes/inputDetails.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/classes/org/example/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/classes/org/example/Entity/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/classes/org/example/Entity/Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/classes/org/example/Exceptions/InsufficientFundsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/classes/org/example/Exceptions/InvalidCredentialsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/classes/org/example/Exceptions/ReceiverNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/classes/org/example/Middleware/FileStorageTarget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/classes/org/example/Middleware/UserDetailsFileRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/classes/org/example/Remote/StorageTarget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/classes/org/example/Remote/UserDetailsRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/classes/org/example/Services/AccountServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleApp/target/test-classes/org/example/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/account.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/account.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/inputDetails.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/inputDetails.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/Entity/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/entity/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/Entity/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/entity/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/Exceptions/InsufficientFundsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/exceptions/InsufficientFundsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/Exceptions/InvalidCredentialsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/exceptions/InvalidCredentialsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/Exceptions/ReceiverNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/exceptions/ReceiverNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/Middleware/FileStorageTarget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/Middleware/UserDetailsFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/middleware/UserDetailsFileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/Remote/StorageTarget.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/remote/StorageTarget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/Remote/UserDetailsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/remote/UserDetailsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/Services/AccountServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/services/AccountServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Entity/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Entity/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Entity/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Entity/Transaction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Exceptions/InsufficientFundsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Exceptions/InsufficientFundsException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Exceptions/InvalidCredentialsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Exceptions/InvalidCredentialsException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Exceptions/ReceiverNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Exceptions/ReceiverNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Middleware/FileStorageTarget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Middleware/UserDetailsFileRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Middleware/UserDetailsFileRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Remote/StorageTarget.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Remote/StorageTarget.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Remote/UserDetailsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Remote/UserDetailsRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Services/AccountServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Services/AccountServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/src/main/java/org/example/middleware/UserDetailsDatabaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/src/main/java/org/example/middleware/UserDetailsDatabaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/ConsoleAppNew-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/ConsoleAppNew-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/classes/META-INF/ConsoleAppNew.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/surefire-reports/TEST-org.example.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/surefire-reports/org.example.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../861-Rest Get mapping of Transactions/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../861-Rest Get mapping of Transactions/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../861-Rest Get mapping of Transactions/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../861-Rest Get mapping of Transactions/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../861-Rest Get mapping of Transactions/src/main/java/restGetmapping/FindAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/../861-Rest Get mapping of Transactions/src/main/java/restGetmapping/FindAll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../861-Rest Get mapping of Transactions/src/main/java/restGetmapping/findAllByDateAndUsername.java" beforeDir="false" afterPath="$PROJECT_DIR$/../861-Rest Get mapping of Transactions/src/main/java/restGetmapping/findAllByDateAndUsername.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../966/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../966/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../966/target/966.war" beforeDir="false" afterPath="$PROJECT_DIR$/../966/target/966.war" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2dtMmP1S3bSvR3Rlu0sJ2IwyKEJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d2becce5-5376-449b-acd5-139177ad81cc" name="Default Changelist" comment="" />
+      <created>1710823079264</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710823079264</updated>
+      <workItem from="1710823082348" duration="1057000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1710824381435">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1710824381435" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1710824381435">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1710824381435" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1710824381435">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1710824381435" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1710824381435">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1710824381435" />
+  </component>
+</project>

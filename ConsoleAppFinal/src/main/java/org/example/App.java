@@ -1,13 +1,13 @@
 package org.example;
 
-import org.example.Entity.Account;
-import org.example.Exceptions.InsufficientFundsException;
-import org.example.Exceptions.InvalidCredentialsException;
-import org.example.Exceptions.ReceiverNotFoundException;
-import org.example.Middleware.FileStorageTarget;
+import org.example.entity.Account;
+import org.example.exceptions.InsufficientFundsException;
+import org.example.exceptions.InvalidCredentialsException;
+import org.example.exceptions.ReceiverNotFoundException;
 import org.example.Middleware.UserDetailsFileRepository;
-import org.example.Remote.StorageTarget;
-import org.example.Services.AccountServices;
+import org.example.remote.StorageTarget;
+import org.example.services.AccountServices;
+import org.example.middleware.DatabaseTarget;
 //import org.slf4j.Logger;
 import javax.security.auth.login.AccountNotFoundException;
 import java.io.*;
@@ -17,8 +17,6 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 import java.util.logging.Logger;
-import static java.lang.System.exit;
-import static java.lang.System.setOut;
 
 public class App {
     private static Account account;
@@ -55,7 +53,7 @@ public class App {
         int option;
         boolean status = false;
         String username, password;
-        storageTarget = new FileStorageTarget();
+        storageTarget = new DatabaseTarget();
         services = new AccountServices(storageTarget);
 
         while (!status) {

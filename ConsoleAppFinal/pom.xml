@@ -25,6 +25,11 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.example</groupId>
+      <artifactId>ConsoleAppNew</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
     <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
     <dependency>
       <groupId>ch.qos.logback</groupId>
@@ -66,7 +71,7 @@
           <configuration>
             <archive>
               <manifest>
-                <myClass>org.example.Services.App</myClass>
+                <myClass>org.example.services.App</myClass>
               </manifest>
             </archive>
           </configuration>

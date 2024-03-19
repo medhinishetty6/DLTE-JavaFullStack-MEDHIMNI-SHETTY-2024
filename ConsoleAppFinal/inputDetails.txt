@@ -132,3 +132,11 @@ Mar 18, 2024 5:30:33 PM org.example.Middleware.UserDetailsFileRepository authent
 WARNING: Username not found.
 Mar 18, 2024 5:30:41 PM org.example.Middleware.UserDetailsFileRepository authenticate
 WARNING: Username not found.
+Mar 18, 2024 7:41:23 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Password not matched.
+Mar 18, 2024 7:41:23 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Login failed.
+Mar 18, 2024 7:41:32 PM org.example.Middleware.UserDetailsFileRepository authenticate
+WARNING: Login failed.
+Mar 18, 2024 7:41:41 PM org.example.Middleware.UserDetailsFileRepository authenticate
+INFO: Login Successful
