@@ -7,40 +7,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a4f8994-f226-4e8a-b123-f9e1b824c878" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/DLTE-Spring-006-JDBC/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/DLTE-Spring-006-JDBC/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/DLTE-Spring-006-JDBC/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/DLTE-Spring-006-JDBC/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/DLTE-Spring-006-JDBC/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/DLTE-Spring-006-JDBC/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/DLTE-Spring-006-JDBC/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/DLTE-Spring-006-JDBC/src/main/java/com/example/demo/ServletInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/DLTE-Spring-006-JDBC/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/DLTE-Spring-006-JDBC/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1037-SpringBootAutowiring/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1037-SpringBootAutowiring/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1037-SpringBootAutowiring/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1037-SpringBootAutowiring/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1037-SpringBootAutowiring/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1037-SpringBootAutowiring/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1037-SpringBootAutowiring/src/main/java/com/example/demo/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1037-SpringBootAutowiring/src/main/java/com/example/demo/Bank.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1037-SpringBootAutowiring/src/main/java/com/example/demo/ExecutingField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1037-SpringBootAutowiring/src/main/java/com/example/demo/HomeLoanImplementation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1037-SpringBootAutowiring/src/main/java/com/example/demo/Loan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1037-SpringBootAutowiring/src/main/java/com/example/demo/LoanInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1037-SpringBootAutowiring/src/main/java/com/example/demo/PersonalLoanImplementation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1037-SpringBootAutowiring/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1037-SpringBootAutowiring/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/soap.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/src/main/java/MyEndPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/src/main/java/MySource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/target/classes/MyEndPoint.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/target/classes/MySource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/target/soap.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/target/soap/WEB-INF/classes/MyEndPoint.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/target/soap/WEB-INF/classes/MySource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/target/soap/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap/target/soap/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1088-SpringBootJPAHQL&amp;SQL/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1088-SpringBootJPAHQL&amp;SQL/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1088-SpringBootJPAHQL&amp;SQL/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1088-SpringBootJPAHQL&amp;SQL/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1088-SpringBootJPAHQL&amp;SQL/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1088-SpringBootJPAHQL&amp;SQL/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1088-SpringBootJPAHQL&amp;SQL/src/main/java/com/spring/hqlsql/demo/DemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1088-SpringBootJPAHQL&amp;SQL/src/main/java/com/spring/hqlsql/demo/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1088-SpringBootJPAHQL&amp;SQL/src/main/java/com/spring/hqlsql/demo/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1088-SpringBootJPAHQL&amp;SQL/src/main/java/com/spring/hqlsql/demo/TransactionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1088-SpringBootJPAHQL&amp;SQL/src/main/java/com/spring/hqlsql/demo/TransactionRemote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1088-SpringBootJPAHQL&amp;SQL/src/main/java/com/spring/hqlsql/demo/TransactionServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1088-SpringBootJPAHQL&amp;SQL/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-Spring/Task/1088-SpringBootJPAHQL&amp;SQL/src/test/java/com/spring/hqlsql/demo/DemoApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DLTE-JavaEE-001.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/DLTE-JavaEE-001.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DLTE-JavaEE-001/WEB-INF/classes/First/MyFirstServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/DLTE-JavaEE-001/WEB-INF/classes/First/MyFirstServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/First/MyFirstServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/First/MyFirstServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/target/834-Rest_Webservice_Transaction_Module.war" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/target/834-Rest_Webservice_Transaction_Module.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/target/834-Rest_Webservice_Transaction_Module/WEB-INF/classes/Rest/TransactionServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/target/834-Rest_Webservice_Transaction_Module/WEB-INF/classes/Rest/TransactionServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/target/classes/Rest/TransactionServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/target/classes/Rest/TransactionServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java-Task/861-Rest Get mapping of Transactions/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-Task/861-Rest Get mapping of Transactions/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-javaEE-JMS-MQ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-javaEE-JMS-MQ/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +75,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Java-Task/834-Rest_Webservice_Transaction_Module" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DLTE-javaEE-JMS-MQ" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -165,11 +168,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="JBoss Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="JBoss Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -190,6 +188,8 @@
       <workItem from="1710138430816" duration="15672000" />
       <workItem from="1710740303622" duration="1281000" />
       <workItem from="1710994831248" duration="3396000" />
+      <workItem from="1711079304126" duration="41000" />
+      <workItem from="1711079370065" duration="1956000" />
     </task>
     <servers />
   </component>
@@ -212,10 +212,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1710147257879" />
-    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1710997186740">
+    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1711083703525">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1710997186740" />
+    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1711083703525" />
     <state width="1024" height="208" key="GridCell.Tab.0.bottom" timestamp="1710221610298">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -236,9 +236,9 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="279" y="54" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1710139089313" />
-    <state x="209" y="114" key="new project wizard" timestamp="1710184280338">
+    <state x="209" y="114" key="new project wizard" timestamp="1711083708380">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="209" y="114" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1710184280338" />
+    <state x="209" y="114" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1711083708380" />
   </component>
 </project>
