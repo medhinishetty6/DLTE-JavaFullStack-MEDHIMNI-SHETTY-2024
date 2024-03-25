@@ -68,7 +68,7 @@ class SpringBootJDBCTesting {
         List<Transaction> actual=transactionServices.apiFindBySender("Divija");
         assertEquals(expected,actual);
         assertNotEquals(notExpected,actual);
-        assertNull(expected);//fails
+        assertNull(expected);
     }
 
     @Test
@@ -83,7 +83,7 @@ class SpringBootJDBCTesting {
         assertEquals(expected,actual);
         assertNotEquals(notExpected,actual);
         assertNotNull(expected);
-        assertNotNull(actual);//fails
+        assertNotNull(actual);
     }
 
     @Test
@@ -96,6 +96,6 @@ class SpringBootJDBCTesting {
         when(jdbcTemplate.query(anyString(),any(Object[].class),any(BeanPropertyRowMapper.class))).thenReturn(expected);
         List<Transaction> actual=transactionServices.apiFindByAmount(400);
         assertEquals(expected,actual);
-        assertNotEquals(notExpected,actual);//fails
+        assertNotEquals(notExpected,actual);
     }
 }
