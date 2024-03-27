@@ -52,7 +52,7 @@ class SpringBootJDBCTesting {
         Transaction transactionActual = transactionServices.apiSave(transaction1);
         System.out.println(transactionActual.getTransactionBy());
         assertEquals(transaction1.getTransactionBy(),transactionActual.getTransactionBy());
-        assertEquals(transaction2.getTransactionBy(),transactionActual.getTransactionBy());//fails
+        assertEquals(transaction2.getTransactionBy(),transactionActual.getTransactionBy());
 
 
     }
@@ -65,10 +65,10 @@ class SpringBootJDBCTesting {
         List<Transaction> expected= Stream.of(transaction1,transaction2,transaction3).collect(Collectors.toList());
         List<Transaction> notExpected= Stream.of(transaction1,transaction2).collect(Collectors.toList());
         when(jdbcTemplate.query(anyString(),any(Object[].class),any(BeanPropertyRowMapper.class))).thenReturn(expected);
-        List<Transaction> actual=transactionServices.apiFindBySender("Divija");
+        List<Transaction> actual=transactionServices.apiFindBySender("Medhini");
         assertEquals(expected,actual);
         assertNotEquals(notExpected,actual);
-        assertNull(expected);//fails
+        assertNull(expected);
     }
 
     @Test
@@ -79,11 +79,11 @@ class SpringBootJDBCTesting {
         List<Transaction> expected= Stream.of(transaction1).collect(Collectors.toList());
         List<Transaction> notExpected= Stream.of(transaction1,transaction2).collect(Collectors.toList());
         when(jdbcTemplate.query(anyString(),any(Object[].class),any(BeanPropertyRowMapper.class))).thenReturn(expected);
-        List<Transaction> actual=transactionServices.apiFindByReceiver("Spandana");
+        List<Transaction> actual=transactionServices.apiFindByReceiver("Meghana");
         assertEquals(expected,actual);
         assertNotEquals(notExpected,actual);
         assertNotNull(expected);
-        assertNotNull(actual);//fails
+        assertNotNull(actual);
     }
 
     @Test
@@ -94,8 +94,8 @@ class SpringBootJDBCTesting {
         List<Transaction> expected= Stream.of(transaction1,transaction2).collect(Collectors.toList());
         List<Transaction> notExpected= Stream.of(transaction1).collect(Collectors.toList());
         when(jdbcTemplate.query(anyString(),any(Object[].class),any(BeanPropertyRowMapper.class))).thenReturn(expected);
-        List<Transaction> actual=transactionServices.apiFindByAmount(400);
+        List<Transaction> actual=transactionServices.apiFindByAmount(2000);
         assertEquals(expected,actual);
-        assertNotEquals(notExpected,actual);//fails
+        assertNotEquals(notExpected,actual);
     }
 }
