@@ -78,12 +78,18 @@ public class SoapPhase {
     public DeleteDatesResponse datesResponse(@RequestPayload DeleteDatesRequest deleteDatesRequest) {
         DeleteDatesResponse deleteDatesResponse=new DeleteDatesResponse();
         ServiceStatus serviceStatus=new ServiceStatus();
+<<<<<<< HEAD
         Date startDate=deleteDatesRequest.getStartDate().toGregorianCalendar().getTime();
         Date endDate=deleteDatesRequest.getEndDate().toGregorianCalendar().getTime();
 //        XMLGregorianCalendar gregorianCalendarStartDate=deleteDatesRequest.getStartDate();
 //        XMLGregorianCalendar gregorianCalendarEndDate=deleteDatesRequest.getEndDate();
      //   String message=transactionService.removeTransactionsBetweenDates(startDate, endDate);
        String message = transactionService.removeTransactionsBetweenDates(startDate,endDate);
+=======
+        Date StartDate=deleteDatesRequest.getStartDate().toGregorianCalendar().getTime();
+        Date EndDate=deleteDatesRequest.getEndDate().toGregorianCalendar().getTime();
+        String message=transactionService.removeTransactionsBetweenDates(StartDate, EndDate);
+>>>>>>> bffc1ea0e087144ada410c509e1907b113525b60
         if(message!=null){
             serviceStatus.setStatus("SUCCESS");
             serviceStatus.setMessage(message);
@@ -148,9 +154,6 @@ public class SoapPhase {
     }
 
 
-
-
-
     @PayloadRoot(namespace = url, localPart = "updateRemarksRequest")
     @ResponsePayload
     public UpdateRemarksResponse updateRemarks(@RequestPayload UpdateRemarksRequest request) {
@@ -160,7 +163,6 @@ public class SoapPhase {
         com.example.demo.dao.Transaction message=new  com.example.demo.dao.Transaction();
         BeanUtils.copyProperties(request.getTransaction(),message);
         message = transactionService.updateRemarks(message);
-//      String message = transactionService.updateRemarks(request.getTransactionId(), request.getRemarks());
         if(message!=null){
             serviceStatus.setStatus("SUCCESS");
             BeanUtils.copyProperties(message,transaction);
