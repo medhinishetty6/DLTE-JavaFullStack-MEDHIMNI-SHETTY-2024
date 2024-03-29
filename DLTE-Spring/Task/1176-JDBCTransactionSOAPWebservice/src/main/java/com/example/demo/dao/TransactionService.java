@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 
@@ -24,7 +25,7 @@ public class TransactionService {
 
     // New transaction
     public Transaction newTransaction(Transaction transaction) {
-        int acknowledge = jdbcTemplate.update("INSERT INTO transaction (transaction_id,transaction_date, transaction_to, transaction_amount, transaction_remarks, transaction_by) VALUES (?, ?, ?, ?, ?)",
+        int acknowledge = jdbcTemplate.update("INSERT INTO transaction (transaction_id,transaction_date, transaction_to, transaction_amount, transaction_remarks, transaction_by) VALUES (?, ?, ?, ?, ?,?)",
                 new Object[]{transaction.getTransactionId(),transaction.getTransactionDate(), transaction.getTransactionTo(), transaction.getTransactionAmount(), transaction.getTransactionRemarks(), transaction.getTransactionBy()});
         if (acknowledge != 0)
             return transaction;
@@ -58,7 +59,7 @@ public class TransactionService {
     }
 
     // Remove transactions between given dates
-    public String removeTransactionsBetweenDates(XMLGregorianCalendar startDate, XMLGregorianCalendar endDate) {
+    public String removeTransactionsBetweenDates(Date startDate, Date endDate) {
         int count = jdbcTemplate.update("DELETE FROM transaction WHERE transaction_date BETWEEN ? AND ?", startDate, endDate);
         return count + " transactions removed between " + startDate + " and " + endDate;
     }
