@@ -43,7 +43,6 @@ public class SoapPhase {
             serviceStatus.setStatus("FAILURE");
             serviceStatus.setMessage("Failed to add transaction");
         }
-        // response.setServiceStatus(serviceStatus);
         return addTransactionResponse;
     }
 
@@ -81,8 +80,6 @@ public class SoapPhase {
         ServiceStatus serviceStatus=new ServiceStatus();
         Date StartDate=deleteDatesRequest.getStartDate().toGregorianCalendar().getTime();
         Date EndDate=deleteDatesRequest.getEndDate().toGregorianCalendar().getTime();
-//        XMLGregorianCalendar gregorianCalendarStartDate=deleteDatesRequest.getStartDate();
-//        XMLGregorianCalendar gregorianCalendarEndDate=deleteDatesRequest.getEndDate();
         String message=transactionService.removeTransactionsBetweenDates(StartDate, EndDate);
         if(message!=null){
             serviceStatus.setStatus("SUCCESS");
@@ -148,9 +145,6 @@ public class SoapPhase {
     }
 
 
-
-
-
     @PayloadRoot(namespace = url, localPart = "updateRemarksRequest")
     @ResponsePayload
     public UpdateRemarksResponse updateRemarks(@RequestPayload UpdateRemarksRequest request) {
@@ -160,7 +154,6 @@ public class SoapPhase {
         com.example.demo.dao.Transaction message=new  com.example.demo.dao.Transaction();
         BeanUtils.copyProperties(request.getTransaction(),message);
         message = transactionService.updateRemarks(message);
-//      String message = transactionService.updateRemarks(request.getTransactionId(), request.getRemarks());
         if(message!=null){
             serviceStatus.setStatus("SUCCESS");
             BeanUtils.copyProperties(message,transaction);
