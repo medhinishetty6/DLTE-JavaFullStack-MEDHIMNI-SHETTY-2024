@@ -10,7 +10,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 import services.transaction.*;
 
 import javax.xml.datatype.XMLGregorianCalendar;
-import java.sql.Date;
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -21,22 +21,23 @@ public class SoapPhase {
     @Autowired
     private TransactionService transactionService;
 
-    @PayloadRoot(namespace = url, localPart = "AddTransactionRequest")
+    @PayloadRoot(namespace = url, localPart = "addTransactionRequest")
     @ResponsePayload
     public AddTransactionResponse addTransactionResponse(@RequestPayload AddTransactionRequest addTransactionRequest) {
         AddTransactionResponse addTransactionResponse = new AddTransactionResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
 
         services.transaction.Transaction transaction1 = addTransactionRequest.getTransaction();
-//        Transaction daotransaction=new Transaction();
+        Date date = addTransactionRequest.getTransaction().getTransactionDate().toGregorianCalendar().getTime();
         com.example.demo.dao.Transaction daotransaction = new com.example.demo.dao.Transaction();
+
         BeanUtils.copyProperties(transaction1, daotransaction);
         daotransaction = transactionService.newTransaction(daotransaction);
-        // Transaction savedTransaction = transactionService.newTransaction(daotransaction);
+
         if (daotransaction != null) {
             serviceStatus.setStatus("SUCCESS");
-//            BeanUtils.copyProperties(transaction, transaction1);
-//            response.setTransaction(transaction1);
+            BeanUtils.copyProperties(transaction1, daotransaction);
+            addTransactionResponse.setTransaction(transaction1);
             serviceStatus.setMessage("Transaction added successfully");
         } else {
             serviceStatus.setStatus("FAILURE");
@@ -46,7 +47,7 @@ public class SoapPhase {
         return addTransactionResponse;
     }
 
-    @PayloadRoot(namespace = url, localPart = "AmountRequest")
+    @PayloadRoot(namespace = url, localPart = "amountRequest")
     @ResponsePayload
     public AmountResponse amountResponse(@RequestPayload AmountRequest amountRequest) {
         AmountResponse amountResponse = new AmountResponse();
@@ -66,7 +67,7 @@ public class SoapPhase {
             serviceStatus.setMessage("transactions found for the amount");
             amountResponse.getTransaction().addAll(transactionList);
         } else {
-            serviceStatus.setStatus("FAILED");
+            serviceStatus.setStatus("FAILURE");
             serviceStatus.setMessage("transaction not found for the amount:" + amountRequest.getAmount());
         }
         amountResponse.setServiceStatus(serviceStatus);
@@ -78,11 +79,13 @@ public class SoapPhase {
     public DeleteDatesResponse datesResponse(@RequestPayload DeleteDatesRequest deleteDatesRequest) {
         DeleteDatesResponse deleteDatesResponse=new DeleteDatesResponse();
         ServiceStatus serviceStatus=new ServiceStatus();
-        XMLGregorianCalendar gregorianCalendarStartDate=deleteDatesRequest.getStartDate();
-        XMLGregorianCalendar gregorianCalendarEndDate=deleteDatesRequest.getEndDate();
-        String message=transactionService.removeTransactionsBetweenDates(gregorianCalendarStartDate,gregorianCalendarEndDate);
+        Date StartDate=deleteDatesRequest.getStartDate().toGregorianCalendar().getTime();
+        Date EndDate=deleteDatesRequest.getEndDate().toGregorianCalendar().getTime();
+//        XMLGregorianCalendar gregorianCalendarStartDate=deleteDatesRequest.getStartDate();
+//        XMLGregorianCalendar gregorianCalendarEndDate=deleteDatesRequest.getEndDate();
+        String message=transactionService.removeTransactionsBetweenDates(StartDate, EndDate);
         if(message!=null){
-            serviceStatus.setStatus("success");
+            serviceStatus.setStatus("SUCCESS");
             serviceStatus.setMessage(message);
         }else {
             serviceStatus.setStatus("FAILURE");
@@ -94,7 +97,7 @@ public class SoapPhase {
     }
 
 
-    @PayloadRoot(namespace = url, localPart = "ReceiverRequest")
+    @PayloadRoot(namespace = url, localPart = "receiverRequest")
     public ReceiverResponse receiverResponse(@RequestPayload ReceiverRequest request) {
         ReceiverResponse response = new ReceiverResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
@@ -118,7 +121,7 @@ public class SoapPhase {
         response.setServiceStatus(serviceStatus);
         return response;
     }
-    @PayloadRoot(namespace = url, localPart = "SenderRequest")
+    @PayloadRoot(namespace = url, localPart = "senderRequest")
     @ResponsePayload
     public SenderResponse senderResponse(@RequestPayload SenderRequest request) {
         SenderResponse response = new SenderResponse();
@@ -159,7 +162,7 @@ public class SoapPhase {
         message = transactionService.updateRemarks(message);
 //      String message = transactionService.updateRemarks(request.getTransactionId(), request.getRemarks());
         if(message!=null){
-            serviceStatus.setStatus("Success");
+            serviceStatus.setStatus("SUCCESS");
             BeanUtils.copyProperties(message,transaction);
             serviceStatus.setMessage("Updated remarks for transaction:"+message.getTransactionId());
         }else {

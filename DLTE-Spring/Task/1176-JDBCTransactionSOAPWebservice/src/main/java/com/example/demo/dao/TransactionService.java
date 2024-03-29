@@ -11,7 +11,6 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 
 import javax.xml.datatype.XMLGregorianCalendar;
-import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -25,8 +24,8 @@ public class TransactionService {
 
     // New transaction
     public Transaction newTransaction(Transaction transaction) {
-        int acknowledge = jdbcTemplate.update("INSERT INTO transactions (transaction_date, transaction_to, transaction_amount, transaction_remarks, transaction_by) VALUES (?, ?, ?, ?, ?)",
-                new Object[]{transaction.getTransactionDate(), transaction.getTransactionTo(), transaction.getTransactionAmount(), transaction.getTransactionRemarks(), transaction.getTransactionBy()});
+        int acknowledge = jdbcTemplate.update("INSERT INTO transaction (transaction_id,transaction_date, transaction_to, transaction_amount, transaction_remarks, transaction_by) VALUES (?, ?, ?, ?, ?)",
+                new Object[]{transaction.getTransactionId(),transaction.getTransactionDate(), transaction.getTransactionTo(), transaction.getTransactionAmount(), transaction.getTransactionRemarks(), transaction.getTransactionBy()});
         if (acknowledge != 0)
             return transaction;
         else
@@ -35,22 +34,22 @@ public class TransactionService {
 
     // Find transactions by sender
     public List<Transaction> findBySender(String sender) {
-        return jdbcTemplate.query("SELECT * FROM transactions WHERE transaction_by = ?", new Object[]{sender}, new TransactionMapper());
+        return jdbcTemplate.query("SELECT * FROM transaction WHERE transaction_by = ?", new Object[]{sender}, new TransactionMapper());
     }
 
     // find transactions by receiver
     public List<Transaction> findByReceiver(String receiver) {
-        return jdbcTemplate.query("SELECT * FROM transactions WHERE transaction_to = ?", new Object[]{receiver}, new TransactionMapper());
+        return jdbcTemplate.query("SELECT * FROM transaction WHERE transaction_to = ?", new Object[]{receiver}, new TransactionMapper());
     }
 
     // Transactions by amount
     public List<Transaction> findByAmount(double amount) {
-        return jdbcTemplate.query("SELECT * FROM transactions WHERE transaction_amount = ?", new Object[]{amount}, new TransactionMapper());
+        return jdbcTemplate.query("SELECT * FROM transaction WHERE transaction_amount = ?", new Object[]{amount}, new TransactionMapper());
     }
 
     // Update remarks of a transaction
     public Transaction updateRemarks(Transaction transaction) {
-        int acknowledge = jdbcTemplate.update("UPDATE transactions SET transaction_remarks = ? WHERE transaction_id = ?",
+        int acknowledge = jdbcTemplate.update("UPDATE transaction SET transaction_remarks = ? WHERE transaction_id = ?",
                 new Object[]{transaction.getTransactionRemarks(), transaction.getTransactionId()});
         if (acknowledge != 0)
             return transaction;
@@ -60,7 +59,7 @@ public class TransactionService {
 
     // Remove transactions between given dates
     public String removeTransactionsBetweenDates(XMLGregorianCalendar startDate, XMLGregorianCalendar endDate) {
-        int count = jdbcTemplate.update("DELETE FROM transactions WHERE transaction_date BETWEEN ? AND ?", startDate, endDate);
+        int count = jdbcTemplate.update("DELETE FROM transaction WHERE transaction_date BETWEEN ? AND ?", startDate, endDate);
         return count + " transactions removed between " + startDate + " and " + endDate;
     }
 
