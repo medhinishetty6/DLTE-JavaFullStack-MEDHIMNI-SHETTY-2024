@@ -25,7 +25,7 @@ public class TransactionService {
 
     // New transaction
     public Transaction newTransaction(Transaction transaction) {
-        int acknowledge = jdbcTemplate.update("INSERT INTO transaction (transaction_id,transaction_date, transaction_to, transaction_amount, transaction_remarks, transaction_by) VALUES (?, ?, ?, ?, ?,?)",
+        int acknowledge = jdbcTemplate.update("INSERT INTO transaction (transaction_id,transaction_date, transaction_to, transaction_amount, transaction_remarks, transaction_by) VALUES (?, ?, ?, ?, ?, ?)",
                 new Object[]{transaction.getTransactionId(),transaction.getTransactionDate(), transaction.getTransactionTo(), transaction.getTransactionAmount(), transaction.getTransactionRemarks(), transaction.getTransactionBy()});
         if (acknowledge != 0)
             return transaction;

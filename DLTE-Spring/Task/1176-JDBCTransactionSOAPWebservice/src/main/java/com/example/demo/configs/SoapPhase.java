@@ -28,12 +28,17 @@ public class SoapPhase {
         ServiceStatus serviceStatus = new ServiceStatus();
 
         services.transaction.Transaction transaction1 = addTransactionRequest.getTransaction();
-        com.example.demo.dao.Transaction daotransaction = new com.example.demo.dao.Transaction();
-
         Date date=addTransactionRequest.getTransaction().getTransactionDate().toGregorianCalendar().getTime();
+        com.example.demo.dao.Transaction daotransaction = new com.example.demo.dao.Transaction();
         daotransaction.setTransactionDate(date);
-        BeanUtils.copyProperties(transaction1, daotransaction);
+        BeanUtils.copyProperties(transaction1,daotransaction);
         daotransaction = transactionService.newTransaction(daotransaction);
+//        Date date=addTransactionRequest.getTransaction().getTransactionDate().toGregorianCalendar().getTime();
+//        daotransaction.setTransactionDate(date);
+//        BeanUtils.copyProperties( daotransaction,transaction1);
+//        addTransactionResponse.setTransaction(transaction1);
+//        serviceStatus.setMessage(transaction1.getTransactionId()+"has inserted");
+//        daotransaction = transactionService.newTransaction(daotransaction);
         if (daotransaction != null) {
             serviceStatus.setStatus("SUCCESS");
             BeanUtils.copyProperties(transaction1, daotransaction);
@@ -78,18 +83,15 @@ public class SoapPhase {
     public DeleteDatesResponse datesResponse(@RequestPayload DeleteDatesRequest deleteDatesRequest) {
         DeleteDatesResponse deleteDatesResponse=new DeleteDatesResponse();
         ServiceStatus serviceStatus=new ServiceStatus();
-<<<<<<< HEAD
         Date startDate=deleteDatesRequest.getStartDate().toGregorianCalendar().getTime();
         Date endDate=deleteDatesRequest.getEndDate().toGregorianCalendar().getTime();
 //        XMLGregorianCalendar gregorianCalendarStartDate=deleteDatesRequest.getStartDate();
 //        XMLGregorianCalendar gregorianCalendarEndDate=deleteDatesRequest.getEndDate();
      //   String message=transactionService.removeTransactionsBetweenDates(startDate, endDate);
        String message = transactionService.removeTransactionsBetweenDates(startDate,endDate);
-=======
         Date StartDate=deleteDatesRequest.getStartDate().toGregorianCalendar().getTime();
         Date EndDate=deleteDatesRequest.getEndDate().toGregorianCalendar().getTime();
-        String message=transactionService.removeTransactionsBetweenDates(StartDate, EndDate);
->>>>>>> bffc1ea0e087144ada410c509e1907b113525b60
+//        String message=transactionService.removeTransactionsBetweenDates(StartDate, EndDate);
         if(message!=null){
             serviceStatus.setStatus("SUCCESS");
             serviceStatus.setMessage(message);
