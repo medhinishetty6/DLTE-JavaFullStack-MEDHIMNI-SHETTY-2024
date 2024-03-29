@@ -33,12 +33,6 @@ public class SoapPhase {
         daotransaction.setTransactionDate(date);
         BeanUtils.copyProperties(transaction1,daotransaction);
         daotransaction = transactionService.newTransaction(daotransaction);
-//        Date date=addTransactionRequest.getTransaction().getTransactionDate().toGregorianCalendar().getTime();
-//        daotransaction.setTransactionDate(date);
-//        BeanUtils.copyProperties( daotransaction,transaction1);
-//        addTransactionResponse.setTransaction(transaction1);
-//        serviceStatus.setMessage(transaction1.getTransactionId()+"has inserted");
-//        daotransaction = transactionService.newTransaction(daotransaction);
         if (daotransaction != null) {
             serviceStatus.setStatus("SUCCESS");
             BeanUtils.copyProperties(transaction1, daotransaction);
@@ -85,13 +79,9 @@ public class SoapPhase {
         ServiceStatus serviceStatus=new ServiceStatus();
         Date startDate=deleteDatesRequest.getStartDate().toGregorianCalendar().getTime();
         Date endDate=deleteDatesRequest.getEndDate().toGregorianCalendar().getTime();
-//        XMLGregorianCalendar gregorianCalendarStartDate=deleteDatesRequest.getStartDate();
-//        XMLGregorianCalendar gregorianCalendarEndDate=deleteDatesRequest.getEndDate();
-     //   String message=transactionService.removeTransactionsBetweenDates(startDate, endDate);
        String message = transactionService.removeTransactionsBetweenDates(startDate,endDate);
         Date StartDate=deleteDatesRequest.getStartDate().toGregorianCalendar().getTime();
         Date EndDate=deleteDatesRequest.getEndDate().toGregorianCalendar().getTime();
-//        String message=transactionService.removeTransactionsBetweenDates(StartDate, EndDate);
         if(message!=null){
             serviceStatus.setStatus("SUCCESS");
             serviceStatus.setMessage(message);
@@ -106,6 +96,7 @@ public class SoapPhase {
 
 
     @PayloadRoot(namespace = url, localPart = "receiverRequest")
+    @ResponsePayload
     public ReceiverResponse receiverResponse(@RequestPayload ReceiverRequest request) {
         ReceiverResponse response = new ReceiverResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
@@ -177,8 +168,5 @@ public class SoapPhase {
          response.setServiceStatus(serviceStatus);
          return response;
     }
-
-
-
-
+    
 }
