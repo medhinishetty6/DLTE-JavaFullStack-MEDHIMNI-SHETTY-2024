@@ -14,7 +14,7 @@ public class LoanController {
         loanList.add(new Loan(2, "Meghana", 8500.0));
         loanList.add(new Loan(3, "Madan", 45000.0));
     }
-    @GetMapping("/{getLoan}")
+    @GetMapping("/{index}")
     public Loan getLoan(@PathVariable int index) {
         if (index >= 0 && index < loanList.size()) {
             return loanList.get(index);
