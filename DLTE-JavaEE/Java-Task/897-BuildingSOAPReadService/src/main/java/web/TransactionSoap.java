@@ -13,7 +13,7 @@ public class TransactionSoap {
     GroupOfTransaction groupOfTransaction=new GroupOfTransaction();
     TransactionService transactionService;
     public TransactionSoap(){
-//        transactionService = new TransactionService(new DatabaseTarget());
+        transactionService = new TransactionService(new DatabaseTarget());
     }
         @WebResult(name="GroupOfTransaction")
         public GroupOfTransaction findAllByType(String type){
