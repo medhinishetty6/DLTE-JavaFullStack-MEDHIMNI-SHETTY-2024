@@ -65,7 +65,7 @@ public class TransactionService {
     }
 
     // RowMapper class to map rows of ResultSet to Transaction objects
-    protected class TransactionMapper implements RowMapper<Transaction> {
+    public class TransactionMapper implements RowMapper<Transaction> {
         @Override
         public Transaction mapRow(ResultSet rs, int rowNum) throws SQLException {
             Transaction transaction = new Transaction();

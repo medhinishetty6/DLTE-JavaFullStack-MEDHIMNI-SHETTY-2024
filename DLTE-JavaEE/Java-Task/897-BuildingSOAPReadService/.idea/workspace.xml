@@ -1,51 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c60a58e-9bf0-48b5-b879-65a72c59d532" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/target/897-BuildingSOAPReadService.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/897-BuildingSOAPReadService/WEB-INF/classes/web/GroupOfTransaction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/897-BuildingSOAPReadService/WEB-INF/classes/web/SoapEndPoint.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/897-BuildingSOAPReadService/WEB-INF/classes/web/TransactionSoap.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/897-BuildingSOAPReadService/WEB-INF/lib/ConsoleAppNew-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/897-BuildingSOAPReadService/WEB-INF/lib/gson-2.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/897-BuildingSOAPReadService/WEB-INF/lib/ojdbc6-11.2.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/897-BuildingSOAPReadService/WEB-INF/lib/ons-11.2.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/897-BuildingSOAPReadService/WEB-INF/lib/oraclepki-11.2.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/897-BuildingSOAPReadService/WEB-INF/lib/osdt_cert-11.2.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/897-BuildingSOAPReadService/WEB-INF/lib/osdt_core-11.2.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/897-BuildingSOAPReadService/WEB-INF/lib/simplefan-11.2.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/897-BuildingSOAPReadService/WEB-INF/lib/ucp-11.2.0.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/897-BuildingSOAPReadService/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/897-BuildingSOAPReadService/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/897-BuildingSOAPReadServiceClient.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/src/main/java/web/GroupOfTransaction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/src/main/java/web/GroupOfTransaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/src/main/java/web/LocalDateTime.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/src/main/java/web/LocalDateTime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/src/main/java/web/ObjectFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/src/main/java/web/ObjectFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/src/main/java/web/Transaction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/src/main/java/web/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/src/main/java/web/TransactionSoap.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/src/main/java/web/TransactionSoap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/src/main/java/web/TransactionSoapService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/src/main/java/web/TransactionSoapService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/src/main/java/web/package-info.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/src/main/java/web/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../897-BuildingSOAPReadServiceClient/src/test/java/org/example/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/TransactionSoap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/TransactionSoap.java" afterDir="false" />
-    </list>
+    <list default="true" id="9c60a58e-9bf0-48b5-b879-65a72c59d532" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711734746541</updated>
-      <workItem from="1711734749851" duration="5137000" />
+      <workItem from="1711734749851" duration="5724000" />
     </task>
     <servers />
   </component>
@@ -149,22 +105,22 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1711791969321" />
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1711792076104">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1711793147818">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1711792076104" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1711792076104">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1711793147818" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1711793147818">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1711792076104" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1711792076103">
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1711793147818" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1711793147818">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1711792076103" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1711792076104">
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1711793147818" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1711793147818">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1711792076104" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1711793147818" />
     <state x="209" y="114" key="new project wizard" timestamp="1711791989754">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
