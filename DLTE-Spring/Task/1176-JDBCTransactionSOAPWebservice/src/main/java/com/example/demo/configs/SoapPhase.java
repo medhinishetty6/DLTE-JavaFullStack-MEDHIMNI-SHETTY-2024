@@ -168,5 +168,5 @@ public class SoapPhase {
          response.setServiceStatus(serviceStatus);
          return response;
     }
-    
+
 }
