@@ -15,6 +15,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+//import java.util.Date;
 
 
 /**
@@ -66,7 +67,7 @@ public class DeleteDatesRequest {
 
     /**
      * Sets the value of the startDate property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
@@ -90,7 +91,7 @@ public class DeleteDatesRequest {
 
     /**
      * Sets the value of the endDate property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
