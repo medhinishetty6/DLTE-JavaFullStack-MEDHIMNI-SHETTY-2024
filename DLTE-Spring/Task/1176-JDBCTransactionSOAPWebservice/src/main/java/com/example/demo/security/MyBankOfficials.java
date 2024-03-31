@@ -13,7 +13,7 @@ public class MyBankOfficials implements UserDetails {
         private String  role;
         private String  address;
         private Long    contact;
-
+        private String  email;
     public Long getContact() {
         return contact;
     }
@@ -22,7 +22,6 @@ public class MyBankOfficials implements UserDetails {
         this.contact = contact;
     }
 
-    private String  email;
 
     @Override
     public String getUsername() {
