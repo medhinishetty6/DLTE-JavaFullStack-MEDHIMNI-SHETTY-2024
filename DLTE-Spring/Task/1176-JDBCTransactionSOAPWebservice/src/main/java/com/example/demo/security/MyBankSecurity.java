@@ -30,12 +30,6 @@ public class MyBankSecurity {
         httpSecurity.httpBasic();
         httpSecurity.formLogin();
         httpSecurity.authorizeRequests().antMatchers("/profile/register").permitAll();
-        httpSecurity.authorizeRequests().antMatchers("/transaction/Sender/*").hasAuthority("customer");
-        httpSecurity.authorizeRequests().antMatchers("/transactionion/Receiver/*").hasAuthority("customer");
-        httpSecurity.authorizeRequests().antMatchers("/transaction/Amount/*").hasAuthority("customer");
-        httpSecurity.authorizeRequests().antMatchers(HttpMethod.POST).hasAuthority("admin");
-        httpSecurity.authorizeRequests().antMatchers(HttpMethod.DELETE).hasAuthority("admin");
-        httpSecurity.authorizeRequests().antMatchers(HttpMethod.PUT).hasAnyAuthority("manager","admin");
         httpSecurity.authorizeRequests().anyRequest().authenticated();
 
         AuthenticationManagerBuilder builder = httpSecurity.
