@@ -1,17 +1,20 @@
 package auth;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.logging.Logger;
 
-public class MyBankOfficials implements UserDetails{
+public class MyBankOfficials implements UserDetails {
     private String name;
     private String username;
     private String password;
     private String email;
     private Long contact;
     private Long aadhaar;
+    private String role;
 
     public String getName() {
         return name;
@@ -53,9 +56,19 @@ public class MyBankOfficials implements UserDetails{
         this.aadhaar = aadhaar;
     }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        Collection<SimpleGrantedAuthority> authorities=new ArrayList<>();
+        authorities.add(new SimpleGrantedAuthority(role));
+        return authorities;
     }
 
     @Override
