@@ -12,7 +12,7 @@ public class MyBankOfficialsService implements UserDetailsService {
     private JdbcTemplate jdbcTemplate;
 
     public MyBankOfficials signIn(MyBankOfficials myBankOfficials){
-        int details=jdbcTemplate.update("insert into transaction values(?,?,?,?,?)",new Object[]{
+        int details=jdbcTemplate.update("insert into transaction values(?,?,?,?,?,?)",new Object[]{
             myBankOfficials.getUsername(),
             myBankOfficials.getPassword(),
             myBankOfficials.getRole(),
