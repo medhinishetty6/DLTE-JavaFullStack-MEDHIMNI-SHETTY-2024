@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Products</title>
+    <body style="background-color:powderblue;"></body>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0; /* Light gray background */
+        }
+        
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            margin: 20px;
+            text-align: center;
+            background-color: #ffffff; /* White background for products */
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            padding: 20px;
+        }
+
+        .product img, .product video {
+            width: 200px; /* Set the width of the media */
+            height: 150px; /* Set the height of the media */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            border-radius: 5px;
+        }
+
+        .product:hover .details {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <div class="product">
+        <img src="Files/product1.jpg" alt="Bank Product 1">
+        <div class="details">
+            <h2>CREDIT CARD</h2>
+            <p>Unlock financial freedom </p>
+            <p>with a credit card</p>
+        </div>
+    </div>
+    <div class="product">
+        <img src="Files/product2.jpg" alt="Bank Product 2">
+        <div class="details">
+            <h2>INVESTMENT</h2>
+            <p>Grow your wealth through </p>
+            <p>investment</p>
+        </div>
+    </div>
+    <div class="product">
+        <img src="Files/product4.jpg" alt="Bank Product 3">
+        <div class="details">
+            <h2>INSURANCE</h2>
+            <p>Secure your future with </p>
+            <p>insurance</p>
+        </div>
+    </div>
+    <div class="product">
+        <video controls muted autoplay>
+            <source src="Files/product3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="details">
+            <h2>SAVINGS</h2>
+            <p>Safeguard your funds with </p>
+            <p>savings</p>
+        </div>    
+    </div>
+</div>
+
+</body>
+</html>
