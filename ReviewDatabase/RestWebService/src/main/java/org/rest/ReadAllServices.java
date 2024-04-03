@@ -17,18 +17,30 @@ import java.util.List;
 public class ReadAllServices extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //InputEmployeeDetails inputEmployeeDetails=new DatabaseRepositoryImplementation();
-        List<Employee> employeeList =new ArrayList<>(); //inputEmployeeDetails.read();
-        Gson gson = new Gson();
-        try {
-            InputEmployeeDetails inputEmployeeDetails = null;
-            resp.setContentType("application/json");
-            String responseData = gson.toJson(employeeList);
-            resp.getWriter().println(responseData);
-            resp.setStatus(HttpServletResponse.SC_OK);
-        }catch (Exception e){
-            String responseData = gson.toJson(employeeList);
-            resp.getWriter().println(responseData);
-        }
+        InputEmployeeDetails inputEmployeeDetails=new DatabaseRepositoryImplementation();
+        resp.setContentType("application/json");
+        List<Employee> employeeList=inputEmployeeDetails.read();
+        Gson gson=new Gson();
+        String responseData = gson.toJson(employeeList);
+        resp.getWriter().println(responseData);
+        resp.setStatus(HttpServletResponse.SC_OK);
     }
 }
+
+
+
+//    List<Employee> employeeList =new ArrayList<>(); //inputEmployeeDetails.read();
+//    Gson gson = new Gson();
+//        try {
+//                InputEmployeeDetails inputEmployeeDetails = null;
+//                resp.setContentType("application/json");
+//                String responseData = gson.toJson(employeeList);
+//                resp.getWriter().println(responseData);
+//                resp.setStatus(HttpServletResponse.SC_OK);
+//                }catch (Exception e){
+//                String responseData = gson.toJson(employeeList);
+//                resp.getWriter().println(responseData);
+//                }
+//    }
+//}
+

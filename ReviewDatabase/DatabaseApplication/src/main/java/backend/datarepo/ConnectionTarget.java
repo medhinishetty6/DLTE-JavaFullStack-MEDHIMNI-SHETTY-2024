@@ -6,6 +6,7 @@ import oracle.jdbc.proxy.annotation.Pre;
 import java.sql.*;
 import java.util.ResourceBundle;
 
+
 public class ConnectionTarget {
     private ResourceBundle resourceBundle=ResourceBundle.getBundle("Database");
     private Connection connection;
