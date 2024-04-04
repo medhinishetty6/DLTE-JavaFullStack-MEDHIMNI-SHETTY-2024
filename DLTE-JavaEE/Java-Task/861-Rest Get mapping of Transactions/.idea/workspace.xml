@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f75f10a-abf6-4dd0-b946-900b9d52f143" name="Default Changelist" comment="" />
+    <list default="true" id="1f75f10a-abf6-4dd0-b946-900b9d52f143" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/DLTE-MyBank_Project_SOAP/DLTE-MyBank_Project_SOAP/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/DLTE-MyBank_Project_SOAP/DLTE-MyBank_Project_SOAP/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/DLTE-MyBank_Project_SOAP/DLTE-MyBank_Project_SOAP/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/DLTE-MyBank_Project_SOAP/DLTE-MyBank_Project_SOAP/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/DLTE-MyBank_Project_SOAP/DLTE-MyBank_Project_SOAP/src/main/java/list/cards/elementspringboot/ElementSpringBootApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/DLTE-MyBank_Project_SOAP/DLTE-MyBank_Project_SOAP/src/main/java/list/cards/elementspringboot/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/DLTE-MyBank_Project_SOAP/DLTE-MyBank_Project_SOAP/src/main/java/list/cards/elementspringboot/dao/entities/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/DLTE-MyBank_Project_SOAP/DLTE-MyBank_Project_SOAP/src/main/java/list/cards/elementspringboot/dao/entities/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/DLTE-MyBank_Project_SOAP/DLTE-MyBank_Project_SOAP/src/main/java/list/cards/elementspringboot/dao/entities/DebitCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/DLTE-MyBank_Project_SOAP/DLTE-MyBank_Project_SOAP/src/main/java/list/cards/elementspringboot/dao/entities/DebitCardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/DLTE-MyBank_Project_SOAP/DLTE-MyBank_Project_SOAP/src/main/java/list/cards/elementspringboot/dao/exception/NewCardException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/DLTE-MyBank_Project_SOAP/DLTE-MyBank_Project_SOAP/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/DLTE-MyBank_Project_SOAP/DLTE-MyBank_Project_SOAP/src/main/resources/debitCard.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/DLTE-MyBank_Project_SOAP/DLTE-MyBank_Project_SOAP/src/test/java/list/cards/elementspringboot/ElementSpringBootApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-creditcard-web/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-creditcard-web/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-creditcard-web/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-creditcard-web/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-creditcard-web/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-creditcard-web/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-creditcard-web/src/main/java/cards/web/service/mybankcreditcardweb/MybankCreditcardWebApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-creditcard-web/src/main/java/cards/web/service/mybankcreditcardweb/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-creditcard-web/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-creditcard-web/src/main/resources/debitCard.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-creditcard-web/src/test/java/cards/web/service/mybankcreditcardweb/MybankCreditcardWebApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../862-RestfulWebservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../862-RestfulWebservice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1098-SpringBootJDBC/src/test/java/com/example/demo/SpringBootEndpointTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1098-SpringBootJDBC/src/test/java/com/example/demo/SpringBootEndpointTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1176-JDBCTransactionSOAPWebservice/transaction.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1176-JDBCTransactionSOAPWebservice/transaction.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +61,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../DLTE-Spring/Task/1038-SpringBootRestControllerMappings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -148,6 +177,7 @@
       <workItem from="1710812641973" duration="15528000" />
       <workItem from="1710906020044" duration="216000" />
       <workItem from="1710929077999" duration="5217000" />
+      <workItem from="1712165213035" duration="73000" />
     </task>
     <servers />
   </component>
