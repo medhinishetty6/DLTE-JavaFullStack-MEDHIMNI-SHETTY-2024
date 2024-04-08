@@ -38,7 +38,7 @@ public class SoapConfiguration extends WsConfigurerAdapter {
 
     // identify the xsd
     @Bean
-    public XsdSchema debitcardSchema(){
+    public XsdSchema debitCardSchema(){
         return new SimpleXsdSchema(new ClassPathResource("debitcard.xsd"));
     }
 }

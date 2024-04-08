@@ -3,7 +3,7 @@ package com.example.demo.configs;
 import com.example.demo.dao.TransactionService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
+//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -22,7 +22,7 @@ public class SoapPhase {
     @Autowired
     private TransactionService transactionService;
 
-    @PreAuthorize("hasAuthority('admin')")
+    //@PreAuthorize("hasAuthority('admin')")
     @PayloadRoot(namespace = url, localPart = "addTransactionRequest")
     @ResponsePayload
     public AddTransactionResponse addTransactionResponse(@RequestPayload AddTransactionRequest addTransactionRequest) {
@@ -47,7 +47,7 @@ public class SoapPhase {
         return addTransactionResponse;
     }
 
-    @PreAuthorize("hasAuthority('customer')")
+   // @PreAuthorize("hasAuthority('customer')")
     @PayloadRoot(namespace = url, localPart = "amountRequest")
     @ResponsePayload
     public AmountResponse amountResponse(@RequestPayload AmountRequest amountRequest) {
@@ -75,7 +75,7 @@ public class SoapPhase {
         return amountResponse;
     }
 
-    @PreAuthorize("hasAuthority('admin')")
+   // @PreAuthorize("hasAuthority('admin')")
     @PayloadRoot(namespace = url, localPart = "deleteDatesRequest")
     @ResponsePayload
     public DeleteDatesResponse datesResponse(@RequestPayload DeleteDatesRequest deleteDatesRequest) {
@@ -98,7 +98,7 @@ public class SoapPhase {
 
     }
 
-    @PreAuthorize("hasAuthority('customer')")
+    //@PreAuthorize("hasAuthority('customer')")
     @PayloadRoot(namespace = url, localPart = "receiverRequest")
     @ResponsePayload
     public ReceiverResponse receiverResponse(@RequestPayload ReceiverRequest request) {
@@ -125,7 +125,7 @@ public class SoapPhase {
         return response;
     }
 
-    @PreAuthorize("hasAuthority('customer')")
+   // @PreAuthorize("hasAuthority('customer')")
     @PayloadRoot(namespace = url, localPart = "senderRequest")
     @ResponsePayload
     public SenderResponse senderResponse(@RequestPayload SenderRequest request) {
@@ -152,7 +152,7 @@ public class SoapPhase {
         return response;
     }
 
-    @PreAuthorize("hasAnyAuthority('admin','manager')")
+   // @PreAuthorize("hasAnyAuthority('admin','manager')")
     @PayloadRoot(namespace = url, localPart = "updateRemarksRequest")
     @ResponsePayload
     public UpdateRemarksResponse updateRemarks(@RequestPayload UpdateRemarksRequest request) {

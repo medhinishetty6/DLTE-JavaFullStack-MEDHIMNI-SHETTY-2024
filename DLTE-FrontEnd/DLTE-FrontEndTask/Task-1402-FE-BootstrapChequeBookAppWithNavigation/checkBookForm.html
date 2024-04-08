@@ -7,14 +7,14 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #5cccf8;
+            background-color: #59bdd1;
         }
 
         .container {
-            background-color: #ffffff;
+            background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            padding: 30px;
             max-width: 500px;
             margin: auto;
         }
@@ -28,15 +28,13 @@
             font-weight: bold;
         }
 
-        .btn-primary {
+        .btn {
             background-color: #007bff;
-            border-color: #007bff;
             width: 100%;
         }
 
-        .btn-primary:hover {
+        .btn:hover {
             background-color: #0056b3;
-            border-color: #0056b3;
         }
     </style>
 </head>
@@ -45,6 +43,89 @@
 <div class="container mt-5">
     <h2>New Cheque Book Request</h2>
     <form>
+        <div class="form-group">
+            <label for="accountNumber">Account Number:</label>
+            <input type="text" class="form-control" id="accountNumber" name="accountNumber" placeholder="Enter account number">
+        </div>
+        <div class="form-group">
+            <label for="accountHolder">Account Holder:</label>
+            <input type="text" class="form-control" id="accountHolder" name="accountHolder" placeholder="Enter account holder">
+        </div>
+        <div class="form-group">
+            <label>Account Type:</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="savings" name="accountType" value="savings">
+                <label class="form-check-label" for="savings">Savings</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="current" name="accountType" value="current">
+                <label class="form-check-label" for="current">Current</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="chequeBookType">Cheque Book Type:</label>
+            <select class="form-control" id="chequeBookType" name="chequeBookType">
+                <option value="standard">Standard</option>
+                <option value="premium">Premium</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="dateOfApply">Date of Apply:</label>
+            <input type="date" class="form-control" id="dateOfApply" name="dateOfApply">
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="termsAndConditions" name="termsAndConditions">
+            <label class="form-check-label" for="termsAndConditions">I accept the terms and conditions</label>
+        </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea class="form-control" id="address" name="address" rows="4" placeholder="Enter your address"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="signature">Signature:</label>
+            <input type="file" class="form-control-file" id="signature" name="signature">
+        </div>
+        <div class="form-group">
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" class="form-control" id="contactNumber" name="contactNumber" placeholder="Enter contact number">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form>
         <div class="form-group">
             <label for="accountNumber">Account Number</label>
             <input type="text" class="form-control" id="accountNumber" placeholder="Enter Account Number">
@@ -62,11 +143,4 @@
             </select>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-</body>
-</html>
+    </form> -->

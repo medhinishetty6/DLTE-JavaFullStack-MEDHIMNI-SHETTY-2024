@@ -7,8 +7,30 @@ import org.springframework.stereotype.Repository;
 import java.sql.SQLException;
 import java.util.List;
 
+//Interface of Debit Card Remotes
 @Repository
 public interface DebitCardRepository {
-
-    List<DebitCard> getDebitCard() throws SQLException, DebitCardException;
+    //List of Debit cards will be Fetched
+    List<DebitCard> getDebitCard() throws  SQLException;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//// Repository interface for accessing debit card data
+//@Repository
+//public interface DebitCardRepository {
+//
+//    // Method to retrieve debit card data
+//    List<DebitCard> getDebitCard() throws SQLException, DebitCardException;
+//}

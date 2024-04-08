@@ -70,8 +70,7 @@ public class TransactionService {
         public Transaction mapRow(ResultSet rs, int rowNum) throws SQLException {
             Transaction transaction = new Transaction();
             transaction.setTransactionId(rs.getInt("transaction_id"));
-            transaction.setTransactionDate(rs.getDate(
-                    "transaction_date"));
+            transaction.setTransactionDate(rs.getDate("transaction_date"));
             transaction.setTransactionTo(rs.getString("transaction_to"));
             transaction.setTransactionAmount(rs.getDouble("transaction_amount"));
             transaction.setTransactionRemarks(rs.getString("transaction_remarks"));
