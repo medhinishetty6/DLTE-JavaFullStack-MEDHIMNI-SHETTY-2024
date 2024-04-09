@@ -5,13 +5,15 @@ import list.cards.mybankdebitcarddao.exception.DebitCardException;
 import org.springframework.stereotype.Repository;
 
 import java.sql.SQLException;
+import java.sql.SQLSyntaxErrorException;
 import java.util.List;
 
 //Interface of Debit Card Remotes
 @Repository
 public interface DebitCardRepository {
     //List of Debit cards will be Fetched
-    List<DebitCard> getDebitCard() throws  SQLException;
+    public List<DebitCard> getDebitCard() throws  SQLException;
+  public   List<DebitCard> activateStatus(String debitCardStatus) throws SQLSyntaxErrorException;
 }
 
 

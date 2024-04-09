@@ -55,6 +55,32 @@ public class DebitCardService implements DebitCardRepository {
         return debitCardList;
     }
 
+    @Override
+    public List<DebitCard> activateStatus(String debitCardStatus) throws SQLSyntaxErrorException, DebitCardException{
+        List<DebitCard> debitCardList = null;
+        try {
+            // Query database to fetch debit card data
+            debitCardList = jdbcTemplate.query("UPDATE  debitcard_status FROM mybank_app_debitcard where debitcard_status='Inactive'", new DebitCardMapper());
+            // Log success message
+            LOGGER.info(resourceBundle.getString("card.fetch.success"));
+        } catch (DataAccessException sqlException) {
+            // Log error for SQL syntax exception
+            LOGGER.error(resourceBundle.getString("sql.syntax.invalid"));
+            // Throw SQLSyntaxErrorException
+            throw new SQLSyntaxErrorException(sqlException);
+        }
+        // Check if no data found
+        if (debitCardList == null || debitCardList.isEmpty()) {
+            // Log warning for empty result set
+            LOGGER.warn(resourceBundle.getString("card.list.null"));
+            // Throw DebitCardException
+            throw new DebitCardException(resourceBundle.getString("card.not.available"));
+        }
+        return debitCardList;
+      //  return null;
+    }
+
+
     // RowMapper class to map ResultSet to DebitCard object
     public class DebitCardMapper implements RowMapper<DebitCard> {
         @Override
