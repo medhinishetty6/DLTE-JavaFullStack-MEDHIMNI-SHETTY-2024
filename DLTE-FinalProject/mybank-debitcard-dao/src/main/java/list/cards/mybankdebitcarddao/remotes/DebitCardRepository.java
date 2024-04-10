@@ -13,7 +13,7 @@ import java.util.List;
 public interface DebitCardRepository {
     //List of Debit cards will be Fetched
     public List<DebitCard> getDebitCard() throws  SQLException;
-  public   List<DebitCard> activateStatus(String debitCardStatus) throws SQLSyntaxErrorException;
+  public   DebitCard activateStatus(Long debitCardNumber) throws SQLSyntaxErrorException;
 }
 
 

@@ -73,6 +73,6 @@ public class SpringBootEndpointTesting {
                 // .andExpect(MockMvcResultMatchers.jsonPath("$[0].transactionAmount").value(200));//fail
                 .andExpect(MockMvcResultMatchers.jsonPath("$[0].transactionAmount").value(900));//Success
     }
-  
+
 }
 

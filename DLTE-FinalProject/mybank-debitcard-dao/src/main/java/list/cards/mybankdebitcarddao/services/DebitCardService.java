@@ -21,7 +21,7 @@ import java.util.ResourceBundle;
 public class DebitCardService implements DebitCardRepository {
 
     // Logger for logging messages
-    Logger LOGGER = LoggerFactory.getLogger(DebitCardService.class);
+    Logger logger = LoggerFactory.getLogger(DebitCardService.class);
 
     // Autowired JdbcTemplate for database access
     @Autowired
@@ -38,45 +38,48 @@ public class DebitCardService implements DebitCardRepository {
             // Query database to fetch debit card data
             debitCardList = jdbcTemplate.query("SELECT * FROM mybank_app_debitcard where not debitcard_status='Blocked'", new DebitCardMapper());
             // Log success message
-            LOGGER.info(resourceBundle.getString("card.fetch.success"));
+            logger.info(resourceBundle.getString("card.fetch.success"));
         } catch (DataAccessException sqlException) {
             // Log error for SQL syntax exception
-            LOGGER.error(resourceBundle.getString("sql.syntax.invalid"));
+            logger.error(resourceBundle.getString("sql.syntax.invalid"));
             // Throw SQLSyntaxErrorException
             throw new SQLSyntaxErrorException(sqlException);
         }
         // Check if no data found
         if (debitCardList == null || debitCardList.isEmpty()) {
             // Log warning for empty result set
-            LOGGER.warn(resourceBundle.getString("card.list.null"));
+            logger.warn(resourceBundle.getString("card.list.null"));
             // Throw DebitCardException
             throw new DebitCardException(resourceBundle.getString("card.not.available"));
         }
         return debitCardList;
     }
 
+
     @Override
-    public List<DebitCard> activateStatus(String debitCardStatus) throws SQLSyntaxErrorException, DebitCardException{
-        List<DebitCard> debitCardList = null;
+    public DebitCard activateStatus(Long debitCardNumber) throws SQLSyntaxErrorException, DebitCardException{
+        DebitCard debitCard1 = null;
         try {
             // Query database to fetch debit card data
-            debitCardList = jdbcTemplate.query("UPDATE  debitcard_status FROM mybank_app_debitcard where debitcard_status='Inactive'", new DebitCardMapper());
-            // Log success message
-            LOGGER.info(resourceBundle.getString("card.fetch.success"));
+          //  debitCardList = jdbcTemplate.query("UPDATE debitcard_status FROM mybank_app_debitcard where debitcard_status='Inactive'", new DebitCardMapper());
+             jdbcTemplate.update("UPDATE mybank_app_debitcard SET debitcard_status = ? where debitcard_number=?",new Object[]{"Active",debitCardNumber});// Log success message
+            debitCard1 = jdbcTemplate.queryForObject("select * from mybank_app_debitcard where debitcard_number=?",new Object[]{debitCardNumber},new DebitCardMapper());
+
+            logger.info(resourceBundle.getString("card.fetch.success"));
         } catch (DataAccessException sqlException) {
             // Log error for SQL syntax exception
-            LOGGER.error(resourceBundle.getString("sql.syntax.invalid"));
+            logger.error(resourceBundle.getString("sql.syntax.invalid"));
             // Throw SQLSyntaxErrorException
             throw new SQLSyntaxErrorException(sqlException);
         }
         // Check if no data found
-        if (debitCardList == null || debitCardList.isEmpty()) {
+        if (debitCard1 == null) {
             // Log warning for empty result set
-            LOGGER.warn(resourceBundle.getString("card.list.null"));
+            logger.warn(resourceBundle.getString("card.list.null"));
             // Throw DebitCardException
             throw new DebitCardException(resourceBundle.getString("card.not.available"));
         }
-        return debitCardList;
+        return debitCard1;
       //  return null;
     }
 
