@@ -18,5 +18,8 @@ public interface UserDetailsRepository {
     void updateAccountBalance(String username, double newBalance) throws IOException, AccountNotFoundException;
     boolean authenticate(String username, String password) throws InvalidCredentialsException, SQLException;
     void addUsers();
+
+    void authenticate(Account account);
+
 }
 

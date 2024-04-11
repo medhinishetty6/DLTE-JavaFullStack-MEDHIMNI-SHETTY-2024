@@ -28,26 +28,66 @@ public class DebitCardController {
     private static final Logger logger = LoggerFactory.getLogger(DebitCardRepository.class);
 
     @PutMapping("/activate/{cardNumber}")
-    public ResponseEntity<ServiceStatus> activateCard(@RequestBody DebitCard debitCard1,@PathVariable("cardNumber") String debitCardNumber) {
+    public ResponseEntity<ServiceStatus> activateCard(@PathVariable("cardNumber") String debitCardNumber) {
         ServiceStatus serviceStatus = new ServiceStatus();
         try {
-            debitCardRepository.activateStatus(Long.valueOf(debitCardNumber));
-            logger.info(resourceBundle.getString("card.active"));
-            serviceStatus.setStatus( HttpStatus.OK.value());
-            serviceStatus.setMessage("Card updated successfully");
-            return new ResponseEntity<>(serviceStatus, HttpStatus.OK);
-
+            String acknowledgmentMessage = debitCardRepository.activateStatus(Long.valueOf(debitCardNumber));
+            if (acknowledgmentMessage.contains("already active")) {
+                logger.info(acknowledgmentMessage);
+                serviceStatus.setStatus(HttpStatus.OK.value());
+                serviceStatus.setMessage("Card is already active");
+                return new ResponseEntity<>(serviceStatus, HttpStatus.OK);
+            } else {
+                logger.info(acknowledgmentMessage);
+                serviceStatus.setStatus(HttpStatus.OK.value());
+                serviceStatus.setMessage("Card activated successfully");
+                return new ResponseEntity<>(serviceStatus, HttpStatus.OK);
+            }
         } catch (SQLSyntaxErrorException syntaxError) {
-            logger.error(resourceBundle.getString("internal.error"));
+            logger.error("Internal error occurred.");
+            serviceStatus.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+            serviceStatus.setMessage("Internal server error occurred");
             return new ResponseEntity<>(serviceStatus, HttpStatus.INTERNAL_SERVER_ERROR);
         } catch (DebitCardException debitCardException) {
-            logger.warn(resourceBundle.getString("activation.fail"));
+            logger.warn("Activation failed.");
+            serviceStatus.setStatus(HttpStatus.BAD_REQUEST.value());
+            serviceStatus.setMessage("Activation failed");
             return new ResponseEntity<>(serviceStatus, HttpStatus.BAD_REQUEST);
         }
     }
-
-
 }
+
+
+
+
+
+
+
+
+
+//    @PutMapping("/activate/{cardNumber}")
+//    public ResponseEntity<ServiceStatus> activateCard(@RequestBody DebitCard debitCard1,@PathVariable("cardNumber") String debitCardNumber) {
+//        ServiceStatus serviceStatus = new ServiceStatus();
+//        try {
+//            debitCardRepository.activateStatus(Long.valueOf(debitCardNumber));
+//            logger.info(resourceBundle.getString("card.active"));
+//            serviceStatus.setStatus( HttpStatus.OK.value());
+//            serviceStatus.setMessage("Card updated successfully");
+//            return new ResponseEntity<>(serviceStatus, HttpStatus.OK);
+//
+//        } catch (SQLSyntaxErrorException syntaxError) {
+//            logger.error(resourceBundle.getString("internal.error"));
+//            return new ResponseEntity<>(serviceStatus, HttpStatus.INTERNAL_SERVER_ERROR);
+//        } catch (DebitCardException debitCardException) {
+//            logger.warn(resourceBundle.getString("activation.fail"));
+//            return new ResponseEntity<>(serviceStatus, HttpStatus.BAD_REQUEST);
+//        }
+//    }
+
+
+
+
+
 
 
 

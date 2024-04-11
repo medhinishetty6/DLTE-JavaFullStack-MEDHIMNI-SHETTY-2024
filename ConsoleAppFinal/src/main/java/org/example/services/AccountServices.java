@@ -26,7 +26,7 @@ public class AccountServices {
             throw accountNotFoundException;
         }
     }
-    public List<Account> getAllAccounts()
+    public List<Account> getAllAccounts(Account account)
     {
         return userDetailsRepository.getAllAccounts();
     }
@@ -66,4 +66,7 @@ public class AccountServices {
 
     }
 
+    public void authenticate(Account account) {
+
+    }
 }
