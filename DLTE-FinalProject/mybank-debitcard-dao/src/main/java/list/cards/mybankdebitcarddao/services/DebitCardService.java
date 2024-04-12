@@ -2,6 +2,7 @@ package list.cards.mybankdebitcarddao.services;
 
 import list.cards.mybankdebitcarddao.entities.DebitCard;
 import list.cards.mybankdebitcarddao.exception.DebitCardException;
+import list.cards.mybankdebitcarddao.exception.DebitCardNullException;
 import list.cards.mybankdebitcarddao.remotes.DebitCardRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -52,38 +53,41 @@ public class DebitCardService implements DebitCardRepository {
         return debitCardList;
     }
 
+
+
     @Override
-    public String activateStatus(Long debitCardNumber) throws SQLSyntaxErrorException {
+    public String activateStatus(Long debitCardNumber) throws SQLSyntaxErrorException, DebitCardException,DebitCardNullException {
         CallableStatementCreator creator = con -> {
-            CallableStatement statement = con.prepareCall("{call activate_debitcard(?,?)}");
+            CallableStatement statement = con.prepareCall("{call activate_debitcard(?, ?)}");
             statement.setLong(1, debitCardNumber);
             statement.registerOutParameter(2, Types.VARCHAR);
             return statement;
         };
+        Map<String, Object> returnedExecution = jdbcTemplate.call(creator, Arrays.asList(
+                new SqlParameter[]{
+                        new SqlParameter(Types.NUMERIC),
+                        new SqlOutParameter("p_result", Types.VARCHAR)
+                })
+        );
 
-        try {
-            Map<String, Object> returnedExecution = jdbcTemplate.call(creator, Collections.emptyList());
-
-            // Check if the acknowledgment message is null
-            Object acknowledgmentObj = returnedExecution.get("p_acknowledgement");
-            String acknowledgment = acknowledgmentObj != null ? acknowledgmentObj.toString() : null;
-
-            if (acknowledgment != null) {
-                logger.info(acknowledgment);
-                // Check if the acknowledgment indicates that the card is already active
-                if (acknowledgment.contains("already active")) {
-                    return "Card is already active";
-                } else {
-                    return acknowledgment;
-                }
-            } else {
-                logger.error("Acknowledgment message is null.");
-                return "Unknown error occurred.";
-            }
-        } catch (DataAccessException dataAccessException) {
-            throw new SQLSyntaxErrorException("Database access error: " + dataAccessException.getMessage());
+        String result =returnedExecution.get("p_result").toString();
+        System.out.println(result);
+        switch (result) {
+            case "SQLSUCESS":
+                return "Debit card activation successful.";
+            case "SQLERR-004":
+                logger.error("Debit card does not exist.");
+                throw new DebitCardNullException("activation.fail");
+            case "SQLERR-005":
+                logger.error("Debit card is already active.");
+                throw new DebitCardException("debitCard.already.active");
+//                default:
+//                    logger.error("Unknown error occurred: " + result);
+//                    throw new DebitCardException("Unknown error occurred during debit card activation.");
+            default:return null;
         }
     }
+
 
 
     // RowMapper class to map ResultSet to DebitCard object
@@ -105,7 +109,6 @@ public class DebitCardService implements DebitCardRepository {
         }
     }
 }
-
 
 
 

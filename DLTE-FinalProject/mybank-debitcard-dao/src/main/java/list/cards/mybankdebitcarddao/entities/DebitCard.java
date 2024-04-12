@@ -1,6 +1,8 @@
 package list.cards.mybankdebitcarddao.entities;
 
 
+import org.hibernate.validator.constraints.Range;
+
 import javax.validation.constraints.*;
 import java.util.Date;
 
@@ -8,10 +10,12 @@ import java.util.Date;
 public class DebitCard {
 
     @NotNull(message= "{card.number.null}")
+
     @Digits(integer=16,fraction = 0,message = "{card.number.invalid}")
     private Long debitCardNumber;
 
-    @NotNull(message= "{account.number.null}")
+    @NotNull
+    @Range(min=1000000000000L, max=99999999999999L,message = "bean")
     @Digits(integer=14,fraction = 0,message = "{account.number.invalid}")
     private Long accountNumber;
 

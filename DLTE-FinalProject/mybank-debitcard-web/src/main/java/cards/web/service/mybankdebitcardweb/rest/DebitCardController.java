@@ -1,18 +1,24 @@
 package cards.web.service.mybankdebitcardweb.rest;
 
 import cards.web.service.mybankdebitcardweb.soap.SoapPhase;
+import links.debitcard.DebitCard;
 import links.debitcard.ServiceStatus;
-import list.cards.mybankdebitcarddao.entities.DebitCard;
 import list.cards.mybankdebitcarddao.exception.DebitCardException;
+import list.cards.mybankdebitcarddao.exception.DebitCardNullException;
 import list.cards.mybankdebitcarddao.remotes.DebitCardRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.sql.SQLSyntaxErrorException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 @RestController
@@ -27,105 +33,43 @@ public class DebitCardController {
     // Logger for logging messages
     private static final Logger logger = LoggerFactory.getLogger(DebitCardRepository.class);
 
+
     @PutMapping("/activate/{cardNumber}")
-    public ResponseEntity<ServiceStatus> activateCard(@PathVariable("cardNumber") String debitCardNumber) {
-        ServiceStatus serviceStatus = new ServiceStatus();
+    public ResponseEntity<String> activateCard(@Valid @PathVariable("cardNumber") Long debitCardNumber, @RequestBody DebitCard debitCard) {
         try {
-            String acknowledgmentMessage = debitCardRepository.activateStatus(Long.valueOf(debitCardNumber));
-            if (acknowledgmentMessage.contains("already active")) {
-                logger.info(acknowledgmentMessage);
-                serviceStatus.setStatus(HttpStatus.OK.value());
-                serviceStatus.setMessage("Card is already active");
-                return new ResponseEntity<>(serviceStatus, HttpStatus.OK);
+            String response = debitCardRepository.activateStatus(debitCardNumber);
+            if (response.equals("Debit card activation successful.")) {
+                logger.info(resourceBundle.getString("card.active"));
+                return ResponseEntity.ok(response);
             } else {
-                logger.info(acknowledgmentMessage);
-                serviceStatus.setStatus(HttpStatus.OK.value());
-                serviceStatus.setMessage("Card activated successfully");
-                return new ResponseEntity<>(serviceStatus, HttpStatus.OK);
+                throw new DebitCardNullException(resourceBundle.getString("activation.fail"));
             }
         } catch (SQLSyntaxErrorException syntaxError) {
-            logger.error("Internal error occurred.");
-            serviceStatus.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
-            serviceStatus.setMessage("Internal server error occurred");
-            return new ResponseEntity<>(serviceStatus, HttpStatus.INTERNAL_SERVER_ERROR);
+            logger.error(resourceBundle.getString("internal.error"));
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(resourceBundle.getString("internal.error"));
         } catch (DebitCardException debitCardException) {
-            logger.warn("Activation failed.");
-            serviceStatus.setStatus(HttpStatus.BAD_REQUEST.value());
-            serviceStatus.setMessage("Activation failed");
-            return new ResponseEntity<>(serviceStatus, HttpStatus.BAD_REQUEST);
+            logger.error(resourceBundle.getString("debitCard.already.active"));
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(resourceBundle.getString("debitCard.already.active"));
+        }catch(DebitCardNullException debitCardNullException){
+            logger.error(resourceBundle.getString("activation.fail"));
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(resourceBundle.getString("activation.fail"));
+
         }
     }
+
+
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public Map<String, String> handleValidationExceptions(MethodArgumentNotValidException ex) {
+        Map<String, String> errors = new HashMap<>();
+        ex.getBindingResult().getAllErrors().forEach((error) -> {
+            String fieldName = ((FieldError) error).getField();
+            String errorMessage = error.getDefaultMessage();
+            errors.put(fieldName, errorMessage);
+        });
+        return errors;
+    }
 }
-
-
-
-
-
-
-
-
-
-//    @PutMapping("/activate/{cardNumber}")
-//    public ResponseEntity<ServiceStatus> activateCard(@RequestBody DebitCard debitCard1,@PathVariable("cardNumber") String debitCardNumber) {
-//        ServiceStatus serviceStatus = new ServiceStatus();
-//        try {
-//            debitCardRepository.activateStatus(Long.valueOf(debitCardNumber));
-//            logger.info(resourceBundle.getString("card.active"));
-//            serviceStatus.setStatus( HttpStatus.OK.value());
-//            serviceStatus.setMessage("Card updated successfully");
-//            return new ResponseEntity<>(serviceStatus, HttpStatus.OK);
-//
-//        } catch (SQLSyntaxErrorException syntaxError) {
-//            logger.error(resourceBundle.getString("internal.error"));
-//            return new ResponseEntity<>(serviceStatus, HttpStatus.INTERNAL_SERVER_ERROR);
-//        } catch (DebitCardException debitCardException) {
-//            logger.warn(resourceBundle.getString("activation.fail"));
-//            return new ResponseEntity<>(serviceStatus, HttpStatus.BAD_REQUEST);
-//        }
-//    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//    @PutMapping("/activate/{cardNumber}")
-//    public ResponseEntity<ServiceStatus> activateCard(@RequestBody DebitCard debitCard1,@PathVariable("cardNumber") String debitCardNumber) {
-//        ServiceStatus serviceStatus = new ServiceStatus();
-//        try {
-//            debitCardRepository.activateStatus(Long.valueOf(debitCardNumber));
-//            serviceStatus.setStatus(HttpStatus.OK.value());
-//            serviceStatus.setMessage(resourceBundle.getString("Card.active"));
-//            return new ResponseEntity<>(serviceStatus, HttpStatus.OK);
-//        } catch (SQLSyntaxErrorException syntaxError) {
-//            logger.error(resourceBundle.getString("internal.error"));
-//            serviceStatus.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
-//            serviceStatus.setMessage("internal.error");
-//            return new ResponseEntity<>(serviceStatus, HttpStatus.INTERNAL_SERVER_ERROR);
-//        } catch (DebitCardException debitCardException) {
-//            // logger.warn(resourceBundle.getString("activation.fail"));
-//            logger.warn("activation.fail" + debitCardNumber);
-//            // Set error status
-//            serviceStatus.setStatus(HttpStatus.BAD_REQUEST.value());
-//            serviceStatus.setMessage("activation.fail");
-//            return new ResponseEntity<>(serviceStatus, HttpStatus.BAD_REQUEST);
-//        }
-//    }
-
-
 
 
 
