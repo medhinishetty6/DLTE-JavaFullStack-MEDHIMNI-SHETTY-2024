@@ -35,8 +35,12 @@ public class DebitCardController {
 
 
     @PutMapping("/activate/{cardNumber}")
-    public ResponseEntity<String> activateCard(@Valid @PathVariable("cardNumber") Long debitCardNumber, @RequestBody DebitCard debitCard) {
+    public ResponseEntity<String> activateCard(@PathVariable("cardNumber") Long debitCardNumber, @Valid@RequestBody(required = false) DebitCard debitCard) {
         try {
+            if (debitCard == null) {
+                throw new IllegalArgumentException("Request body is empty");
+            }
+
             String response = debitCardRepository.activateStatus(debitCardNumber);
             if (response.equals("Debit card activation successful.")) {
                 logger.info(resourceBundle.getString("card.active"));
@@ -50,12 +54,15 @@ public class DebitCardController {
         } catch (DebitCardException debitCardException) {
             logger.error(resourceBundle.getString("debitCard.already.active"));
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(resourceBundle.getString("debitCard.already.active"));
-        }catch(DebitCardNullException debitCardNullException){
+        } catch (DebitCardNullException debitCardNullException) {
             logger.error(resourceBundle.getString("activation.fail"));
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(resourceBundle.getString("activation.fail"));
-
+        } catch (IllegalArgumentException illegalArgumentException) {
+            logger.error("Request body is empty.");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Request body is empty.Please provide card details.");
         }
     }
+
 
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
