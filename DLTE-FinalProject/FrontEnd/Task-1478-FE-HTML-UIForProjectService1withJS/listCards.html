@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Company - Debit Card Information</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #000;
+            box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.5);
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.5);
+            }
+            to {
+                box-shadow: 0 0 30px 10px rgba(255, 215, 0, 0.8);
+            }
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .search-form {
+            margin-bottom: 30px;
+        }
+
+        .search-input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            background-color: #ecd11e;
+            color: rgb(12, 12, 12);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .card-info {
+            border: 1px solid #e7ee10;
+            border-radius: 4px;
+            padding: 20px;
+            background-color: #0c0c0c;
+            box-shadow: 0 4px 8px rgba(239, 210, 17, 0.745);
+            display: none;
+            text-align: left;
+        }
+
+        .card-info p {
+            margin: 0;
+            color: #fffefe;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to Bank Company</h1>
+
+    <form id="searchForm" class="search-form">
+        <input type="text" id="debitCardNumber" class="search-input" placeholder="Enter Debit Card Number" required>
+        <button type="button" class="search-button" onclick="searchCard()">Search</button>
+    </form>
+
+    <!-- Card details section 1 -->
+    <div id="cardInfo1" class="card-info">
+        <p><strong>Debit Card Number:</strong> <span id="cardNumber1">3692468135796673</span></p>
+        <p><strong>Account Number:</strong> <span id="accountNumber1">98789657098760</span></p>
+        <p><strong>Customer ID:</strong> <span id="customerId1">123673</span></p>
+        <p><strong>CVV:</strong> <span id="cvv1">786</span></p>
+        <p><strong>PIN:</strong> <span id="pin1">8234</span></p>
+        <p><strong>Expiry Date:</strong> <span id="expiry1">2025-02-09</span></p>
+        <p><strong>Status:</strong> <span id="status1">Active</span></p>
+        <p><strong>Domestic Limit:</strong> <span id="domesticLimit1">50000</span></p>
+        <p><strong>International Limit:</strong> <span id="internationalLimit1">200000</span></p>
+    </div>
+
+    <!-- Card details section 2 -->
+    <div id="cardInfo2" class="card-info" style="display: none;">
+        <p><strong>Debit Card Number:</strong> <span id="cardNumber2">1234567890123456</span></p>
+        <p><strong>Account Number:</strong> <span id="accountNumber2">6543210987654321</span></p>
+        <p><strong>Customer ID:</strong> <span id="customerId2">987654</span></p>
+        <p><strong>CVV:</strong> <span id="cvv2">123</span></p>
+        <p><strong>PIN:</strong> <span id="pin2">5678</span></p>
+        <p><strong>Expiry Date:</strong> <span id="expiry2">2024-12-31</span></p>
+        <p><strong>Status:</strong> <span id="status2">Active</span></p>
+        <p><strong>Domestic Limit:</strong> <span id="domesticLimit2">75000</span></p>
+        <p><strong>International Limit:</strong> <span id="internationalLimit2">300000</span></p>
+    </div>
+
+    <!-- Card details section 3 -->
+    <div id="cardInfo3" class="card-info" style="display: none;">
+        <p><strong>Debit Card Number:</strong> <span id="cardNumber3">9876543210987654</span></p>
+        <p><strong>Account Number:</strong> <span id="accountNumber3">1230987654321098</span></p>
+        <p><strong>Customer ID:</strong> <span id="customerId3">456789</span></p>
+        <p><strong>CVV:</strong> <span id="cvv3">456</span></p>
+        <p><strong>PIN:</strong> <span id="pin3">9876</span></p>
+        <p><strong>Expiry Date:</strong> <span id="expiry3">2023-11-30</span></p>
+        <p><strong>Status:</strong> <span id="status3">Inactive</span></p>
+        <p><strong>Domestic Limit:</strong> <span id="domesticLimit3">30000</span></p>
+        <p><strong>International Limit:</strong> <span id="internationalLimit3">150000</span></p>
+    </div>
+
+    <!-- Card details section 4 -->
+    <div id="cardInfo4" class="card-info" style="display: none;">
+        <p><strong>Debit Card Number:</strong> <span id="cardNumber4">5432167890123456</span></p>
+        <p><strong>Account Number:</strong> <span id="accountNumber4">3456789012345678</span></p>
+        <p><strong>Customer ID:</strong> <span id="customerId4">234567</span></p>
+        <p><strong>CVV:</strong> <span id="cvv4">789</span></p>
+        <p><strong>PIN:</strong> <span id="pin4">3456</span></p>
+        <p><strong>Expiry Date:</strong> <span id="expiry4">2026-05-15</span></p>
+        <p><strong>Status:</strong> <span id="status4">Active</span></p>
+        <p><strong>Domestic Limit:</strong> <span id="domesticLimit4">100000</span></p>
+        <p><strong>International Limit:</strong> <span id="internationalLimit4">500000</span></p>
+    </div>
+</div>
+
+<script>
+    function searchCard() {
+        var cardNumber = document.getElementById('debitCardNumber').value;
+        // You can perform any additional operations here, such as validation
+        
+        // Display card details based on card number
+        document.querySelectorAll('.card-info').forEach(function(cardInfo) {
+            cardInfo.style.display = 'none';
+        });
+
+        switch (cardNumber) {
+            case '3692468135796673':
+                document.getElementById('cardInfo1').style.display = 'block';
+                break;
+            case '1234567890123456':
+                document.getElementById('cardInfo2').style.display = 'block';
+                break;
+            case '9876543210987654':
+                document.getElementById('cardInfo3').style.display = 'block';
+                break;
+            case '5432167890123456':
+                document.getElementById('cardInfo4').style.display = 'block';
+                break;
+            default:
+                alert('Card details not found!');
+        }
+
+        // Glow effect for the container
+        var container = document.querySelector('.container');
+        container.style.boxShadow = '0 0 20px 5px rgba(255, 215, 0, 0.5)';
+        container.style.animation = 'glow 2s infinite alternate';
+
+        setTimeout(function() {
+            container.style.boxShadow = 'none';
+            container.style.animation = 'none';
+        }, 3000);
+    }
+</script>
+
+</body>
+</html>
+
+

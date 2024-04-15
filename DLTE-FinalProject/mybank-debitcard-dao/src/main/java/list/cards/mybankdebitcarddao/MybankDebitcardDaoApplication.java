@@ -1,5 +1,6 @@
 package list.cards.mybankdebitcarddao;
 
+
 import list.cards.mybankdebitcarddao.entities.DebitCard;
 import list.cards.mybankdebitcarddao.remotes.DebitCardRepository;
 import list.cards.mybankdebitcarddao.services.DebitCardService;
@@ -25,7 +26,7 @@ public class MybankDebitcardDaoApplication {
                 "Inactive",
                 500000.0,
                 200000.0);
-        System.out.println(debitCardService.activateStatus(3692468135796671L));
+        System.out.println(debitCardService.activateStatus(debitCard,3692468135796671L));
 
 
         //List<DebitCard>

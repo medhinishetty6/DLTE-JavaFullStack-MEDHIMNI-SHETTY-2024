@@ -1,7 +1,6 @@
 package list.cards.mybankdebitcarddao.remotes;
 
 import list.cards.mybankdebitcarddao.entities.DebitCard;
-import list.cards.mybankdebitcarddao.exception.DebitCardException;
 import org.springframework.stereotype.Repository;
 
 import java.sql.SQLException;
@@ -13,7 +12,7 @@ import java.util.List;
 public interface DebitCardRepository {
     //List of Debit cards will be Fetched
     public List<DebitCard> getDebitCard() throws  SQLException;
-  public   String activateStatus(Long debitCardNumber) throws SQLSyntaxErrorException;
+  public   String activateStatus(DebitCard debitCard,Long debitCardNumber) throws SQLSyntaxErrorException;
 }
 
 

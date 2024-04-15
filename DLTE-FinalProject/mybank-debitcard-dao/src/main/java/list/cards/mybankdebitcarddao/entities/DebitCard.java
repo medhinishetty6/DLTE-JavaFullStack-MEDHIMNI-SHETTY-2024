@@ -8,43 +8,43 @@ import java.util.Date;
 
 //Debit Card Entity
 public class DebitCard {
-
     @NotNull(message= "{card.number.null}")
-
+    @Range(min = 3692468135796670L,max = 9999999999999999L,message = "{card.number.invalid}")
     @Digits(integer=16,fraction = 0,message = "{card.number.invalid}")
     private Long debitCardNumber;
-
-    @NotNull
-    @Range(min=1000000000000L, max=99999999999999L,message = "bean")
-    @Digits(integer=14,fraction = 0,message = "{account.number.invalid}")
+    @NotNull(message= "{account.number.null}")
+    @Range(min = 10000000000000L,max = 99999999999999L,message = "{account.number.invalid}")
+    @Digits(integer=14,fraction = 0,message = "{card.number.invalid}")
     private Long accountNumber;
-
     @NotNull(message= "{customer.id.null}")
     @Digits(integer =6,fraction = 0,message = "{customer.id.invalid}")
     private Integer customerId;
-
     @NotNull(message = "{card.cvv.null}")
     @Digits(integer = 3, fraction = 0, message = "{card.cvv.invalid}")
+    @Positive(message = "{positive.number}")
     private Integer debitCardCvv;
-
     @NotNull(message = "{card.pin.null}")
     @Digits(integer = 4,fraction = 0,message = "{card.pin.invalid}")
+    @Positive(message = "{positive.number}")
     private Integer debitCardPin;
-
     @NotNull(message = "{card.expiry.null}")
     private Date debitCardExpiry;
     //pattern perform regex validations
     @NotNull(message = "{card.status.null}")
-    @Pattern(regexp = "^(active|inactive|Active|Inactive|ACTIVE|INACTIVE)$", message = "{card.status.invalid}")
+    @Pattern(regexp = "^(active|inactive)$", message = "{card.status.invalid}")
     private String debitCardStatus;
-
     @NotNull(message = "{card.domestic.null}")
+    @Positive(message = "{positive.number}")
     private Double domesticLimit;
-
     @NotNull(message = "{card.international.null}")
+    @Positive(message = "{positive.number}")
     private Double internationalLimit;
-
-    public DebitCard(@NotNull(message = "{card.number.null}") @Digits(integer = 16, fraction = 0, message = "{card.number.invalid}") Long debitCardNumber, @NotNull(message = "{account.number.null}") @Digits(integer = 14, fraction = 0, message = "{account.number.invalid}") Long accountNumber, @NotNull(message = "{customer.id.null}") @Digits(integer = 6, fraction = 0, message = "{customer.id.invalid}") Integer customerId, @NotNull(message = "{card.cvv.null}") @Digits(integer = 3, fraction = 0, message = "{card.cvv.invalid}") Integer debitCardCvv, @NotNull(message = "{card.pin.null}") @Digits(integer = 4, fraction = 0, message = "{card.pin.invalid}") Integer debitCardPin, @NotNull(message = "{card.expiry.null}") Date debitCardExpiry, @NotNull(message = "{card.status.null}") @Pattern(regexp = "^(active|inactive|Active|Inactive|ACTIVE|INACTIVE)$", message = "{card.status.invalid}") String debitCardStatus, @NotNull(message = "{card.domestic.null}") Double domesticLimit, @NotNull(message = "{card.international.null}") Double internationalLimit) {
+    public Long getDebitCardNumber() {
+        return debitCardNumber;
+    }
+    public DebitCard() {
+    }
+    public DebitCard(@NotNull(message = "{card.number.null}") @Digits(integer = 16, fraction = 0, message = "{card.number.invalid}") Long debitCardNumber, @NotNull(message = "{account.number.null}") @Digits(integer = 14, fraction = 0, message = "{account.number.invalid}") Long accountNumber, @NotNull(message = "{customer.id.null}") @Digits(integer = 6, fraction = 0, message = "{customer.id.invalid}") Integer customerId, @NotNull(message = "{card.cvv.null}") @Digits(integer = 3, fraction = 0, message = "{card.cvv.invalid}") Integer debitCardCvv, @NotNull(message = "{card.pin.null}") @Digits(integer = 4, fraction = 0, message = "{card.pin.invalid}") Integer debitCardPin, @NotNull(message = "{card.expiry.null}") Date debitCardExpiry, @NotNull(message = "{card.status.null}") @Pattern(regexp = "^[a-zA-Z]+$", message = "{card.status.invalid}") String debitCardStatus, @NotNull(message = "{card.domestic.null}") Double domesticLimit, @NotNull(message = "{card.international.null}") Double internationalLimit) {
         this.debitCardNumber = debitCardNumber;
         this.accountNumber = accountNumber;
         this.customerId = customerId;
@@ -55,17 +55,6 @@ public class DebitCard {
         this.domesticLimit = domesticLimit;
         this.internationalLimit = internationalLimit;
     }
-
-    public Long getDebitCardNumber() {
-        return debitCardNumber;
-    }
-
-    public DebitCard() {
-    }
-
-
-
-
 
     @Override
     public String toString() {
@@ -81,72 +70,56 @@ public class DebitCard {
                 ", internationalLimit=" + internationalLimit +
                 '}';
     }
-
     public void setDebitCardNumber(Long debitCardNumber) {
         this.debitCardNumber = debitCardNumber;
     }
-
     public Long getAccountNumber() {
         return accountNumber;
     }
-
     public void setAccountNumber(Long accountNumber) {
         this.accountNumber = accountNumber;
     }
-
     public Integer getCustomerId() {
         return customerId;
     }
-
     public void setCustomerId(Integer customerId) {
         this.customerId = customerId;
     }
-
     public Integer getDebitCardCvv() {
         return debitCardCvv;
     }
-
     public void setDebitCardCvv(Integer debitCardCvv) {
         this.debitCardCvv = debitCardCvv;
     }
-
     public Integer getDebitCardPin() {
         return debitCardPin;
     }
-
     public void setDebitCardPin(Integer debitCardPin) {
         this.debitCardPin = debitCardPin;
     }
-
     public Date getDebitCardExpiry() {
         return debitCardExpiry;
     }
-
     public void setDebitCardExpiry(Date debitCardExpiry) {
         this.debitCardExpiry = debitCardExpiry;
     }
-
     public String getDebitCardStatus() {
         return debitCardStatus;
     }
-
     public void setDebitCardStatus(String debitCardStatus) {
         this.debitCardStatus = debitCardStatus;
     }
-
     public Double getDomesticLimit() {
         return domesticLimit;
     }
-
     public void setDomesticLimit(Double domesticLimit) {
         this.domesticLimit = domesticLimit;
     }
-
     public Double getInternationalLimit() {
         return internationalLimit;
     }
-
     public void setInternationalLimit(Double internationalLimit) {
         this.internationalLimit = internationalLimit;
     }
 }
+

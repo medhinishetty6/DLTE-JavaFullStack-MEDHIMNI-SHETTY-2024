@@ -56,7 +56,7 @@ public class DebitCardService implements DebitCardRepository {
 
 
     @Override
-    public String activateStatus(Long debitCardNumber) throws SQLSyntaxErrorException, DebitCardException,DebitCardNullException {
+    public String activateStatus(DebitCard debitCard,Long debitCardNumber) throws SQLSyntaxErrorException, DebitCardException,DebitCardNullException {
         CallableStatementCreator creator = con -> {
             CallableStatement statement = con.prepareCall("{call activate_debitcard(?, ?)}");
             statement.setLong(1, debitCardNumber);
@@ -74,12 +74,14 @@ public class DebitCardService implements DebitCardRepository {
         System.out.println(result);
         switch (result) {
             case "SQLSUCESS":
-                return "Debit card activation successful.";
+                logger.info(resourceBundle.getString("card.active"));
+                return resourceBundle.getString("card.active");
+
             case "SQLERR-004":
-                logger.error("Debit card does not exist.");
+                logger.error(resourceBundle.getString("activation.fail"));
                 throw new DebitCardNullException("activation.fail");
             case "SQLERR-005":
-                logger.error("Debit card is already active.");
+                logger.error(resourceBundle.getString("debitCard.already.active"));
                 throw new DebitCardException("debitCard.already.active");
 //                default:
 //                    logger.error("Unknown error occurred: " + result);
@@ -109,6 +111,23 @@ public class DebitCardService implements DebitCardRepository {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

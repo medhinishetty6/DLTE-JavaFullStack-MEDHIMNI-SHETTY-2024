@@ -1,8 +1,10 @@
 package cards.web.service.mybankdebitcardweb.rest;
 
 import cards.web.service.mybankdebitcardweb.soap.SoapPhase;
-import links.debitcard.DebitCard;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import links.debitcard.ServiceStatus;
+import list.cards.mybankdebitcarddao.entities.DebitCard;
 import list.cards.mybankdebitcarddao.exception.DebitCardException;
 import list.cards.mybankdebitcarddao.exception.DebitCardNullException;
 import list.cards.mybankdebitcarddao.remotes.DebitCardRepository;
@@ -11,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
@@ -35,13 +38,18 @@ public class DebitCardController {
 
 
     @PutMapping("/activate/{cardNumber}")
-    public ResponseEntity<String> activateCard(@PathVariable("cardNumber") Long debitCardNumber, @Valid@RequestBody(required = false) DebitCard debitCard) {
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "404", description = "Debit card does not exist or request body is empty"),
+            @ApiResponse(responseCode = "400", description = "Debit card is already active or debit card number is wrong"),
+
+    })
+    public ResponseEntity<String> activateCard(@Valid @RequestBody DebitCard debitCard, @PathVariable("cardNumber") Long debitCardNumber) {
         try {
             if (debitCard == null) {
-                throw new IllegalArgumentException("Request body is empty");
+                throw new IllegalArgumentException(resourceBundle.getString("empty.body"));
             }
 
-            String response = debitCardRepository.activateStatus(debitCardNumber);
+            String response = debitCardRepository.activateStatus(debitCard,debitCardNumber);
             if (response.equals("Debit card activation successful.")) {
                 logger.info(resourceBundle.getString("card.active"));
                 return ResponseEntity.ok(response);
@@ -58,11 +66,10 @@ public class DebitCardController {
             logger.error(resourceBundle.getString("activation.fail"));
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(resourceBundle.getString("activation.fail"));
         } catch (IllegalArgumentException illegalArgumentException) {
-            logger.error("Request body is empty.");
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Request body is empty.Please provide card details.");
+            logger.error(resourceBundle.getString("empty.body"));
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(resourceBundle.getString("empty.body"));
         }
     }
-
 
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
@@ -79,6 +86,76 @@ public class DebitCardController {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    @PutMapping("/activate/{cardNumber}")
+//    public ResponseEntity<String> activateCard( @Valid @RequestBody DebitCard debitCard,
+//            @Valid @PathVariable("cardNumber") Long debitCardNumber,
+//            BindingResult bindingResult) {
+//
+//        // Check for validation errors in the request body
+//        if (bindingResult.hasErrors()) {
+//            // Prepare error messages map
+//            Map<String, String> errors = new HashMap<>();
+//            for (FieldError error : bindingResult.getFieldErrors()) {
+//                errors.put(error.getField(), error.getDefaultMessage());
+//            }
+//            // Return bad request response with error messages
+//            return ResponseEntity.badRequest().body(errors.toString());
+//        }
+//
+//        try {
+//            String response = debitCardRepository.activateStatus(debitCardNumber);
+//            if (response.equals("Debit card activation successful.")) {
+//                logger.info(resourceBundle.getString("card.active"));
+//                return ResponseEntity.ok(response);
+//            } else {
+//                throw new DebitCardNullException(resourceBundle.getString("activation.fail"));
+//            }
+//        } catch (SQLSyntaxErrorException syntaxError) {
+//            logger.error(resourceBundle.getString("internal.error"));
+//            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(resourceBundle.getString("internal.error"));
+//        } catch (DebitCardException debitCardException) {
+//            logger.error(resourceBundle.getString("debitCard.already.active"));
+//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(resourceBundle.getString("debitCard.already.active"));
+//        } catch(DebitCardNullException debitCardNullException){
+//            logger.error(resourceBundle.getString("activation.fail"));
+//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(resourceBundle.getString("activation.fail"));
+//        }
+//    }
 
 
 
