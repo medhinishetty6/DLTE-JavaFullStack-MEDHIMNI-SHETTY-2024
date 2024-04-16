@@ -67,21 +67,23 @@
 //
 //    @Test
 //    void testActivateStatus_DebitCardAlreadyActiveException() throws SQLException {
-//        // Mock the CallableStatementCreator
+//        // Mock the behavior of JdbcTemplate's call method to return a specific result map
 //        when(jdbcTemplate.call(any(), anyList()))
 //                .thenReturn(createMockExecutionMap("SQLERR-005"));
 //
-//        // Call the method to be tested and assert that DebitCardException is thrown
+//        // Call the method under test and assert that DebitCardException is thrown
 //        assertThrows(DebitCardNullException.class, () -> {
 //            debitCardService.activateStatus(new DebitCard(), 123456789L);
 //        });
 //    }
 //
+//    // Helper method to create a mock execution map with a specified result
 //    private Map<String, Object> createMockExecutionMap(String result) {
 //        Map<String, Object> executionMap = new HashMap<>();
-//        executionMap.put("p_result", result);
+//        executionMap.put("p_result", result); // Set the value of the output parameter
 //        return executionMap;
 //    }
+//
 //}
 //
 //

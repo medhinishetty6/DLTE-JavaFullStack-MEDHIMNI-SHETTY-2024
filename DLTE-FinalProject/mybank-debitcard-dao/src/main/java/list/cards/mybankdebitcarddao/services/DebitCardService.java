@@ -56,13 +56,17 @@ public class DebitCardService implements DebitCardRepository {
 
 
     @Override
-    public String activateStatus(DebitCard debitCard,Long debitCardNumber) throws SQLSyntaxErrorException, DebitCardException,DebitCardNullException {
+    public String activateStatus(DebitCard debitCard, Long debitCardNumber) throws SQLSyntaxErrorException, DebitCardException, DebitCardNullException {
+        // Define a CallableStatementCreator to prepare the call to the stored procedure
         CallableStatementCreator creator = con -> {
             CallableStatement statement = con.prepareCall("{call activate_debitcard(?, ?)}");
+            // Set the parameters for the stored procedure call
             statement.setLong(1, debitCardNumber);
             statement.registerOutParameter(2, Types.VARCHAR);
             return statement;
         };
+
+        // Execute the stored procedure using JdbcTemplate
         Map<String, Object> returnedExecution = jdbcTemplate.call(creator, Arrays.asList(
                 new SqlParameter[]{
                         new SqlParameter(Types.NUMERIC),
@@ -70,23 +74,27 @@ public class DebitCardService implements DebitCardRepository {
                 })
         );
 
-        String result =returnedExecution.get("p_result").toString();
-        System.out.println(result);
+        // Extract the result from the output parameter of the stored procedure
+        String result = returnedExecution.get("p_result").toString();
+        logger.info(result);
+        // Handle different results from the stored procedure
         switch (result) {
             case "SQLSUCESS":
+                // Log success and return appropriate message
                 logger.info(resourceBundle.getString("card.active"));
                 return resourceBundle.getString("card.active");
-
             case "SQLERR-004":
+                // Log error and throw exception for card not found
                 logger.error(resourceBundle.getString("activation.fail"));
                 throw new DebitCardNullException("activation.fail");
             case "SQLERR-005":
+                // Log error and throw exception for card already active
                 logger.error(resourceBundle.getString("debitCard.already.active"));
                 throw new DebitCardException("debitCard.already.active");
-//                default:
-//                    logger.error("Unknown error occurred: " + result);
-//                    throw new DebitCardException("Unknown error occurred during debit card activation.");
-            default:return null;
+
+            default:
+                // Handle any other unexpected result
+                return null;
         }
     }
 

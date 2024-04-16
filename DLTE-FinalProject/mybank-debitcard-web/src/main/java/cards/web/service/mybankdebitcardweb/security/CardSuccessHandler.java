@@ -31,7 +31,7 @@ public class CardSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
                 cardSecurity.setAttempts(1);
                 cardSecurityServices.updateAttempts(cardSecurity);
             }
-           super.setAlwaysUseDefaultTargetUrl(true);
+           super.setDefaultTargetUrl("/debitcardrepo/debitcard.wsdl");
         }
         else{
             logger.warn(resourceBundle.getString("account.redeem"));

@@ -8,11 +8,15 @@ import list.cards.mybankdebitcarddao.entities.DebitCard;
 import list.cards.mybankdebitcarddao.exception.DebitCardException;
 import list.cards.mybankdebitcarddao.exception.DebitCardNullException;
 import list.cards.mybankdebitcarddao.remotes.DebitCardRepository;
+import list.cards.mybankdebitcarddao.security.CardSecurity;
+import list.cards.mybankdebitcarddao.security.CardSecurityServices;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -29,15 +33,17 @@ import java.util.ResourceBundle;
 public class DebitCardController {
     @Autowired
     private DebitCardRepository debitCardRepository;
+    @Autowired
+    CardSecurityServices services;
 
     // ResourceBundle for accessing application properties/messages
     ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
 
     // Logger for logging messages
-    private static final Logger logger = LoggerFactory.getLogger(DebitCardRepository.class);
+    private Logger logger = LoggerFactory.getLogger(DebitCardController.class);
 
 
-    @PutMapping("/activate/{cardNumber}")
+    @PutMapping("/activate")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "404", description = "Debit card does not exist or request body is empty"),
             @ApiResponse(responseCode = "400", description = "Debit card is already active or debit card number is wrong"),
@@ -45,12 +51,17 @@ public class DebitCardController {
     })
     public ResponseEntity<String> activateCard(@Valid @RequestBody DebitCard debitCard, @PathVariable("cardNumber") Long debitCardNumber) {
         try {
+            Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+            String username=authentication.getName();
+            CardSecurity card=services.findByUserName(username);
+            debitCard.setDebitCardNumber(card.getCustomerId());
             if (debitCard == null) {
                 throw new IllegalArgumentException(resourceBundle.getString("empty.body"));
             }
 
             String response = debitCardRepository.activateStatus(debitCard,debitCardNumber);
-            if (response.equals("Debit card activation successful.")) {
+            logger.info(response);
+            if (response.equals("Debit card activation successful")) {
                 logger.info(resourceBundle.getString("card.active"));
                 return ResponseEntity.ok(response);
             } else {

@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 
 public class CardSecurity implements UserDetails {
-
+    private  Long customerId;
     private String customerName;
     private String customerAddress;
     private String customerStatus;
@@ -15,6 +15,25 @@ public class CardSecurity implements UserDetails {
     private String password;
     private final int maxAttempt=3;
     private Integer attempts;
+
+    public Long getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
+    }
+
+    public CardSecurity(Long customerId, String customerName, String customerAddress, String customerStatus, Long customerContact, String username, String password, Integer attempts) {
+        this.customerId = customerId;
+        this.customerName = customerName;
+        this.customerAddress = customerAddress;
+        this.customerStatus = customerStatus;
+        this.customerContact = customerContact;
+        this.username = username;
+        this.password = password;
+        this.attempts = attempts;
+    }
 
     public String getCustomerName() {
         return customerName;

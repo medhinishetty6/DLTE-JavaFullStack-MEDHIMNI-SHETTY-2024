@@ -1,130 +1,261 @@
 package cards.web.service.mybankdebitcardweb;
 
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+
+import java.sql.SQLSyntaxErrorException;
+import java.util.ResourceBundle;
+
+import cards.web.service.mybankdebitcardweb.rest.DebitCardController;
 import list.cards.mybankdebitcarddao.entities.DebitCard;
 import list.cards.mybankdebitcarddao.exception.DebitCardException;
-import list.cards.mybankdebitcarddao.exception.DebitCardNullException;
-import list.cards.mybankdebitcarddao.services.DebitCardService;
+import list.cards.mybankdebitcarddao.remotes.DebitCardRepository;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.junit.jupiter.MockitoExtension;
-import org.slf4j.LoggerFactory;
-import org.springframework.jdbc.core.CallableStatementCreator;
-import org.springframework.jdbc.core.JdbcTemplate;
+import org.mockito.MockitoAnnotations;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
-import java.sql.Types;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.ResourceBundle;
-import java.util.logging.Logger;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
-@ExtendWith(MockitoExtension.class)
 public class DebitCardControllerTest {
 
+    @Mock
+    private DebitCardRepository debitCardRepository;
+
+
     @InjectMocks
-    private DebitCardService debitCardService;
+    private DebitCardController debitCardController;
 
-    @Mock
-    private JdbcTemplate jdbcTemplate;
-
-    @Mock
-    private Logger logger;
-
-    @Mock
-    private ResourceBundle resourceBundle;
-
-//    Logger logger = LoggerFactory.getLogger(DebitCardService.class);
-//    ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
-
-    @Test
-    public void testActivateStatus_Success() throws Exception {
-        // Mock input data
-        Long debitCardNumber = 1234567890123456L;
-        DebitCard debitCard = new DebitCard();
-
-        // Mock database call
-        Mockito.when(jdbcTemplate.call(Mockito.any(CallableStatementCreator.class), Mockito.anyList()))
-                .thenReturn(createSuccessResultMap());
-
-        // Mock resource bundle
-        Mockito.when(resourceBundle.getString("card.active")).thenReturn("Debit card activation successful");
-
-        // Invoke the method
-        String result = debitCardService.activateStatus(debitCard, debitCardNumber);
-
-        // Verify the result
-        assertEquals("Debit card activation successful", result);
+    @BeforeEach
+    public void setUp() {
+        MockitoAnnotations.openMocks(this);
     }
 
     @Test
-    public void testingActivateStatus_DebitCardException() {
-        // Mock input data
-        Long debitCardNumber = 1234567890123456L;
-        DebitCard debitCard = new DebitCard();
+    public void testActivateCard_SuccessfulActivation() throws SQLSyntaxErrorException {
+        // Mocking
+        DebitCard debitCard = new DebitCard(); // create a valid DebitCard object
+        Long cardNumber = 123456789L;
+        when(debitCardRepository.activateStatus(any(DebitCard.class), anyLong())).thenReturn("Debit card activation successful.");
 
-        // Mock database call
-        Mockito.when(jdbcTemplate.call(Mockito.any(CallableStatementCreator.class), Mockito.anyList()))
-                .thenReturn(createErrorResultMap("SQLERR-005"));
+        // Call the method under test
+        ResponseEntity<String> response = debitCardController.activateCard(debitCard, cardNumber);
 
-        // Mock the method that fetches the resource bundle
-        //Mockito.when(debitCardService.getResourceBundle()).thenReturn(resourceBundleMock);
-
-        // Mock resource bundle
-        ResourceBundle resourceBundleMock = Mockito.mock(ResourceBundle.class);
-        Mockito.when(resourceBundleMock.getString("debitCard.already.active")).thenReturn("Debit card is already active.");
-
-        // Invoke the method and verify exception
-        DebitCardException exception = assertThrows(DebitCardException.class,
-                () -> debitCardService.activateStatus(debitCard, debitCardNumber));
-        assertEquals("Debit card is already active.", exception.getMessage());
+        // Assertions
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals("Debit card activation successful.", response.getBody());
     }
-
-
 
     @Test
-    public void testActivateStatus_DebitCardException() {
-        // Mock input data
-        Long debitCardNumber = 1234567890123456L;
-        DebitCard debitCard = new DebitCard();
+    public void testActivateCard_CardAlreadyActive() throws SQLSyntaxErrorException {
+        // Mocking
+        DebitCard debitCard = new DebitCard(); // create a valid DebitCard object
+        Long cardNumber = 123456789L;
+        when(debitCardRepository.activateStatus(any(DebitCard.class), anyLong())).thenThrow(new DebitCardException("error"));
 
-        // Mock database call
-        Mockito.when(jdbcTemplate.call(Mockito.any(CallableStatementCreator.class), Mockito.anyList()))
-                .thenReturn(createErrorResultMap("SQLERR-005"));
+        // Call the method under test
+        ResponseEntity<String> response = debitCardController.activateCard(debitCard, cardNumber);
 
-        // Mock resource bundle
-        ResourceBundle resourceBundle = Mockito.mock(ResourceBundle.class);
-        Mockito.when(resourceBundle.getString("debitCard.already.active")).thenReturn("Debit card is already active.");
-
-        // Inject the mocked resource bundle into the service
-
-
-        // Invoke the method and verify exception
-        DebitCardException exception = assertThrows(DebitCardException.class,
-                () -> debitCardService.activateStatus(debitCard, debitCardNumber));
-        assertEquals("Debit card is already active.", exception.getMessage());
+        // Assertions
+        assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
+        assertEquals("Error message", response.getBody());
     }
+    @Test
+    public void testActivateCard_CardAlreadyActive2() throws SQLSyntaxErrorException {
+        // Mocking
+        DebitCard debitCard = new DebitCard(); // create a valid DebitCard object
+        Long cardNumber = 123456789L;
+        when(debitCardRepository.activateStatus(any(DebitCard.class), anyLong())).thenThrow(new DebitCardException("error"));
+
+        // Call the method under test
+        ResponseEntity<String> response = debitCardController.activateCard(debitCard, cardNumber);
+
+        // Assertions
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+
+    // Add more test cases for other scenarios like empty body, internal error, etc.
+}}
 
 
-    private Map<String, Object> createSuccessResultMap() {
-        // Simulate success result map from database call
-        Map<String, Object> resultMap = new HashMap<>();
-        resultMap.put("p_result", "SQLSUCESS");
-        return resultMap;
-    }
 
-    private Map<String, Object> createErrorResultMap(String errorCode) {
-        // Simulate error result map from database call
-        Map<String, Object> resultMap = new HashMap<>();
-        resultMap.put("p_result", errorCode);
-        return resultMap;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//import list.cards.mybankdebitcarddao.entities.DebitCard;
+//import list.cards.mybankdebitcarddao.exception.DebitCardException;
+//import list.cards.mybankdebitcarddao.exception.DebitCardNullException;
+//import list.cards.mybankdebitcarddao.services.DebitCardService;
+//import org.junit.jupiter.api.Test;
+//import org.junit.jupiter.api.extension.ExtendWith;
+//import org.mockito.InjectMocks;
+//import org.mockito.Mock;
+//import org.mockito.Mockito;
+//import org.mockito.junit.jupiter.MockitoExtension;
+//import org.slf4j.LoggerFactory;
+//import org.springframework.http.MediaType;
+//import org.springframework.jdbc.core.CallableStatementCreator;
+//import org.springframework.jdbc.core.JdbcTemplate;
+//import org.springframework.test.web.servlet.MockMvc;
+//import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+//import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+//
+//import java.sql.Types;
+//import java.util.Arrays;
+//import java.util.HashMap;
+//import java.util.Map;
+//import java.util.ResourceBundle;
+//import java.util.logging.Logger;
+//
+//import static org.junit.jupiter.api.Assertions.assertEquals;
+//import static org.junit.jupiter.api.Assertions.assertThrows;
+//import static org.mockito.Mockito.when;
+//
+//@ExtendWith(MockitoExtension.class)
+//public class DebitCardControllerTest {
+//
+//    @InjectMocks
+//    private DebitCardService debitCardService;
+//
+//    @Mock
+//    private JdbcTemplate jdbcTemplate;
+//
+//    @Mock
+//    private Logger logger;
+//
+//    @Mock
+//    private ResourceBundle resourceBundle;
+//
+////    Logger logger = LoggerFactory.getLogger(DebitCardService.class);
+////    ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
+//    private MockMvc mockMvc;
+//    @Test
+//    public void testActivateStatus_Success() throws Exception {
+//        // Mock input data
+//        Long debitCardNumber = 1234567890123456L;
+//        DebitCard debitCard = new DebitCard();
+//
+//        // Mock database call
+//        when(jdbcTemplate.call(Mockito.any(CallableStatementCreator.class), Mockito.anyList()))
+//                .thenReturn(createSuccessResultMap());
+//
+//        // Mock resource bundle
+//        when(resourceBundle.getString("card.active")).thenReturn("Debit card activation successful");
+//
+//        // Invoke the method
+//        String result = debitCardService.activateStatus(debitCard, debitCardNumber);
+//
+//        // Verify the result
+//        assertEquals("Debit card activation successful", result);
+//    }
+//
+//    @Test
+//    public void testingActivateStatus_DebitCardException() {
+//        // Mock input data
+//        Long debitCardNumber = 1234567890123456L;
+//        DebitCard debitCard = new DebitCard();
+//
+//        // Mock database call
+//        when(jdbcTemplate.call(Mockito.any(CallableStatementCreator.class), Mockito.anyList()))
+//                .thenReturn(createErrorResultMap("SQLERR-005"));
+//
+//        // Mock the method that fetches the resource bundle
+//        //Mockito.when(debitCardService.getResourceBundle()).thenReturn(resourceBundleMock);
+//
+//        // Mock resource bundle
+//        ResourceBundle resourceBundleMock = Mockito.mock(ResourceBundle.class);
+//        when(resourceBundleMock.getString("debitCard.already.active")).thenReturn("Debit card is already active.");
+//
+//        // Invoke the method and verify exception
+//        DebitCardException exception = assertThrows(DebitCardException.class,
+//                () -> debitCardService.activateStatus(debitCard, debitCardNumber));
+//        assertEquals("Debit card is already active.", exception.getMessage());
+//    }
+//
+////    @Test
+//    public void testActivateCard_Success() throws Exception {
+//        // Mock debit card data
+//        DebitCard debitCard = new DebitCard();
+//        debitCard.setDebitCardNumber(123456789012345L);
+//
+//        // Mock repository method
+//        when(debitCardService.activateStatus(debitCard, 1234567890123456L))
+//                .thenReturn("Debit card activation successful.");
+//
+//        // Mock resource bundle
+//        when(resourceBundle.getString("card.active")).thenReturn("Debit card activated successfully.");
+//
+//        // Perform POST request
+//        mockMvc.perform(MockMvcRequestBuilders.put("/debitcard/activate/1234567890123456")
+//                .contentType(MediaType.APPLICATION_JSON)
+//                .content(asJsonString(debitCard)))
+//                .andExpect(MockMvcResultMatchers.status().isOk())
+//                .andExpect(MockMvcResultMatchers.content().string("Debit card activated successfully."));
+//    }
+//
+//
+//
+//    @Test
+//    public void testActivateStatus_DebitCardException() {
+//        // Mock input data
+//        Long debitCardNumber = 1234567890123456L;
+//        DebitCard debitCard = new DebitCard();
+//
+//        // Mock database call
+//        when(jdbcTemplate.call(Mockito.any(CallableStatementCreator.class), Mockito.anyList()))
+//                .thenReturn(createErrorResultMap("SQLERR-005"));
+//
+//        // Mock resource bundle
+//        ResourceBundle resourceBundle = Mockito.mock(ResourceBundle.class);
+//        when(resourceBundle.getString("debitCard.already.active")).thenReturn("Debit card is already active.");
+//
+//        // Inject the mocked resource bundle into the service
+//
+//
+//        // Invoke the method and verify exception
+//        DebitCardException exception = assertThrows(DebitCardException.class,
+//                () -> debitCardService.activateStatus(debitCard, debitCardNumber));
+//        assertEquals("Debit card is already active.", exception.getMessage());
+//    }
+//
+//
+//    private Map<String, Object> createSuccessResultMap() {
+//        // Simulate success result map from database call
+//        Map<String, Object> resultMap = new HashMap<>();
+//        resultMap.put("p_result", "SQLSUCESS");
+//        return resultMap;
+//    }
+//
+//    private Map<String, Object> createErrorResultMap(String errorCode) {
+//        // Simulate error result map from database call
+//        Map<String, Object> resultMap = new HashMap<>();
+//        resultMap.put("p_result", errorCode);
+//        return resultMap;
+//    }
+//}
 
 
 
