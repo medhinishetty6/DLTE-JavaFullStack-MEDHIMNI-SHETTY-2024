@@ -1,5 +1,6 @@
 package cards.web.service.mybankdebitcardweb.security;
 
+import list.cards.mybankdebitcarddao.security.CardSecurityServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -37,6 +38,8 @@ public class CardSecurityConfig {
                 successHandler(cardSuccessHandler);
         httpSecurity.csrf().disable();
         httpSecurity.authorizeRequests().antMatchers("/profile/register").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/v3/api-docs").permitAll();
+
         httpSecurity.authorizeRequests().anyRequest().authenticated();
 
 
