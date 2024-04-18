@@ -95,73 +95,107 @@
 //
 //}
 //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //
+//    @Test
+//    public void testGetDebitCard() throws SQLException {
+//        // Mocking ResultSet to return sample data
+//        ResultSet resultSet = mock(ResultSet.class);
+//        when(resultSet.getLong(anyInt())).thenReturn(123456789L);
+//        when(resultSet.getInt(anyInt())).thenReturn(200005);
+//        when(resultSet.getDate(anyInt())).thenReturn(new Date(2024 - 04 - 01));
 //
+//        // Mocking jdbcTemplate.query to return the mocked ResultSet
+//        when(jdbcTemplate.query(anyString(), ArgumentMatchers.any(DebitCardService.DebitCardMapper.class))).thenReturn(new ArrayList<DebitCard>() {{
+//            add(new DebitCard());
+//        }});
 //
+//        // Calling the method to be tested
+//        List<DebitCard> debitCards = debitCardService.getDebitCard();
 //
+//        // Verifying that the jdbcTemplate.query method was called with the correct parameters
+//        verify(jdbcTemplate).query(anyString(), ArgumentMatchers.any(DebitCardService.DebitCardMapper.class));
 //
+//        // Verifying that the returned list contains one element
+//        assertEquals(1, debitCards.size());
 //
+//        // Verifying that the mapped DebitCard object has the expected values
+//        DebitCard debitCard = debitCards.get(0);
+//        assertEquals(java.util.Optional.of(123456789L), debitCard.getDebitCardNumber());
+//        assertEquals(java.util.Optional.of(200005), debitCard.getCustomerId());
+//    }
 //
+//    @Test
+//    public void testGetDebitCardSuccess() throws SQLSyntaxErrorException {
+//        // Mocking the return value of jdbcTemplate.query to return a list of DebitCard objects
+//        List<DebitCard> expectedDebitCards = new ArrayList<>();
+//        expectedDebitCards.add(new DebitCard(3692468135796670L,85236951478523L,23760,131,2222,new Date(2024,07,10), "active", 5000.0,50000.0)); // Add sample DebitCard objects
+//        when(jdbcTemplate.query(anyString(), ArgumentMatchers.any(DebitCardService.DebitCardMapper.class)))
+//                .thenReturn(expectedDebitCards);
 //
+//        // Calling the method to be tested
+//        List<DebitCard> actualDebitCards = debitCardService.getDebitCard();
 //
+//        // Verifying that the jdbcTemplate.query method was called with the correct parameters
+//        verify(jdbcTemplate).query(anyString(), ArgumentMatchers.any(DebitCardService.DebitCardMapper.class));
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-////
-////    @Test
-////    public void testGetDebitCard() throws SQLException {
-////        // Mocking ResultSet to return sample data
-////        ResultSet resultSet = mock(ResultSet.class);
-////        when(resultSet.getLong(anyInt())).thenReturn(123456789L);
-////        when(resultSet.getInt(anyInt())).thenReturn(200005);
-////        when(resultSet.getDate(anyInt())).thenReturn(new Date(2024 - 04 - 01));
-////
-////        // Mocking jdbcTemplate.query to return the mocked ResultSet
-////        when(jdbcTemplate.query(anyString(), ArgumentMatchers.any(DebitCardService.DebitCardMapper.class))).thenReturn(new ArrayList<DebitCard>() {{
-////            add(new DebitCard());
-////        }});
-////
-////        // Calling the method to be tested
-////        List<DebitCard> debitCards = debitCardService.getDebitCard();
-////
-////        // Verifying that the jdbcTemplate.query method was called with the correct parameters
-////        verify(jdbcTemplate).query(anyString(), ArgumentMatchers.any(DebitCardService.DebitCardMapper.class));
-////
-////        // Verifying that the returned list contains one element
-////        assertEquals(1, debitCards.size());
-////
-////        // Verifying that the mapped DebitCard object has the expected values
-////        DebitCard debitCard = debitCards.get(0);
-////        assertEquals(java.util.Optional.of(123456789L), debitCard.getDebitCardNumber());
-////        assertEquals(java.util.Optional.of(200005), debitCard.getCustomerId());
-////    }
-////
-////    @Test
-////    public void testGetDebitCardSuccess() throws SQLSyntaxErrorException {
-////        // Mocking the return value of jdbcTemplate.query to return a list of DebitCard objects
-////        List<DebitCard> expectedDebitCards = new ArrayList<>();
-////        expectedDebitCards.add(new DebitCard(3692468135796670L,85236951478523L,23760,131,2222,new Date(2024,07,10), "active", 5000.0,50000.0)); // Add sample DebitCard objects
-////        when(jdbcTemplate.query(anyString(), ArgumentMatchers.any(DebitCardService.DebitCardMapper.class)))
-////                .thenReturn(expectedDebitCards);
-////
-////        // Calling the method to be tested
-////        List<DebitCard> actualDebitCards = debitCardService.getDebitCard();
-////
-////        // Verifying that the jdbcTemplate.query method was called with the correct parameters
-////        verify(jdbcTemplate).query(anyString(), ArgumentMatchers.any(DebitCardService.DebitCardMapper.class));
-////
-////        // Verifying that the returned list matches the expected list
-////        assertEquals(expectedDebitCards.size(), actualDebitCards.size());
-////        assertEquals(expectedDebitCards, actualDebitCards);
-////    }
+//        // Verifying that the returned list matches the expected list
+//        assertEquals(expectedDebitCards.size(), actualDebitCards.size());
+//        assertEquals(expectedDebitCards, actualDebitCards);
+//    }
