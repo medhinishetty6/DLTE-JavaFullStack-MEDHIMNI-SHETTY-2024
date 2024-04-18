@@ -1,0 +1,5 @@
+console\employee\App.class
+console\employee\entities\EmployeebasicDetails.class
+console\employee\entities\Employee.class
+console\employee\entities\EmployeeAddress.class
+console\employee\RestClient.class

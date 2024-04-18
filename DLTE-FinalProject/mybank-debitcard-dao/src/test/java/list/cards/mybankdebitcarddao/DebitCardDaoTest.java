@@ -47,7 +47,7 @@
 //                .thenReturn(createMockExecutionMap("SQLSUCESS"));
 //
 //        // Call the method to be tested
-//        String result = debitCardService.activateStatus(new DebitCard(), 123L);
+//        String result = debitCardService.activateStatus(new DebitCard(), 123L,567L);
 //
 //        // Assertions
 //        assertEquals(resourceBundle.getString("card.active"),result);
@@ -61,7 +61,7 @@
 //
 //        // Call the method to be tested and assert that DebitCardNullException is thrown
 //        assertThrows(DebitCardNullException.class, () -> {
-//            debitCardService.activateStatus(new DebitCard(), 369765432L);
+//            debitCardService.activateStatus(new DebitCard(), 369765432L,345678L);
 //        });
 //    }
 //
@@ -73,7 +73,7 @@
 //
 //        // Call the method under test and assert that DebitCardException is thrown
 //        assertThrows(DebitCardNullException.class, () -> {
-//            debitCardService.activateStatus(new DebitCard(), 123456789L);
+//            debitCardService.activateStatus(new DebitCard(), 123456789L,34567L);
 //        });
 //    }
 //

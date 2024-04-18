@@ -1,6 +1,7 @@
 package list.cards.mybankdebitcarddao.services;
 
 import list.cards.mybankdebitcarddao.entities.DebitCard;
+import list.cards.mybankdebitcarddao.exception.CardNotEditableException;
 import list.cards.mybankdebitcarddao.exception.DebitCardException;
 import list.cards.mybankdebitcarddao.exception.DebitCardNullException;
 import list.cards.mybankdebitcarddao.remotes.DebitCardRepository;
@@ -56,19 +57,21 @@ public class DebitCardService implements DebitCardRepository {
 
 
     @Override
-    public String activateStatus(DebitCard debitCard, Long debitCardNumber) throws SQLSyntaxErrorException, DebitCardException, DebitCardNullException {
+    public String activateStatus(DebitCard debitCard, Long debitCardNumber, Long customerId) throws SQLSyntaxErrorException, DebitCardException, DebitCardNullException {
         // Define a CallableStatementCreator to prepare the call to the stored procedure
         CallableStatementCreator creator = con -> {
-            CallableStatement statement = con.prepareCall("{call activate_debitcard(?, ?)}");
+            CallableStatement statement = con.prepareCall("{call activate_debitcard(?,?,?)}");
             // Set the parameters for the stored procedure call
             statement.setLong(1, debitCardNumber);
-            statement.registerOutParameter(2, Types.VARCHAR);
+            statement.setLong(2, customerId);
+            statement.registerOutParameter(3, Types.VARCHAR);
             return statement;
         };
 
         // Execute the stored procedure using JdbcTemplate
         Map<String, Object> returnedExecution = jdbcTemplate.call(creator, Arrays.asList(
                 new SqlParameter[]{
+                        new SqlParameter(Types.NUMERIC),
                         new SqlParameter(Types.NUMERIC),
                         new SqlOutParameter("p_result", Types.VARCHAR)
                 })
@@ -91,9 +94,11 @@ public class DebitCardService implements DebitCardRepository {
                 // Log error and throw exception for card already active
                 logger.error(resourceBundle.getString("debitCard.already.active"));
                 throw new DebitCardException("debitCard.already.active");
-
-            default:
+            case "SQLERR-003":
+                logger.error(resourceBundle.getString("account.not.editable"));
+                throw new CardNotEditableException("account.not.editable");
                 // Handle any other unexpected result
+            default:
                 return null;
         }
     }

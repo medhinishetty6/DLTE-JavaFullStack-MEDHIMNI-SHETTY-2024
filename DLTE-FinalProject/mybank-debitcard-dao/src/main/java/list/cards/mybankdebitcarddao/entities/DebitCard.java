@@ -16,10 +16,8 @@ public class DebitCard {
     @Range(min = 10000000000000L,max = 99999999999999L,message = "{account.number.invalid}")
     @Digits(integer=14,fraction = 0,message = "{card.number.invalid}")
     private Long accountNumber;
-    @NotNull(message= "{customer.id.null}")
     @Digits(integer =6,fraction = 0,message = "{customer.id.invalid}")
     private Integer customerId;
-    @NotNull(message = "{card.cvv.null}")
     @Digits(integer = 3, fraction = 0, message = "{card.cvv.invalid}")
     @Positive(message = "{positive.number}")
     private Integer debitCardCvv;
@@ -44,10 +42,22 @@ public class DebitCard {
     }
     public DebitCard() {
     }
-    public DebitCard(@NotNull(message = "{card.number.null}") @Digits(integer = 16, fraction = 0, message = "{card.number.invalid}") Long debitCardNumber, @NotNull(message = "{account.number.null}") @Digits(integer = 14, fraction = 0, message = "{account.number.invalid}") Long accountNumber, @NotNull(message = "{customer.id.null}") @Digits(integer = 6, fraction = 0, message = "{customer.id.invalid}") Integer customerId, @NotNull(message = "{card.cvv.null}") @Digits(integer = 3, fraction = 0, message = "{card.cvv.invalid}") Integer debitCardCvv, @NotNull(message = "{card.pin.null}") @Digits(integer = 4, fraction = 0, message = "{card.pin.invalid}") Integer debitCardPin, @NotNull(message = "{card.expiry.null}") Date debitCardExpiry, @NotNull(message = "{card.status.null}") @Pattern(regexp = "^[a-zA-Z]+$", message = "{card.status.invalid}") String debitCardStatus, @NotNull(message = "{card.domestic.null}") Double domesticLimit, @NotNull(message = "{card.international.null}") Double internationalLimit) {
+
+    public DebitCard(@NotNull(message = "{card.number.null}") @Range(min = 3692468135796670L, max = 9999999999999999L, message = "{card.number.invalid}") @Digits(integer = 16, fraction = 0, message = "{card.number.invalid}") Long debitCardNumber, @NotNull(message = "{account.number.null}") @Range(min = 10000000000000L, max = 99999999999999L, message = "{account.number.invalid}") @Digits(integer = 14, fraction = 0, message = "{card.number.invalid}") Long accountNumber, @Digits(integer = 6, fraction = 0, message = "{customer.id.invalid}") Integer customerId, @NotNull(message = "{card.cvv.null}") @Digits(integer = 3, fraction = 0, message = "{card.cvv.invalid}") @Positive(message = "{positive.number}") Integer debitCardCvv, @NotNull(message = "{card.pin.null}") @Digits(integer = 4, fraction = 0, message = "{card.pin.invalid}") @Positive(message = "{positive.number}") Integer debitCardPin, @NotNull(message = "{card.expiry.null}") Date debitCardExpiry, @NotNull(message = "{card.status.null}") @Pattern(regexp = "^(active|inactive)$", message = "{card.status.invalid}") String debitCardStatus, @NotNull(message = "{card.domestic.null}") @Positive(message = "{positive.number}") Double domesticLimit, @NotNull(message = "{card.international.null}") @Positive(message = "{positive.number}") Double internationalLimit) {
         this.debitCardNumber = debitCardNumber;
         this.accountNumber = accountNumber;
         this.customerId = customerId;
+        this.debitCardCvv = debitCardCvv;
+        this.debitCardPin = debitCardPin;
+        this.debitCardExpiry = debitCardExpiry;
+        this.debitCardStatus = debitCardStatus;
+        this.domesticLimit = domesticLimit;
+        this.internationalLimit = internationalLimit;
+    }
+
+    public DebitCard(@NotNull(message = "{card.number.null}") @Digits(integer = 16, fraction = 0, message = "{card.number.invalid}") Long debitCardNumber, @NotNull(message = "{account.number.null}") @Digits(integer = 14, fraction = 0, message = "{account.number.invalid}") Long accountNumber, @NotNull(message = "{card.cvv.null}") @Digits(integer = 3, fraction = 0, message = "{card.cvv.invalid}") Integer debitCardCvv, @NotNull(message = "{card.pin.null}") @Digits(integer = 4, fraction = 0, message = "{card.pin.invalid}") Integer debitCardPin, @NotNull(message = "{card.expiry.null}") Date debitCardExpiry, @NotNull(message = "{card.status.null}") @Pattern(regexp = "^[a-zA-Z]+$", message = "{card.status.invalid}") String debitCardStatus, @NotNull(message = "{card.domestic.null}") Double domesticLimit, @NotNull(message = "{card.international.null}") Double internationalLimit) {
+        this.debitCardNumber = debitCardNumber;
+        this.accountNumber = accountNumber;
         this.debitCardCvv = debitCardCvv;
         this.debitCardPin = debitCardPin;
         this.debitCardExpiry = debitCardExpiry;

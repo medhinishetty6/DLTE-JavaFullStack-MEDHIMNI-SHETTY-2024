@@ -5,6 +5,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import links.debitcard.ServiceStatus;
 import list.cards.mybankdebitcarddao.entities.DebitCard;
+import list.cards.mybankdebitcarddao.exception.CardNotEditableException;
 import list.cards.mybankdebitcarddao.exception.DebitCardException;
 import list.cards.mybankdebitcarddao.exception.DebitCardNullException;
 import list.cards.mybankdebitcarddao.remotes.DebitCardRepository;
@@ -43,31 +44,32 @@ public class DebitCardController {
     private Logger logger = LoggerFactory.getLogger(DebitCardController.class);
 
 
-    @PutMapping("/activate")
+    @PutMapping("/activate/{cardNumber}")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "404", description = "Debit card does not exist or request body is empty"),
             @ApiResponse(responseCode = "400", description = "Debit card is already active or debit card number is wrong"),
-
     })
     public ResponseEntity<String> activateCard(@Valid @RequestBody DebitCard debitCard, @PathVariable("cardNumber") Long debitCardNumber) {
         try {
             Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
             String username=authentication.getName();
             CardSecurity card=services.findByUserName(username);
-            debitCard.setDebitCardNumber(card.getCustomerId());
             if (debitCard == null) {
                 throw new IllegalArgumentException(resourceBundle.getString("empty.body"));
             }
 
-            String response = debitCardRepository.activateStatus(debitCard,debitCardNumber);
+            String response = debitCardRepository.activateStatus(debitCard,debitCardNumber,card.getCustomerId());
             logger.info(response);
-            if (response.equals("Debit card activation successful")) {
+            if (response.equals(resourceBundle.getString("card.active"))) {
                 logger.info(resourceBundle.getString("card.active"));
                 return ResponseEntity.ok(response);
             } else {
                 throw new DebitCardNullException(resourceBundle.getString("activation.fail"));
             }
-        } catch (SQLSyntaxErrorException syntaxError) {
+        } catch (CardNotEditableException error) {
+            logger.error(resourceBundle.getString("account.not.editable"));
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(resourceBundle.getString("account.not.editable"));}
+        catch (SQLSyntaxErrorException syntaxError) {
             logger.error(resourceBundle.getString("internal.error"));
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(resourceBundle.getString("internal.error"));
         } catch (DebitCardException debitCardException) {

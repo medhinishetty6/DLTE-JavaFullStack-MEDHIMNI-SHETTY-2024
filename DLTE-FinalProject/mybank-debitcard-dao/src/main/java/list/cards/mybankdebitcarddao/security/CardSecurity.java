@@ -16,12 +16,25 @@ public class CardSecurity implements UserDetails {
     private final int maxAttempt=3;
     private Integer attempts;
 
+    public CardSecurity() {
+    }
+
     public Long getCustomerId() {
         return customerId;
     }
 
     public void setCustomerId(Long customerId) {
         this.customerId = customerId;
+    }
+
+    public CardSecurity(String customerName, String customerAddress, String customerStatus, Long customerContact, String username, String password, Integer attempts) {
+        this.customerName = customerName;
+        this.customerAddress = customerAddress;
+        this.customerStatus = customerStatus;
+        this.customerContact = customerContact;
+        this.username = username;
+        this.password = password;
+        this.attempts = attempts;
     }
 
     public CardSecurity(Long customerId, String customerName, String customerAddress, String customerStatus, Long customerContact, String username, String password, Integer attempts) {
