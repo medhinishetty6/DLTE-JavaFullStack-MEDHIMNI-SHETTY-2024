@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Cheque Book Request</title>
+    <title>Cheque Book Request</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <style>
         body {
             background-color: #59bdd1;
@@ -36,111 +40,161 @@
         .btn:hover {
             background-color: #0056b3;
         }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
 
-<div class="container mt-5">
-    <h2>New Cheque Book Request</h2>
-    <form>
-        <div class="form-group">
-            <label for="accountNumber">Account Number:</label>
-            <input type="text" class="form-control" id="accountNumber" name="accountNumber" placeholder="Enter account number">
-        </div>
-        <div class="form-group">
-            <label for="accountHolder">Account Holder:</label>
-            <input type="text" class="form-control" id="accountHolder" name="accountHolder" placeholder="Enter account holder">
-        </div>
-        <div class="form-group">
-            <label>Account Type:</label><br>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="savings" name="accountType" value="savings">
-                <label class="form-check-label" for="savings">Savings</label>
+    <div class="container mt-5">
+        <h2>New Cheque Book Request</h2>
+        <form id="chequeBookForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="accountNumber">Account Number:</label>
+                <input type="text" class="form-control" id="accountNumber" name="accountNumber" placeholder="Enter account number">
+                <div id="accountNumberError" class="error"></div>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" id="current" name="accountType" value="current">
-                <label class="form-check-label" for="current">Current</label>
+            <div class="form-group">
+                <label for="accountHolder">Account Holder:</label>
+                <input type="text" class="form-control" id="accountHolder" name="accountHolder" placeholder="Enter account holder">
+                <div id="accountHolderError" class="error"></div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="chequeBookType">Cheque Book Type:</label>
-            <select class="form-control" id="chequeBookType" name="chequeBookType">
-                <option value="standard">Standard</option>
-                <option value="premium">Premium</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="dateOfApply">Date of Apply:</label>
-            <input type="date" class="form-control" id="dateOfApply" name="dateOfApply">
-        </div>
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="termsAndConditions" name="termsAndConditions">
-            <label class="form-check-label" for="termsAndConditions">I accept the terms and conditions</label>
-        </div>
-        <div class="form-group">
-            <label for="address">Address:</label>
-            <textarea class="form-control" id="address" name="address" rows="4" placeholder="Enter your address"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="signature">Signature:</label>
-            <input type="file" class="form-control-file" id="signature" name="signature">
-        </div>
-        <div class="form-group">
-            <label for="contactNumber">Contact Number:</label>
-            <input type="tel" class="form-control" id="contactNumber" name="contactNumber" placeholder="Enter contact number">
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+            <div class="form-group">
+                <label>Account Type:</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="savings" name="accountType" value="savings">
+                    <label class="form-check-label" for="savings">Savings</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="current" name="accountType" value="current">
+                    <label class="form-check-label" for="current">Current</label>
+                </div>
+                <div id="accountTypeError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="chequeBookType">Cheque Book Type:</label>
+                <select class="form-control" id="chequeBookType" name="chequeBookType">
+                    <option value="standard">Standard</option>
+                    <option value="premium">Premium</option>
+                </select>
+                <div id="chequeBookTypeError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="dateOfApply">Date of Apply:</label>
+                <input type="date" class="form-control" id="dateOfApply" name="dateOfApply">
+                <div id="dateOfApplyError" class="error"></div>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="termsAndConditions" name="termsAndConditions">
+                <label class="form-check-label" for="termsAndConditions">I accept the terms and conditions</label>
+                <div id="termsAndConditionsError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea class="form-control" id="address" name="address" rows="4" placeholder="Enter your address"></textarea>
+                <div id="addressError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="signature">Signature:</label>
+                <input type="file" class="form-control-file" id="signature" name="signature">
+                <div id="signatureError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" class="form-control" id="contactNumber" name="contactNumber" placeholder="Enter contact number">
+                <div id="contactNumberError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                <div id="emailError" class="error"></div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    
+    <script>
+        function validateForm() {
+            // Reset error messages
+            $(".error").text("");
+    
+            // Validation for account number
+            var accountNumber = $("#accountNumber").val();
+            if (!accountNumber || !$.isNumeric(accountNumber)) {
+                $("#accountNumberError").text("Please enter a valid account number.");
+                return false;
+            }
+    
+            // Validation for account holder name
+            var accountHolder = $("#accountHolder").val();
+            if (!accountHolder) {
+                $("#accountHolderError").text("Account holder name is required.");
+                return false;
+            }
+    
+            // Validation for account type
+            var accountType = $("input[name='accountType']:checked").val();
+            if (!accountType) {
+                $("#accountTypeError").text("Please select an account type.");
+                return false;
+            }
+    
+            // Validation for cheque book type
+            var chequeBookType = $("#chequeBookType").val();
+            if (!chequeBookType) {
+                $("#chequeBookTypeError").text("Please select a cheque book type.");
+                return false;
+            }
+    
+            // Validation for date of apply
+            var dateOfApply = $("#dateOfApply").val();
+            if (!dateOfApply) {
+                $("#dateOfApplyError").text("Please enter the date of apply.");
+                return false;
+            }
+    
+            // Validation for terms and conditions
+            var termsAndConditions = $("#termsAndConditions").prop('checked');
+            if (!termsAndConditions) {
+                $("#termsAndConditionsError").text("Please accept the terms and conditions.");
+                return false;
+            }
+    
+            // Validation for address
+            var address = $("#address").val();
+            if (!address) {
+                $("#addressError").text("Address is required.");
+                return false;
+            }
+    
+            // Validation for signature
+            var signature = $("#signature").val();
+            if (!signature) {
+                $("#signatureError").text("Please upload your signature.");
+                return false;
+            }
+    
+            // Validation for contact number
+            var contactNumber = $("#contactNumber").val();
+            if (!contactNumber || !$.isNumeric(contactNumber) || contactNumber.length !== 10) {
+                $("#contactNumberError").text("Please enter a valid 10-digit contact number.");
+                return false;
+            }
+    
+            // Validation for email
+            var email = $("#email").val();
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                $("#emailError").text("Please enter a valid email address.");
+                return false;
+            }
+    
+            return true;
+        }
+    </script>
+    
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <form>
-        <div class="form-group">
-            <label for="accountNumber">Account Number</label>
-            <input type="text" class="form-control" id="accountNumber" placeholder="Enter Account Number">
-        </div>
-        <div class="form-group">
-            <label for="accountHolder">Account Holder</label>
-            <input type="text" class="form-control" id="accountHolder" placeholder="Enter Account Holder Name">
-        </div>
-        <div class="form-group">
-            <label for="chequeBookType">Cheque Book Type</label>
-            <select class="form-control" id="chequeBookType">
-                <option>Select Type</option>
-                <option>Personal</option>
-                <option>Business</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form> -->
