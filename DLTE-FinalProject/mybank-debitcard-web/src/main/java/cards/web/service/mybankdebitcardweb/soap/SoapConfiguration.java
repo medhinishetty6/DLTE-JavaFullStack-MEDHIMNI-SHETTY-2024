@@ -29,7 +29,7 @@ public class SoapConfiguration extends WsConfigurerAdapter {
     @Bean(name = "debitcard")
     public DefaultWsdl11Definition convertToWsdl(XsdSchema xsdSchema){
         DefaultWsdl11Definition defaultWsdl11Definition=new DefaultWsdl11Definition();
-        defaultWsdl11Definition.setPortTypeName("LoansPort");
+        defaultWsdl11Definition.setPortTypeName("DebitPort");
         defaultWsdl11Definition.setTargetNamespace("http://debitcard.links");
         defaultWsdl11Definition.setLocationUri("/debitcardrepo");
         defaultWsdl11Definition.setSchema(xsdSchema);

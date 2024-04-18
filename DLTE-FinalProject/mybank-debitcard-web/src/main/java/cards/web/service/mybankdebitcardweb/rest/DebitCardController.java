@@ -32,6 +32,8 @@ import java.util.ResourceBundle;
 @RestController
 @RequestMapping("/debitcard")
 public class DebitCardController {
+
+    // Autowiring DebitCardRepository and CardSecurityServices for dependency injection
     @Autowired
     private DebitCardRepository debitCardRepository;
     @Autowired
@@ -43,7 +45,7 @@ public class DebitCardController {
     // Logger for logging messages
     private Logger logger = LoggerFactory.getLogger(DebitCardController.class);
 
-
+    // API endpoint for activating a debit card
     @PutMapping("/activate/{cardNumber}")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "404", description = "Debit card does not exist or request body is empty"),
@@ -51,15 +53,20 @@ public class DebitCardController {
     })
     public ResponseEntity<String> activateCard(@Valid @RequestBody DebitCard debitCard, @PathVariable("cardNumber") Long debitCardNumber) {
         try {
+            // Retrieving authentication details
             Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
             String username=authentication.getName();
+            // Finding card details for the authenticated user
             CardSecurity card=services.findByUserName(username);
+            // Checking if the request body is empty
             if (debitCard == null) {
                 throw new IllegalArgumentException(resourceBundle.getString("empty.body"));
             }
 
+            // Activating the debit card
             String response = debitCardRepository.activateStatus(debitCard,debitCardNumber,card.getCustomerId());
             logger.info(response);
+            // Returning response based on activation status
             if (response.equals(resourceBundle.getString("card.active"))) {
                 logger.info(resourceBundle.getString("card.active"));
                 return ResponseEntity.ok(response);
@@ -68,8 +75,8 @@ public class DebitCardController {
             }
         } catch (CardNotEditableException error) {
             logger.error(resourceBundle.getString("account.not.editable"));
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(resourceBundle.getString("account.not.editable"));}
-        catch (SQLSyntaxErrorException syntaxError) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(resourceBundle.getString("account.not.editable"));
+        } catch (SQLSyntaxErrorException syntaxError) {
             logger.error(resourceBundle.getString("internal.error"));
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(resourceBundle.getString("internal.error"));
         } catch (DebitCardException debitCardException) {
@@ -84,11 +91,12 @@ public class DebitCardController {
         }
     }
 
-
+    // Exception handler for handling validation exceptions
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public Map<String, String> handleValidationExceptions(MethodArgumentNotValidException ex) {
         Map<String, String> errors = new HashMap<>();
+        // Extracting field errors and their error messages
         ex.getBindingResult().getAllErrors().forEach((error) -> {
             String fieldName = ((FieldError) error).getField();
             String errorMessage = error.getDefaultMessage();
@@ -97,6 +105,8 @@ public class DebitCardController {
         return errors;
     }
 }
+
+
 
 
 

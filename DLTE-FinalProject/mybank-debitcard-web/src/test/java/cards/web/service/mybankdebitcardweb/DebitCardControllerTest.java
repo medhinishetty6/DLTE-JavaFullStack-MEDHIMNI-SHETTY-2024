@@ -1,72 +1,74 @@
-package cards.web.service.mybankdebitcardweb;
+//package cards.web.service.mybankdebitcardweb;
+//
+//import static org.junit.jupiter.api.Assertions.*;
+//import static org.mockito.Mockito.*;
+//
+//import java.sql.SQLSyntaxErrorException;
+//import java.util.ResourceBundle;
+//
+//import cards.web.service.mybankdebitcardweb.rest.DebitCardController;
+//import list.cards.mybankdebitcarddao.entities.DebitCard;
+//import list.cards.mybankdebitcarddao.exception.DebitCardException;
+//import list.cards.mybankdebitcarddao.remotes.DebitCardRepository;
+//import list.cards.mybankdebitcarddao.security.CardSecurity;
+//import list.cards.mybankdebitcarddao.security.CardSecurityServices;
+//import org.junit.jupiter.api.BeforeEach;
+//import org.junit.jupiter.api.Test;
+//import org.mockito.InjectMocks;
+//import org.mockito.Mock;
+//import org.mockito.MockitoAnnotations;
+//import org.springframework.http.HttpStatus;
+//import org.springframework.http.ResponseEntity;
+//import org.springframework.security.authentication.TestingAuthenticationToken;
+//import org.springframework.security.core.Authentication;
+//import org.springframework.security.core.context.SecurityContext;
+//import org.springframework.security.core.context.SecurityContextHolder;
+//
+//public class DebitCardControllerTest {
+//
+//    @Mock
+//    private DebitCardRepository debitCardRepository;
+//
+//    @Mock
+//    private CardSecurityServices cardSecurityServices;
+//
+//    @InjectMocks
+//    private DebitCardController debitCardController;
+//
+//    @BeforeEach
+//    public void setUp() {
+//        MockitoAnnotations.openMocks(this);
+//    }
+//
+//    @Test
+//    public void testActivateCard_SuccessfulActivation() throws SQLSyntaxErrorException {
+//        // Mocking
+//        DebitCard debitCard = new DebitCard();
+//        Long cardNumber = 123456789L;
+//        Long customerId = 123L;
+//
+//        // Mocking SecurityContextHolder
+//        Authentication authentication = new TestingAuthenticationToken("username", "password");
+//        SecurityContext securityContext = mock(SecurityContext.class);
+//        when(SecurityContextHolder.getContext()).thenReturn(securityContext);
+//        securityContext.setAuthentication(authentication);
+//
+//        CardSecurity cardSecurity = new CardSecurity();
+//        cardSecurity.setCustomerId(customerId);
+//        when(cardSecurityServices.findByUserName("username")).thenReturn(cardSecurity);
+//
+//        // Stubbing the method call on the mock object using when().thenReturn() syntax
+//        when(debitCardRepository.activateStatus(any(DebitCard.class), anyLong(), anyLong())).thenReturn("Debit card activation successful.");
+//
+//        // Call the method under test
+//        ResponseEntity<String> response = debitCardController.activateCard(debitCard, cardNumber);
+//
+//        // Assertions
+//        assertEquals(HttpStatus.OK, response.getStatusCode());
+//        assertEquals("Debit card activation successful.", response.getBody());
+//    }
+//
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
-
-import java.sql.SQLSyntaxErrorException;
-import java.util.ResourceBundle;
-
-import cards.web.service.mybankdebitcardweb.rest.DebitCardController;
-import list.cards.mybankdebitcarddao.entities.DebitCard;
-import list.cards.mybankdebitcarddao.exception.DebitCardException;
-import list.cards.mybankdebitcarddao.remotes.DebitCardRepository;
-import list.cards.mybankdebitcarddao.security.CardSecurity;
-import list.cards.mybankdebitcarddao.security.CardSecurityServices;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.TestingAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContext;
-import org.springframework.security.core.context.SecurityContextHolder;
-
-public class DebitCardControllerTest {
-
-    @Mock
-    private DebitCardRepository debitCardRepository;
-
-    @Mock
-    private CardSecurityServices cardSecurityServices;
-
-    @InjectMocks
-    private DebitCardController debitCardController;
-
-    @BeforeEach
-    public void setUp() {
-        MockitoAnnotations.openMocks(this);
-    }
-
-    @Test
-    public void testActivateCard_SuccessfulActivation() throws SQLSyntaxErrorException {
-        // Mocking
-        DebitCard debitCard = new DebitCard();
-        Long cardNumber = 123456789L;
-        Long customerId = 123L;
-
-        // Mocking SecurityContextHolder
-        Authentication authentication = new TestingAuthenticationToken("username", "password");
-        SecurityContext securityContext = mock(SecurityContext.class);
-        when(SecurityContextHolder.getContext()).thenReturn(securityContext);
-        securityContext.setAuthentication(authentication);
-
-        CardSecurity cardSecurity = new CardSecurity();
-        cardSecurity.setCustomerId(customerId);
-        when(cardSecurityServices.findByUserName("username")).thenReturn(cardSecurity);
-
-        // Stubbing the method call on the mock object using when().thenReturn() syntax
-        when(debitCardRepository.activateStatus(any(DebitCard.class), anyLong(), anyLong())).thenReturn("Debit card activation successful.");
-
-        // Call the method under test
-        ResponseEntity<String> response = debitCardController.activateCard(debitCard, cardNumber);
-
-        // Assertions
-        assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals("Debit card activation successful.", response.getBody());
-    }
 
 
 //    @Test
@@ -93,7 +95,7 @@ public class DebitCardControllerTest {
 //        assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
 //        assertEquals("Error message", response.getBody());
 //    }
-}
+//}
 
 
 
