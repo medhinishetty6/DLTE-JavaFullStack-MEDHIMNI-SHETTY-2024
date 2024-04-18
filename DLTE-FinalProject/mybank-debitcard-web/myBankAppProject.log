@@ -60,4 +60,13 @@
 [0;39m[31m2024-04-18 11:05:47,407[0;39m [32m[INFO][0;39m org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] http-nio-8083-exec-2 [32mInitializing Spring DispatcherServlet 'dispatcherServlet'
 [0;39m[31m2024-04-18 11:05:47,408[0;39m [32m[INFO][0;39m org.springframework.web.servlet.DispatcherServlet http-nio-8083-exec-2 [32mInitializing Servlet 'dispatcherServlet'
 [0;39m[31m2024-04-18 11:05:47,411[0;39m [32m[INFO][0;39m org.springframework.web.servlet.DispatcherServlet http-nio-8083-exec-2 [32mCompleted initialization in 2 ms
+[0;39m[31m2024-04-18 11:37:22,030[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-1 housekeeper [32mHikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m4s723ms606µs300ns).
+[0;39m[31m2024-04-18 13:37:17,701[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-1 housekeeper [32mHikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m54s92ms537µs399ns).
+[0;39m[31m2024-04-18 13:45:31,539[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-1 housekeeper [32mHikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m13s723ms491µs101ns).
+[0;39m[31m2024-04-18 13:52:05,674[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-1 housekeeper [32mHikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m34s134ms963µs700ns).
+[0;39m[31m2024-04-18 13:53:03,857[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-1 housekeeper [32mHikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s182ms961µs699ns).
+[0;39m[31m2024-04-18 13:57:02,491[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-1 housekeeper [32mHikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s618ms167µs800ns).
+[0;39m[31m2024-04-18 13:59:46,284[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-1 housekeeper [32mHikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m13s775ms62µs701ns).
+[0;39m[31m2024-04-18 14:03:42,943[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-1 housekeeper [32mHikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m56s661ms375µs500ns).
+[0;39m[31m2024-04-18 14:04:53,183[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-1 housekeeper [32mHikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m10s236ms886µs800ns).
 [0;39m
