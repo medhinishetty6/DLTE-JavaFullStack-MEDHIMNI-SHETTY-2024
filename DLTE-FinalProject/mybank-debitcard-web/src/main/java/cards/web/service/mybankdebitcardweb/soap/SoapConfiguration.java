@@ -36,6 +36,7 @@ public class SoapConfiguration extends WsConfigurerAdapter {
         return defaultWsdl11Definition;
     }
 
+
     // identify the xsd
     @Bean
     public XsdSchema debitCardSchema(){
