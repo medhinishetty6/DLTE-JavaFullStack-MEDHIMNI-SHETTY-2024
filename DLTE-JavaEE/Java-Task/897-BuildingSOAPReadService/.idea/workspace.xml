@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c60a58e-9bf0-48b5-b879-65a72c59d532" name="Default Changelist" comment="" />
+    <list default="true" id="9c60a58e-9bf0-48b5-b879-65a72c59d532" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log.2024-04-21.0.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/FrontEnd/Task-1478-FE-HTML-UIForProjectService1withJS/listCards.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/FrontEnd/Task-1478-FE-HTML-UIForProjectService1withJS/listCards.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/FrontEnd/Task-1478-FE-HTML-UIForProjectService1withJS/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/FrontEnd/Task-1478-FE-HTML-UIForProjectService1withJS/project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log.2024-04-14.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/rest/DebitCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/rest/DebitCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/soap/SoapPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/soap/SoapPhase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/links/debitcard/DebitCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/links/debitcard/ObjectFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/links/debitcard/ServiceStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/links/debitcard/ViewDebitCardRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/links/debitcard/ViewDebitCardResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/links/debitcard/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../862-RestfulWebservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../862-RestfulWebservice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../862-RestfulWebservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../862-RestfulWebservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../862-RestfulWebservice/src/test/java/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../862-RestfulWebservice/src/test/java/AppTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +50,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -87,6 +106,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711734746541</updated>
       <workItem from="1711734749851" duration="5724000" />
+      <workItem from="1713762260087" duration="5000" />
     </task>
     <servers />
   </component>

@@ -6,7 +6,6 @@ import links.debitcard.ViewDebitCardRequest;
 import links.debitcard.ViewDebitCardResponse;
 import list.cards.mybankdebitcarddao.exception.DebitCardException;
 import list.cards.mybankdebitcarddao.remotes.DebitCardRepository;
-import list.cards.mybankdebitcarddao.services.DebitCardService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
@@ -14,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -39,17 +37,15 @@ public class SoapPhase {
     @Autowired
     private DebitCardRepository debitCardService;
 
-    // ResourceBundle for accessing application properties/messages
     ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
 
-    // Logger for logging messages
     private static final Logger logger = LoggerFactory.getLogger(SoapPhase.class);
 
     // Method to handle incoming SOAP requests
     @PayloadRoot(namespace = url,localPart = "viewDebitCardRequest")
     @ResponsePayload
     public  ViewDebitCardResponse viewDebitCardResponse(@RequestPayload ViewDebitCardRequest viewDebitCardRequest) throws SQLException{
-        // Create a response object
+
         ViewDebitCardResponse viewDebitCardResponse = new ViewDebitCardResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
         try {
@@ -90,6 +86,220 @@ public class SoapPhase {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//// Component scan to find beans for dependency injection
+//@ComponentScan("list.cards.mybankdebitcarddao")
+//// Annotation to declare this class as an endpoint for SOAP requests
+//@Endpoint
+//public class SoapPhase {
+//    // URL namespace for SOAP requests
+//    private final String url="http://debitcard.links";
+//
+//    // Dependency injection of DebitCardService
+//    @Autowired
+//    private DebitCardRepository debitCardService;
+//
+//    // ResourceBundle for accessing application properties/messages
+//    ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
+//
+//    // Logger for logging messages
+//    private static final Logger logger = LoggerFactory.getLogger(SoapPhase.class);
+//
+//    // Method to handle incoming SOAP requests
+//    @PayloadRoot(namespace = url,localPart = "viewDebitCardRequest")
+//    @ResponsePayload
+//    public  ViewDebitCardResponse viewDebitCardResponse(@RequestPayload ViewDebitCardRequest viewDebitCardRequest) throws SQLException{
+//        // Create a response object
+//        ViewDebitCardResponse viewDebitCardResponse = new ViewDebitCardResponse();
+//        ServiceStatus serviceStatus = new ServiceStatus();
+//        try {
+//            // Initialize a list to store DebitCard objects
+//            List<DebitCard> debitCardList = new ArrayList<>();
+//            // Retrieve DebitCard entities from the service
+//            List<list.cards.mybankdebitcarddao.entities.DebitCard> debitCardsDao = debitCardService.getDebitCard();
+//
+//            // Convert DebitCard entities to DebitCard objects
+//            debitCardsDao.forEach(debitCard -> {
+//                links.debitcard.DebitCard currentDebitCard = new links.debitcard.DebitCard();
+//                BeanUtils.copyProperties(debitCard, currentDebitCard);
+//                debitCardList.add(currentDebitCard);
+//            });
+//
+//            // Set the response status to OK
+//            serviceStatus.setStatus(HttpServletResponse.SC_OK);
+//            // Add the DebitCard objects to the response
+//            viewDebitCardResponse.getDebitCard().addAll(debitCardList);
+//        } catch (DebitCardException e) {
+//            // Handle exceptions by setting an internal server error status and logging the error
+//            serviceStatus.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+//            serviceStatus.setMessage(e.toString());
+//            logger.error(resourceBundle.getString("Debitcard.error"));
+//        }
+//
+//        // Set the service status in the response and return it
+//        viewDebitCardResponse.setServiceStatus(serviceStatus);
+//        return viewDebitCardResponse;
+//    }
+//
+//    // Exception handler to handle SQLException and DebitCardException
+//    @ExceptionHandler(value = {SQLException.class, DebitCardException.class})
+//    public ResponseEntity<String> handleExceptions(Exception ex) {
+//        // Log the error
+//        logger.info(resourceBundle.getString("Debitcard.error"));
+//        // Return an internal server error response with the exception message
+//        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -19,14 +19,13 @@ import java.util.*;
 @Service
 public class DebitCardService implements DebitCardRepository {
 
-    // Logger for logging messages
     Logger logger = LoggerFactory.getLogger(DebitCardService.class);
 
     // Autowired JdbcTemplate for database access
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    // ResourceBundle for accessing application properties
+
     ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
 
     // Method to fetch debit card data from the database

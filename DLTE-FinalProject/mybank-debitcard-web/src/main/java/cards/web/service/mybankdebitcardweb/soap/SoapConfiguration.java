@@ -25,6 +25,8 @@ public class SoapConfiguration extends WsConfigurerAdapter {
         return new ServletRegistrationBean(servlet,"/debitcardrepo/*");
     }
 
+
+
     // wsdl properties
     @Bean(name = "debitcard")
     public DefaultWsdl11Definition convertToWsdl(XsdSchema xsdSchema){

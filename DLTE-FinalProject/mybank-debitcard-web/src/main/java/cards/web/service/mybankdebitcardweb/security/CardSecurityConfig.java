@@ -26,6 +26,7 @@ public class CardSecurityConfig {
 
     @Autowired
     CardFailureHandler cardFailureHandler;
+
     @Autowired
     CardSuccessHandler cardSuccessHandler;
 
