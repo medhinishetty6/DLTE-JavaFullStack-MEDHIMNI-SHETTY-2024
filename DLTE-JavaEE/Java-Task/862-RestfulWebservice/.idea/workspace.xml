@@ -7,30 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2becce5-5376-449b-acd5-139177ad81cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-dao/myBankAppProject.log.2024-04-17.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log.2024-04-22.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log.2024-04-23.0.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-dao/myBankAppProject.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-dao/myBankAppProject.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-dao/myBankAppProject.log.2024-04-10.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-dao/myBankAppProject.log.2024-04-11.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-dao/myBankAppProject.log.2024-04-12.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-dao/myBankAppProject.log.2024-04-14.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-dao/myBankAppProject.log.2024-04-15.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-dao/myBankAppProject.log.2024-04-16.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-dao/src/main/java/list/cards/mybankdebitcarddao/exception/DebitCardException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-dao/src/main/java/list/cards/mybankdebitcarddao/exception/DebitCardException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-dao/src/main/java/list/cards/mybankdebitcarddao/services/DebitCardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-dao/src/main/java/list/cards/mybankdebitcarddao/services/DebitCardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-dao/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-dao/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log.2024-04-15.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log.2024-04-16.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/rest/DebitCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/rest/DebitCardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/security/CardFailureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/security/CardFailureHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/security/CardSecurity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/security/CardSecurityServices.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/soap/SoapPhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/soap/SoapPhase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FrontEnd/DLTE-FrontEndTask/Task-1561-FE-JQuery-Search&amp;Pagination/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FrontEnd/DLTE-FrontEndTask/Task-1561-FE-JQuery-Search&amp;Pagination/project.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +169,7 @@
       <workItem from="1710823082348" duration="1057000" />
       <workItem from="1710862373197" duration="10047000" />
       <workItem from="1712165017073" duration="83000" />
-      <workItem from="1713689296239" duration="2239000" />
+      <workItem from="1713689296239" duration="2357000" />
     </task>
     <servers />
   </component>

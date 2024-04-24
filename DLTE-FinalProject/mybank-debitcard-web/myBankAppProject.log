@@ -582,4 +582,5 @@ Unconditional classes:
 [0;39m[31m2024-04-24 11:17:34,163[0;39m [32m[INFO][0;39m list.cards.mybankdebitcarddao.services.DebitCardService http-nio-8083-exec-9 [32mDebit card details fetched successfully
 [0;39m[31m2024-04-24 11:39:38,151[0;39m [32m[INFO][0;39m list.cards.mybankdebitcarddao.services.DebitCardService http-nio-8083-exec-5 [32mDebit card details fetched successfully
 [0;39m[31m2024-04-24 12:35:00,664[0;39m [32m[INFO][0;39m list.cards.mybankdebitcarddao.services.DebitCardService http-nio-8083-exec-3 [32mDebit card details fetched successfully
+[0;39m[31m2024-04-24 12:35:14,709[0;39m [32m[INFO][0;39m list.cards.mybankdebitcarddao.services.DebitCardService http-nio-8083-exec-7 [32mDebit card details fetched successfully
 [0;39m
