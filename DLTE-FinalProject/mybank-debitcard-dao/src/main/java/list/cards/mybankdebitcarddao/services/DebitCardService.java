@@ -21,33 +21,27 @@ public class DebitCardService implements DebitCardRepository {
 
     Logger logger = LoggerFactory.getLogger(DebitCardService.class);
 
-    // Autowired JdbcTemplate for database access
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
 
     ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
 
-    // Method to fetch debit card data from the database
+    // debit card data is fetched from the database
     @Override
     public List<DebitCard> getDebitCard() throws SQLSyntaxErrorException, DebitCardException {
         List<DebitCard> debitCardList = null;
         try {
-            // Query database to fetch debit card data
+
             debitCardList = jdbcTemplate.query("SELECT * FROM mybank_app_debitcard where not debitcard_status='Blocked'", new DebitCardMapper());
-            // Log success message
             logger.info(resourceBundle.getString("card.fetch.success"));
         } catch (DataAccessException sqlException) {
-            // Log error for SQL syntax exception
             logger.error(resourceBundle.getString("sql.syntax.invalid"));
-            // Throw SQLSyntaxErrorException
             throw new SQLSyntaxErrorException(sqlException);
         }
-        // Check if no data found
+
         if (debitCardList == null || debitCardList.isEmpty()) {
-            // Log warning for empty result set
-            logger.warn(resourceBundle.getString("card.list.null"));
-            // Throw DebitCardException
+            logger.warn(resourceBundle.getString("card.list.null"));                            // Log warning for empty result set
             throw new DebitCardException(resourceBundle.getString("card.not.available"));
         }
         return debitCardList;
@@ -57,46 +51,42 @@ public class DebitCardService implements DebitCardRepository {
 
     @Override
     public String activateStatus(DebitCard debitCard, Long debitCardNumber, Long customerId) throws SQLSyntaxErrorException, DebitCardException, DebitCardNullException {
-        // Define a CallableStatementCreator to prepare the call to the stored procedure
+        // Preparing the call to the stored procedure
         CallableStatementCreator creator = con -> {
             CallableStatement statement = con.prepareCall("{call activate_debitcard(?,?,?)}");
-            // Set the parameters for the stored procedure call
+            // Setting parameters for the stored procedure call
             statement.setLong(1, debitCardNumber);
             statement.setLong(2, customerId);
             statement.registerOutParameter(3, Types.VARCHAR);
             return statement;
         };
 
-        // Execute the stored procedure using JdbcTemplate
+
         Map<String, Object> returnedExecution = jdbcTemplate.call(creator, Arrays.asList(
                 new SqlParameter[]{
                         new SqlParameter(Types.NUMERIC),
                         new SqlParameter(Types.NUMERIC),
                         new SqlOutParameter("p_result", Types.VARCHAR)
                 })
-        );
+        );         // Execution of stored procedure
 
-        // Extract the result from the output parameter of the stored procedure
         String result = returnedExecution.get("p_result").toString();
         logger.info(result);
-        // Handle different results from the stored procedure
+
+        // here different results are handled from the stored procedure
         switch (result) {
-            case "SQLSUCESS":
-                // Log success and return appropriate message
+            case "SQLSUCESS"://activation successful
                 logger.info(resourceBundle.getString("card.active"));
                 return resourceBundle.getString("card.active");
-            case "SQLERR-004":
-                // Log error and throw exception for card not found
+            case "SQLERR-004"://card not found
                 logger.error(resourceBundle.getString("activation.fail"));
                 throw new DebitCardNullException("activation.fail");
-            case "SQLERR-005":
-                // Log error and throw exception for card already active
+            case "SQLERR-005"://card already active
                 logger.error(resourceBundle.getString("debitCard.already.active"));
                 throw new DebitCardException("debitCard.already.active");
-            case "SQLERR-003":
+            case "SQLERR-003"://user does not have excess for the particular account
                 logger.error(resourceBundle.getString("account.not.editable"));
                 throw new CardNotEditableException("account.not.editable");
-                // Handle any other unexpected result
             default:
                 return null;
         }
@@ -104,11 +94,10 @@ public class DebitCardService implements DebitCardRepository {
 
 
 
-    // RowMapper class to map ResultSet to DebitCard object
+    //  Maping ResultSet to DebitCard object
     public class DebitCardMapper implements RowMapper<DebitCard> {
         @Override
         public DebitCard mapRow(ResultSet rs, int rowNum) throws SQLException {
-            // Create DebitCard object and set its attributes
             DebitCard debitCard = new DebitCard();
             debitCard.setDebitCardNumber(rs.getLong(1));
             debitCard.setAccountNumber(rs.getLong(2));

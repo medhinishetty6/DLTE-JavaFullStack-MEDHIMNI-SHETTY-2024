@@ -27,17 +27,41 @@
             <div class="collapse navbar-collapse" id="mybankmenu">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="./checkBookForm.html" class="btn btn-outline-light rounded-pill me-2 nav-link" style="font-weight: bold;">Forms</a>
+                        <a href="soapAJAX.html" class="btn btn-outline-light rounded-pill me-2 nav-link" style="font-weight: bold;">View cards</a>
                     </li>
                     <li class="nav-item">
-                        <a href="pajination.html" class="btn btn-outline-light rounded-pill me-2 nav-link" style="font-weight: bold;">Accounts</a>
+                        <a href="restAJAX.html" class="btn btn-outline-light rounded-pill me-2 nav-link" style="font-weight: bold;">Update</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./schemeSlides.html" class="btn btn-outline-light rounded-pill me-2 nav-link" style="font-weight: bold;">Deposits</a>
+                        <a href="login.html" class="btn btn-outline-light rounded-pill me-2 nav-link" style="font-weight: bold;">Logout</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>     
+    </nav> 
+    <script>
+         $(document).ready(()=>{
+            if(sessionStorage.getItem("logged")){
+                $("button").click(function(){
+                    const current = $(this)
+                    if(current.hasClass("View cards")){
+                        $("iframe").attr("src","/Task-1602-FE-Web-CompleteUIforMyBankBackend\soapAJAX.html")
+                    }
+                    
+                    else if(current.hasClass("Update")){
+                        $("iframe").attr("src","/Task-1602-FE-Web-CompleteUIforMyBankBackend\restAJAX.html")
+                    }
+                    else if(current.hasClass("Logout")){
+                        sessionStorage.removeItem("logged")
+                        location.assign("http://127.0.0.1:5500/Task-1602-FE-Web-CompleteUIforMyBankBackend\login.html")
+                    }
+                })
+
+            }
+            else{
+                location.assign("http://127.0.0.1:5500/Task-1602-FE-Web-CompleteUIforMyBankBackend\login.html")
+            }
+        })
+    </script>    
     </body>
 </html>

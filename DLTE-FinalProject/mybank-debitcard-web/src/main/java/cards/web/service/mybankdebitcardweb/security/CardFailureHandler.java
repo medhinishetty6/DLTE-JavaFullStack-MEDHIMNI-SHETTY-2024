@@ -37,6 +37,7 @@ public class CardFailureHandler extends SimpleUrlAuthenticationFailureHandler {
                     logger.warn(resourceBundle.getString("credentials.invalid"));
                     exception=new LockedException(resourceBundle.getString("attempts.taken"));
                 }
+
                 else{
                     cardSecurityServices.updateStatus(cardSecurity);
                     logger.warn(resourceBundle.getString("account.suspend"));

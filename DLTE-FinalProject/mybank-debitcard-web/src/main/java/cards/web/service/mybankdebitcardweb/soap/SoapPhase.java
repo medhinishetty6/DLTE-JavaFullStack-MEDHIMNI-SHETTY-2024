@@ -25,12 +25,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-// Component scan to find beans for dependency injection
+
 @ComponentScan("list.cards.mybankdebitcarddao")
-// Annotation to declare this class as an endpoint for SOAP requests
+
 @Endpoint
 public class SoapPhase {
-    // URL namespace for SOAP requests
+    // URL for SOAP request
     private final String url="http://debitcard.links";
 
     // Dependency injection of DebitCardService
@@ -41,7 +41,7 @@ public class SoapPhase {
 
     private static final Logger logger = LoggerFactory.getLogger(SoapPhase.class);
 
-    // Method to handle incoming SOAP requests
+
     @PayloadRoot(namespace = url,localPart = "viewDebitCardRequest")
     @ResponsePayload
     public  ViewDebitCardResponse viewDebitCardResponse(@RequestPayload ViewDebitCardRequest viewDebitCardRequest) throws SQLException{
@@ -49,40 +49,36 @@ public class SoapPhase {
         ViewDebitCardResponse viewDebitCardResponse = new ViewDebitCardResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
         try {
-            // Initialize a list to store DebitCard objects
-            List<DebitCard> debitCardList = new ArrayList<>();
-            // Retrieve DebitCard entities from the service
-            List<list.cards.mybankdebitcarddao.entities.DebitCard> debitCardsDao = debitCardService.getDebitCard();
+            List<DebitCard> debitCardList = new ArrayList<>();             // Initialize a list to store DebitCard objects
+            List<list.cards.mybankdebitcarddao.entities.DebitCard> debitCardsDao = debitCardService.getDebitCard();            // Retrieve DebitCard entities from the service
 
-            // Convert DebitCard entities to DebitCard objects
+            // Convertion of DebitCard entities to DebitCard objects
             debitCardsDao.forEach(debitCard -> {
                 links.debitcard.DebitCard currentDebitCard = new links.debitcard.DebitCard();
                 BeanUtils.copyProperties(debitCard, currentDebitCard);
                 debitCardList.add(currentDebitCard);
             });
 
-            // Set the response status to OK
             serviceStatus.setStatus(HttpServletResponse.SC_OK);
-            // Add the DebitCard objects to the response
-            viewDebitCardResponse.getDebitCard().addAll(debitCardList);
+            viewDebitCardResponse.getDebitCard().addAll(debitCardList);          // here you will be adding the DebitCard objects
         } catch (DebitCardException e) {
-            // Handle exceptions by setting an internal server error status and logging the error
+
             serviceStatus.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             serviceStatus.setMessage(e.toString());
             logger.error(resourceBundle.getString("Debitcard.error"));
         }
 
-        // Set the service status in the response and return it
+        // here set the service status in the response and return it
         viewDebitCardResponse.setServiceStatus(serviceStatus);
         return viewDebitCardResponse;
     }
 
-    // Exception handler to handle SQLException and DebitCardException
+
     @ExceptionHandler(value = {SQLException.class, DebitCardException.class})
     public ResponseEntity<String> handleExceptions(Exception ex) {
-        // Log the error
+
         logger.info(resourceBundle.getString("Debitcard.error"));
-        // Return an internal server error response with the exception message
+
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
     }
 }

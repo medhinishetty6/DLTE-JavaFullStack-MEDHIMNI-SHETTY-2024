@@ -31,19 +31,17 @@ import java.util.ResourceBundle;
 @RequestMapping("/debitcard")
 public class DebitCardController {
 
-    // Autowiring DebitCardRepository and CardSecurityServices for dependency injection
+
     @Autowired
     private DebitCardRepository debitCardRepository;
     @Autowired
     CardSecurityServices services;
 
-    // ResourceBundle for accessing application properties/messages
     ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
 
-    // Logger for logging messages
     private Logger logger = LoggerFactory.getLogger(DebitCardController.class);
 
-    // API endpoint for activating a debit card
+    // endpoint to activate debit card
     @PutMapping("/activate/{cardNumber}")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "404", description = "Debit card does not exist or request body is empty"),
@@ -51,12 +49,11 @@ public class DebitCardController {
     })
     public ResponseEntity<String> activateCard(@Valid @RequestBody DebitCard debitCard, @PathVariable("cardNumber") Long debitCardNumber) {
         try {
-            // Retrieving authentication details
+            // Getting the authentication details
             Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
             String username=authentication.getName();
-            // Finding card details for the authenticated user
-            CardSecurity card=services.findByUserName(username);
-            // Checking if the request body is empty
+            CardSecurity card=services.findByUserName(username);   //searching card details for the particular username
+
             if (debitCard == null) {
                 throw new IllegalArgumentException(resourceBundle.getString("empty.body"));
             }
@@ -64,7 +61,7 @@ public class DebitCardController {
             // Activating the debit card
             String response = debitCardRepository.activateStatus(debitCard,debitCardNumber,card.getCustomerId());
             logger.info(response);
-            // Returning response based on activation status
+            // Returning the response based on activation status
             if (response.equals(resourceBundle.getString("card.active"))) {
                 logger.info(resourceBundle.getString("card.active"));
                 return ResponseEntity.ok(response);
@@ -89,7 +86,7 @@ public class DebitCardController {
         }
     }
 
-    // Exception handler for handling validation exceptions
+    //  Handling validation exceptions
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public Map<String, String> handleValidationExceptions(MethodArgumentNotValidException ex) {
