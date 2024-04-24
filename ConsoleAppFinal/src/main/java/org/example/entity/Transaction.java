@@ -11,6 +11,9 @@ public class Transaction implements Serializable {
     private double amount;
     private LocalDateTime timestamp;
 
+    public Transaction() {
+    }
+
     public Transaction(String sender, String receiver, double amount) {
         this.sender = sender;
         this.receiver = receiver;

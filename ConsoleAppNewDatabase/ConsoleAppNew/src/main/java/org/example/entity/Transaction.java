@@ -11,7 +11,10 @@ public class Transaction implements Serializable {
     private double amount;
     private LocalDateTime transaction_timestamp;
 
-    public Transaction(String sender, String receiver, double amount,LocalDateTime transaction_timestamp) {
+    public Transaction() {
+    }
+
+    public Transaction(String sender, String receiver, double amount, LocalDateTime transaction_timestamp) {
         this.sender = sender;
         this.receiver = receiver;
         this.amount = amount;
