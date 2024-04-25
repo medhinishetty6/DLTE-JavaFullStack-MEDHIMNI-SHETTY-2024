@@ -15,7 +15,7 @@ public class TransactionService implements UserDetailsService {
     private JdbcTemplate jdbcTemplate;
 
     public Transaction signIn(Transaction transaction) {
-        int details = jdbcTemplate.update("insert into transaction values(?,?,?,?,?)", new Object[]{
+        int details = jdbcTemplate.update("insert into securitytransaction values(?,?,?,?,?)", new Object[]{
                 transaction.getUsername(),
                 transaction.getPassword(),
                 transaction.getRole(),
@@ -26,7 +26,7 @@ public class TransactionService implements UserDetailsService {
         return transaction;
     }
     public Transaction findByUsername(String username){
-        Transaction transaction=jdbcTemplate.queryForObject("select*from transaction where username=?",
+        Transaction transaction=jdbcTemplate.queryForObject("select*from securitytransaction where username=?",
                 new Object[]{username},new BeanPropertyRowMapper<>(Transaction.class));
         return transaction;
     }

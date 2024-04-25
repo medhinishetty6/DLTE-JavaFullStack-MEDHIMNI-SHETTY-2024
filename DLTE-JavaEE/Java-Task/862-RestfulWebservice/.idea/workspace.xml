@@ -7,66 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2becce5-5376-449b-acd5-139177ad81cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log.2024-04-24.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/resources/debitcard.wsdl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/1754-JSF-Collection-CRUD.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/src/main/java/crud/loans/Loans.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/src/main/webapp/index.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/classes/crud/loans/Loans.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/jspwithloan.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/jspwithloan/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/jspwithloan/WEB-INF/classes/crud/loans/Loans.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/jspwithloan/WEB-INF/lib/jsf-api-2.2.20.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/jspwithloan/WEB-INF/lib/jsf-impl-2.2.20.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/jspwithloan/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/jspwithloan/index.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log.2024-04-18.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log.2024-04-19.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log.2024-04-21.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log.2024-04-22.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log.2024-04-23.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log.2024-04-24.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/MybankDebitcardWebApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/ServletInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/mvc/MyBankWebController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/rest/DebitCardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/security/CardFailureHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/security/CardSecurityApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/security/CardSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/security/CardSuccessHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/soap/SoapConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/soap/SoapPhase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/resources/debitcard.wsdl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/resources/debitcard.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/resources/templates/update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/resources/templates/viewDebitcard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/test/java/cards/web/service/mybankdebitcardweb/DebitCardControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/test/java/cards/web/service/mybankdebitcardweb/MybankDebitcardWebApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/FrontEnd/Task-1602-FE-Web-CompleteUIforMyBankBackend/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/FrontEnd/Task-1602-FE-Web-CompleteUIforMyBankBackend/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log.2024-04-17.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/resources/sample.xs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/src/main/webapp/index.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1098-SpringBootJDBC/src/main/java/auth/MyBankOfficialsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1098-SpringBootJDBC/src/main/java/auth/MyBankOfficialsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1098-SpringBootJDBC/src/main/java/security/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1098-SpringBootJDBC/src/main/java/security/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

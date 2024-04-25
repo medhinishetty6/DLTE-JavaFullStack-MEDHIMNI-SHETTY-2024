@@ -916,4 +916,6 @@ Identify and stop the process that's listening on port 8083 or configure this ap
 [0;39m[31m2024-04-25 16:09:51,872[0;39m [32m[INFO][0;39m org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] http-nio-8088-exec-1 [32mInitializing Spring DispatcherServlet 'dispatcherServlet'
 [0;39m[31m2024-04-25 16:09:51,872[0;39m [32m[INFO][0;39m org.springframework.web.servlet.DispatcherServlet http-nio-8088-exec-1 [32mInitializing Servlet 'dispatcherServlet'
 [0;39m[31m2024-04-25 16:09:51,872[0;39m [32m[INFO][0;39m org.springframework.web.servlet.DispatcherServlet http-nio-8088-exec-1 [32mCompleted initialization in 0 ms
+[0;39m[31m2024-04-25 17:05:08,760[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-1 housekeeper [32mHikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s693ms812µs).
+[0;39m[31m2024-04-25 17:49:31,959[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-1 housekeeper [32mHikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m22s460ms519µs601ns).
 [0;39m

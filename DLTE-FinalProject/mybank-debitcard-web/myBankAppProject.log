@@ -326,4 +326,6 @@ Unconditional classes:
 [0;39m[31m2024-04-25 13:57:56,495[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-1 housekeeper [32mHikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53m49s324ms37µs100ns).
 [0;39m[31m2024-04-25 14:27:25,354[0;39m [32m[INFO][0;39m list.cards.mybankdebitcarddao.services.DebitCardService http-nio-8083-exec-7 [32mDebit card details fetched successfully
 [0;39m[31m2024-04-25 14:29:32,718[0;39m [32m[INFO][0;39m list.cards.mybankdebitcarddao.services.DebitCardService http-nio-8083-exec-3 [32mDebit card details fetched successfully
+[0;39m[31m2024-04-25 17:05:20,382[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-1 housekeeper [32mHikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s692ms210µs799ns).
+[0;39m[31m2024-04-25 17:49:43,573[0;39m [32m[WARN][0;39m com.zaxxer.hikari.pool.HikariPool HikariPool-1 housekeeper [32mHikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m22s452ms999µs999ns).
 [0;39m

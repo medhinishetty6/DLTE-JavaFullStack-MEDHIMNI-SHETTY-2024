@@ -111,13 +111,13 @@ public class Loans {
     }
 
     public List<Loans> getClosedLoans() {
-        List<Loans> closedLoans = new ArrayList<>();
+        List<Loans> displayclosedLoans = new ArrayList<>();
         for (Loans loan : loanList) {
             if (loan.getLoanStatus().equalsIgnoreCase("closed")) {
-                closedLoans.add(loan);
+                displayclosedLoans.add(loan);
             }
         }
-        return closedLoans;
+        return displayclosedLoans;
     }
 
     public void deleteLoan(Long loanNumber) {

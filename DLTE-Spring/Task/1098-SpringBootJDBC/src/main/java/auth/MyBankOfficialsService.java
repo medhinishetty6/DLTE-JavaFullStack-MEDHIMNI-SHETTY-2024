@@ -14,7 +14,7 @@ public class MyBankOfficialsService implements UserDetailsService {
     private JdbcTemplate jdbcTemplate;
 
     public MyBankOfficials signIn(MyBankOfficials myBankOfficials) {
-        int details = jdbcTemplate.update("insert into transaction values(?,?,?,?,?)", new Object[]{
+        int details = jdbcTemplate.update("insert into securitytransaction values(?,?,?,?,?)", new Object[]{
                 myBankOfficials.getName(),
                 myBankOfficials.getUsername(),
                 myBankOfficials.getPassword(),
@@ -26,7 +26,7 @@ public class MyBankOfficialsService implements UserDetailsService {
 
     }
     public MyBankOfficials findByUsername(String username) {
-        MyBankOfficials myBankOfficials = jdbcTemplate.queryForObject("select * from mybank_officials where username=?",
+        MyBankOfficials myBankOfficials = jdbcTemplate.queryForObject("select * from securitytransaction where username=?",
                 new Object[]{username}, new BeanPropertyRowMapper<>(MyBankOfficials.class));
         return myBankOfficials;
     }
