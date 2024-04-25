@@ -47,11 +47,10 @@ public class NewTransaction extends HttpServlet {
         }
 
         if (updatedBalance >= 0) {
-            // redirect to the dashboard with the updated balance
             resp.sendRedirect("dashboard.jsp?balance=" + updatedBalance);
+            req.setAttribute("error", resourceBundle.getString("transaction.success"));
         } else {
-            // redirect back to the withdrawal page with an error message
-            RequestDispatcher dispatcher = req.getRequestDispatcher("transferamount.jsp");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("transaction.jsp");
             req.setAttribute("error", resourceBundle.getString("transaction.failure"));
             dispatcher.forward(req, resp);
         }

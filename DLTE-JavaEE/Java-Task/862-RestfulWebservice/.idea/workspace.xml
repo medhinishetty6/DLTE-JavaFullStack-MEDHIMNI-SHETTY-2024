@@ -8,10 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d2becce5-5376-449b-acd5-139177ad81cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/src/main/webapp/index.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1098-SpringBootJDBC/src/main/java/auth/MyBankOfficialsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1098-SpringBootJDBC/src/main/java/auth/MyBankOfficialsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1098-SpringBootJDBC/src/main/java/security/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1098-SpringBootJDBC/src/main/java/security/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restWeb/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restWeb/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restWeb/NewTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restWeb/NewTransaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/transaction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/transaction.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +185,7 @@
       <workItem from="1710862373197" duration="10047000" />
       <workItem from="1712165017073" duration="83000" />
       <workItem from="1713689296239" duration="12549000" />
-      <workItem from="1714015891952" duration="2496000" />
+      <workItem from="1714015891952" duration="3099000" />
     </task>
     <servers />
   </component>

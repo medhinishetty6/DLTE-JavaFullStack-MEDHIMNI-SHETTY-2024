@@ -24,7 +24,7 @@
     <h1 class="text-center text-success"><%= info %></h1>
     <% } %>
     <h1>Transfer Amount</h1>
-    <form action="WithdrawServlet" method="post">
+    <form action="TransactionServlet" method="post">
         <div class="mb-3">
             <label for="amount" class="form-label">Amount to Withdraw</label>
             <input type="text" id="amount" name="amount" class="form-control" required>

@@ -51,10 +51,10 @@
                     <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="newaccount.jsp">Create Account</a>
+                    <a class="nav-link" href="create.jsp">Create Account</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="withdrawamount.jsp">Transfer Amount</a>
+                    <a class="nav-link" href="transaction.jsp">Transfer Amount</a>
                 </li>
             </ul>
         </div>

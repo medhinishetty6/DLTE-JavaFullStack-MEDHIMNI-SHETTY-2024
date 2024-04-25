@@ -35,7 +35,7 @@ import java.util.ResourceBundle;
                 Driver driver = new OracleDriver();
                 DriverManager.registerDriver(driver);
                 Connection connection = DriverManager.getConnection(resourceBundle.getString("db.url"), resourceBundle.getString("db.user"), resourceBundle.getString("db.pass"));
-                String query = "select * from Acccounts where username=? and password=?";
+                String query = "select * from transactionjsp where username=? and password=?";
                 PreparedStatement preparedStatement=connection.prepareStatement(query);
                 preparedStatement.setString(1,username);
                 preparedStatement.setString(2,password);
