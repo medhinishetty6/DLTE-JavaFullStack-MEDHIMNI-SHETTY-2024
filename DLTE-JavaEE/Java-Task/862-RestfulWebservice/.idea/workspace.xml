@@ -7,51 +7,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2becce5-5376-449b-acd5-139177ad81cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restWeb/CreateAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restWeb/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restWeb/NewTransaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restfulweb/CreateNewTransactionPost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/restfulweb/Transactions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/transaction.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/entity/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/entity/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/main/java/org/example/middleware/UserDetailsFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/src/test/java/org/example/Middleware/UserDetailsFileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Entity/Account.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Entity/Transaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Exceptions/InsufficientFundsException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Exceptions/InvalidCredentialsException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Middleware/UserDetailsFileRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Remote/FileStorageTarget.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Remote/StorageTarget.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Remote/UserDetailsRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/classes/org/example/Services/AccountServices.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppFinal/target/test-classes/org/example/AppTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/src/main/java/org/example/entity/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/src/main/java/org/example/entity/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/ConsoleAppNew-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/ConsoleAppNew-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/classes/org/example/entity/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/classes/org/example/entity/Transaction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/surefire-reports/TEST-org.example.AppTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ConsoleAppNewDatabase/ConsoleAppNew/target/surefire-reports/org.example.AppTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log.2024-04-24.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/resources/debitcard.wsdl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/1754-JSF-Collection-CRUD.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/src/main/java/crud/loans/Loans.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/src/main/webapp/index.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/classes/crud/loans/Loans.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/jspwithloan.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/jspwithloan/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/jspwithloan/WEB-INF/classes/crud/loans/Loans.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/jspwithloan/WEB-INF/lib/jsf-api-2.2.20.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/jspwithloan/WEB-INF/lib/jsf-impl-2.2.20.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/jspwithloan/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/jspwithloan/index.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1754-JSF-Collection-CRUD/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log.2024-04-18.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log.2024-04-19.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log.2024-04-21.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log.2024-04-22.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log.2024-04-23.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log.2024-04-24.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/MybankDebitcardWebApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/mvc/MyBankWebController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/rest/DebitCardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/security/CardFailureHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/security/CardSecurityApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/security/CardSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/security/CardSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/soap/SoapConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/java/cards/web/service/mybankdebitcardweb/soap/SoapPhase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/resources/debitcard.wsdl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/resources/debitcard.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/resources/templates/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/main/resources/templates/viewDebitcard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/test/java/cards/web/service/mybankdebitcardweb/DebitCardControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/src/test/java/cards/web/service/mybankdebitcardweb/MybankDebitcardWebApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/FrontEnd/Task-1602-FE-Web-CompleteUIforMyBankBackend/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/FrontEnd/Task-1602-FE-Web-CompleteUIforMyBankBackend/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log.2024-04-17.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/src/main/resources/sample.xs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/862-RestfulWebservice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/862-RestfulWebservice.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restfulweb/createNewTRansacction.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/862-RestfulWebservice.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/862-RestfulWebservice.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/862-RestfulWebservice/WEB-INF/classes/restfulweb/CreateNewTransactionPost.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/862-RestfulWebservice/WEB-INF/classes/restfulweb/CreateNewTransactionPost.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/862-RestfulWebservice/WEB-INF/classes/restfulweb/Transactions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/862-RestfulWebservice/WEB-INF/classes/restfulweb/Transactions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/862-RestfulWebservice/WEB-INF/lib/ConsoleAppNew-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/862-RestfulWebservice/WEB-INF/lib/ConsoleAppNew-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restfulweb/CreateNewTransactionPost.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restfulweb/CreateNewTransactionPost.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restfulweb/Transactions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restfulweb/Transactions.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +99,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -202,11 +217,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="JBoss Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="JBoss Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -227,7 +237,8 @@
       <workItem from="1710823082348" duration="1057000" />
       <workItem from="1710862373197" duration="10047000" />
       <workItem from="1712165017073" duration="83000" />
-      <workItem from="1713689296239" duration="10695000" />
+      <workItem from="1713689296239" duration="12549000" />
+      <workItem from="1714015891952" duration="2496000" />
     </task>
     <servers />
   </component>
@@ -250,34 +261,34 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="188" y="281" width="393" height="265" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.816@0.0.1536.816" timestamp="1713949069203" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1713952590264">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1713958681821">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1713952590264" />
-    <state width="1024" height="208" key="GridCell.Tab.0.bottom" timestamp="1713957439323">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1713958681821" />
+    <state width="1024" height="208" key="GridCell.Tab.0.bottom" timestamp="1713961641322">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1024" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1713957439323" />
-    <state width="1024" height="208" key="GridCell.Tab.0.center" timestamp="1713957439323">
+    <state width="1024" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1713961641322" />
+    <state width="1024" height="208" key="GridCell.Tab.0.center" timestamp="1713961641322">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1024" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1713957439323" />
-    <state width="1024" height="208" key="GridCell.Tab.0.left" timestamp="1713957439323">
+    <state width="1024" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1713961641322" />
+    <state width="1024" height="208" key="GridCell.Tab.0.left" timestamp="1713961641322">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1024" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1713957439323" />
-    <state width="1024" height="208" key="GridCell.Tab.0.right" timestamp="1713957439323">
+    <state width="1024" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1713961641322" />
+    <state width="1024" height="208" key="GridCell.Tab.0.right" timestamp="1713961641322">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1024" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1713957439323" />
+    <state width="1024" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1713961641322" />
     <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1710950300709">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.816@0.0.1536.816" timestamp="1710950300709" />
-    <state x="209" y="117" key="new project wizard" timestamp="1710929067454">
+    <state x="209" y="117" key="new project wizard" timestamp="1714019803340">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="209" y="117" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1710929067454" />
+    <state x="209" y="117" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1714019803340" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -75,6 +75,7 @@
                     error:function(xhr, status, error){
                     
                         // alert(JSON.stringify(error))
+                        sessionStorage.setItem("logged",credentials)
                         location.assign("http://127.0.0.1:5500/Task-1602-FE-Web-CompleteUIforMyBankBackend\login.html")
                     }
                 })
