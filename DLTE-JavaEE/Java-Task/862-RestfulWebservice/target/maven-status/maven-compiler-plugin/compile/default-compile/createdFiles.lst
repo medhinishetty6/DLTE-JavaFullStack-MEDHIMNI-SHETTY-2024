@@ -1,4 +1,8 @@
+restfulweb\findByUserNameDate.class
+restfulweb\findByUsername.class
+restWeb\CreateAccount.class
 restfulweb\CreateNewTransactionPost.class
 restfulweb\Transactions.class
 restfulweb\createAccount.class
-restfulweb\findByUsername.class
+restWeb\Login.class
+restWeb\NewTransaction.class

@@ -10,6 +10,9 @@ public class Transaction {
     private Integer transactionAmount;
     private String transactionRemarks;
 
+    public Transaction() {
+    }
+
     @Override
     public String toString() {
         return "Transaction{" +

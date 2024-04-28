@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+</body><div class="container">
+    <h2 class="mt-5">New Transaction</h2>
+    <div th:if="${error}" class="alert alert-danger" role="alert">
+        <strong>error:</strong> <span th:text="${error}"></span>
+    </div>
+    <form th:action="@{/web/post}" th:object="${transaction}" method="post">
+        <div class="form group">
+            <label for="transactionId" class="form-label">Transaction Id</label>
+            <input type="number" class="form-control" id="transactionId" th:field="*{transactionId}">
+        </div>
+        <div class="form group">>
+            <label for="transactionDate" class="form-label">Transaction Date</label>
+            <input type="text" class="form-control" id="transactionDate" th:field="*{transactionDate}" placeholder="Date">
+        </div>
+        <div class="form group">
+            <label for="receivedBy" class="form-label">Transaction by</label>
+            <input type="text" class="form-control" id="receivedBy" th:field="*{transactionBy}">
+        </div>
+        <div class="form group">
+            <label for="sentTo" class="form-label">Transaction to</label>
+            <input type="text" class="form-control" id="sentTo" th:field="*{transactionTo}">
+        </div>
+        <div class="form group">
+            <label for="amount" class="form-label">Amount</label>
+            <input type="number" class="form-control" id="amount" th:field="*{transactionAmount}">
+        </div>
+        <div class="form group">
+        <label for="remarks" class="form-label">Remarks</label>
+            <input type="text" class="form-control" id="remarks" th:field="*{transactionFor}">
+        </div>
+        <div class="m-5 row justify-content-around">
+            <button type="submit" class="btn btn-outline-info"><h1 class="bi bi-check-circle-fill"></h1></button>
+            <button type="reset" class="btn btn-outline-secondary"><h1 class="bi bi-x-lg"></h1></button>
+        </div>
+    </form>
+</div>
+</html>
