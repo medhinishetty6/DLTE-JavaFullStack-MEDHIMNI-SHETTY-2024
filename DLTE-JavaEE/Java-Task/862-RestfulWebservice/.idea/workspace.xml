@@ -7,25 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2becce5-5376-449b-acd5-139177ad81cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1098-SpringBootJDBC/src/main/java/mvc/MvcController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1098-SpringBootJDBC/src/main/java/mvc/TransactionException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1098-SpringBootJDBC/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1098-SpringBootJDBC/src/main/resources/templates/newTransaction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-FinalProject/mybank-debitcard-web/myBankAppProject.log.2024-04-18.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/862-RestfulWebservice.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/862-RestfulWebservice.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/862-RestfulWebservice/WEB-INF/classes/META-INF/862-RestfulWebservice.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/862-RestfulWebservice/WEB-INF/classes/restWeb/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/862-RestfulWebservice/WEB-INF/classes/restWeb/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/862-RestfulWebservice/WEB-INF/classes/restWeb/NewTransaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/862-RestfulWebservice/WEB-INF/classes/restWeb/NewTransaction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/862-RestfulWebservice.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restWeb/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restWeb/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restWeb/NewTransaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restWeb/NewTransaction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1098-SpringBootJDBC/src/main/java/com/example/demo/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/1098-SpringBootJDBC/src/main/java/com/example/demo/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DLTE-Spring/Task/mybank-debitcard-web/myBankAppProject.log.2024-04-18.0.gz" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
