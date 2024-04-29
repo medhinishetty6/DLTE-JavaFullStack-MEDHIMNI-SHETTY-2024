@@ -53,15 +53,17 @@ public class CardSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
         httpSecurity.httpBasic();
-        httpSecurity.formLogin()
+        httpSecurity.cors();
+        httpSecurity.authorizeRequests().antMatchers("/profile/register").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/v3/api-docs").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/web/**").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/images/**").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/styles/**").permitAll();
+        httpSecurity.formLogin().loginPage("/web/")
                 .usernameParameter("username")
                 .failureHandler(cardFailureHandler).
                 successHandler(cardSuccessHandler);
         httpSecurity.csrf().disable();
-        httpSecurity.cors();
-        httpSecurity.authorizeRequests().antMatchers("/profile/register").permitAll();
-        httpSecurity.authorizeRequests().antMatchers("/v3/api-docs").permitAll();
-
         httpSecurity.authorizeRequests().anyRequest().authenticated();
 
 

@@ -12,31 +12,41 @@ public class DebitCard {
     @Range(min = 3692468135796670L,max = 9999999999999999L,message = "{card.number.invalid}")
     @Digits(integer=16,fraction = 0,message = "{card.number.invalid}")
     private Long debitCardNumber;
+
     @NotNull(message= "{account.number.null}")
     @Range(min = 10000000000000L,max = 99999999999999L,message = "{account.number.invalid}")
     @Digits(integer=14,fraction = 0,message = "{card.number.invalid}")
     private Long accountNumber;
-    @Digits(integer =6,fraction = 0,message = "{customer.id.invalid}")
+
     private Integer customerId;
+
+    @NotNull(message = "{card.cvv.null}")
     @Digits(integer = 3, fraction = 0, message = "{card.cvv.invalid}")
     @Positive(message = "{positive.number}")
     private Integer debitCardCvv;
+
     @NotNull(message = "{card.pin.null}")
     @Digits(integer = 4,fraction = 0,message = "{card.pin.invalid}")
     @Positive(message = "{positive.number}")
     private Integer debitCardPin;
+
     @NotNull(message = "{card.expiry.null}")
+    @FutureOrPresent(message = "{date.expiry}")
     private Date debitCardExpiry;
+
     //pattern perform regex validations
     @NotNull(message = "{card.status.null}")
-    @Pattern(regexp = "^(active|inactive)$", message = "{card.status.invalid}")
+    @Pattern(regexp = "^(active|inactive|Active|Inactive|ACTIVE|INACTIVE)$", message = "{card.status.invalid}")
     private String debitCardStatus;
+
     @NotNull(message = "{card.domestic.null}")
     @Positive(message = "{positive.number}")
     private Double domesticLimit;
+
     @NotNull(message = "{card.international.null}")
     @Positive(message = "{positive.number}")
     private Double internationalLimit;
+
     public Long getDebitCardNumber() {
         return debitCardNumber;
     }
