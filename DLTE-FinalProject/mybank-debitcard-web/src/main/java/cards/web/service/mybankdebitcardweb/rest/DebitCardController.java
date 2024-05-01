@@ -37,7 +37,7 @@ public class DebitCardController {
     @Autowired
     CardSecurityServices services;
 
-    ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("card");
 
     private Logger logger = LoggerFactory.getLogger(DebitCardController.class);
 
@@ -69,19 +69,19 @@ public class DebitCardController {
                 throw new DebitCardNullException(resourceBundle.getString("activation.fail"));
             }
         } catch (CardNotEditableException error) {
-            logger.error(resourceBundle.getString("account.not.editable"));
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(resourceBundle.getString("account.not.editable"));
+            logger.error(resourceBundle.getString("account.not.editable"));   //user does not have access to this account
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(resourceBundle.getString("account.not.editable"));
         } catch (SQLSyntaxErrorException syntaxError) {
             logger.error(resourceBundle.getString("internal.error"));
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(resourceBundle.getString("internal.error"));
+            return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString("internal.error"));
         } catch (DebitCardException debitCardException) {
-            logger.error(resourceBundle.getString("debitCard.already.active"));
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(resourceBundle.getString("debitCard.already.active"));
+            logger.error(resourceBundle.getString("debitCard.already.active"));   //if the debit card is already active
+            return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString("debitCard.already.active"));
         } catch (DebitCardNullException debitCardNullException) {
-            logger.error(resourceBundle.getString("activation.fail"));
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(resourceBundle.getString("activation.fail"));
+            logger.error(resourceBundle.getString("activation.fail"));       //debit card does not exist
+            return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString("activation.fail"));
         } catch (IllegalArgumentException illegalArgumentException) {
-            logger.error(resourceBundle.getString("empty.body"));
+            logger.error(resourceBundle.getString("empty.body"));       //if request body is empty
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(resourceBundle.getString("empty.body"));
         }
     }
@@ -102,153 +102,4 @@ public class DebitCardController {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//    @PutMapping("/activate/{cardNumber}")
-//    public ResponseEntity<String> activateCard( @Valid @RequestBody DebitCard debitCard,
-//            @Valid @PathVariable("cardNumber") Long debitCardNumber,
-//            BindingResult bindingResult) {
-//
-//        // Check for validation errors in the request body
-//        if (bindingResult.hasErrors()) {
-//            // Prepare error messages map
-//            Map<String, String> errors = new HashMap<>();
-//            for (FieldError error : bindingResult.getFieldErrors()) {
-//                errors.put(error.getField(), error.getDefaultMessage());
-//            }
-//            // Return bad request response with error messages
-//            return ResponseEntity.badRequest().body(errors.toString());
-//        }
-//
-//        try {
-//            String response = debitCardRepository.activateStatus(debitCardNumber);
-//            if (response.equals("Debit card activation successful.")) {
-//                logger.info(resourceBundle.getString("card.active"));
-//                return ResponseEntity.ok(response);
-//            } else {
-//                throw new DebitCardNullException(resourceBundle.getString("activation.fail"));
-//            }
-//        } catch (SQLSyntaxErrorException syntaxError) {
-//            logger.error(resourceBundle.getString("internal.error"));
-//            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(resourceBundle.getString("internal.error"));
-//        } catch (DebitCardException debitCardException) {
-//            logger.error(resourceBundle.getString("debitCard.already.active"));
-//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(resourceBundle.getString("debitCard.already.active"));
-//        } catch(DebitCardNullException debitCardNullException){
-//            logger.error(resourceBundle.getString("activation.fail"));
-//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(resourceBundle.getString("activation.fail"));
-//        }
-//    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        // Helper method to find debit card by number
-//    private DebitCard findDebitCardByNumber(String cardNumber) {
-//        // Implement this method to fetch debit card by number from your database
-//   return null;
-   // }
-
-
-
-//  @PutMapping("/activate/{cardNumber}")
-//    public ResponseEntity<ServiceStatus> activateCard(@PathVariable String debitCardNumber, @RequestBody DebitCard debitCard1) {
-//
-//        ServiceStatus serviceStatus = new ServiceStatus();
-//        try {
-//List<DebitCard> debitCard=debitCardService.activateStatus();
-//            // Check if the card exists and is inactive
-//           // DebitCard debitCard =activateStatus(debitCardStatus);
-//            if (debitCard != null && debitCard.get(0).getDebitCardStatus().equalsIgnoreCase("Inactive")) {
-//                // Update card status to active
-//                updateCardStatus(debitCard, "Active");
-//                // Log success message
-//                logger.info("Card " + debitCardNumber + " activated successfully.");
-//                // Set success status
-//                serviceStatus.setStatus(HttpStatus.OK.value());
-//                serviceStatus.setMessage("Card activated successfully.");
-//                return new ResponseEntity<>(serviceStatus, HttpStatus.OK);
-//            } else {
-//                // Log warning for invalid card number or already active card
-//                logger.warn("Invalid card number or already active card: " + debitCardNumber);
-//                // Set error status
-//                serviceStatus.setStatus(HttpStatus.BAD_REQUEST.value());
-//                serviceStatus.setMessage("Invalid card number or already active card.");
-//                return new ResponseEntity<>(serviceStatus, HttpStatus.BAD_REQUEST);
-//            }
-//        } catch (Exception e) {
-//            // Log error
-//            logger.error("Error activating card " + debitCardNumber + ": " + e.getMessage());
-//            // Set error status
-//            serviceStatus.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
-//            serviceStatus.setMessage("Error activating card: " + e.getMessage());
-//            return new ResponseEntity<>(serviceStatus, HttpStatus.INTERNAL_SERVER_ERROR);
-//        }
-//    }
 

@@ -36,43 +36,42 @@ class DebitCardControllerTest {
     @MockBean
     private CardSecurityServices cardSecurityServices;
 
-//    @Test
-//    @WithMockUser(username = "medhini",password = "medhini",roles = "customer")
-//    void testActivateCard_SuccessfulActivation() throws Exception {
-//
-//        when(debitCardRepository.activateStatus(any(), anyLong(), anyLong()))
-//                .thenReturn("Debit card activation successful.");
-//
-//        // Performing the request to activate the card
-//        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.put("/debitcard/activate/123456789")
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .content("{}"))
-//                .andExpect(MockMvcResultMatchers.status().isOk()) // Expecting HTTP 200 OK status
-//                .andReturn();
-//
-//        // Assertions
-//        String response = result.getResponse().getContentAsString();
-//        assertEquals("Debit card activation successful.", response); // Verify the response message
-//    }
-//
-//    @Test
-//    void testActivateCard_CardAlreadyActive() throws Exception {
-//        // Mock the repository to throw a DebitCardException indicating that the card is already active
-//        when(debitCardRepository.activateStatus(any(), anyLong(), anyLong()))
-//                .thenThrow(new DebitCardException("Card is already active"));
-//
-//        // Perform the request to activate the card
-//        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.put("/debitcard/activate/123456789")
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .content("{}"))
-//                .andExpect(MockMvcResultMatchers.status().isForbidden()) // Expecting HTTP 400 Bad Request status
-//                .andReturn();
-//
-//        // Assertions
-//        String response = result.getResponse().getContentAsString();
-//        assertEquals("Card is already active", response); // Verify the error message
-//    }
-//
+    @Test
+    @WithMockUser(username = "medhini",password = "medhini",roles = "customer")
+    void testActivateCard_SuccessfulActivation() throws Exception {
+
+        when(debitCardRepository.activateStatus(any(), anyLong(), anyLong()))
+                .thenReturn("Debit card activation successful.");
+
+        // Performing the request to activate the card
+        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.put("/debitcard/activate/12352369456789")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{}"))
+                .andExpect(MockMvcResultMatchers.status().isOk()) // Expecting HTTP 200 OK status
+                .andReturn();
+
+        // Assertions
+        String response = result.getResponse().getContentAsString();
+        assertEquals("Debit card activation successful.", response); // Verify the response message
+    }
+
+    @Test
+    void testActivateCard_CardAlreadyActive() throws Exception {
+        // Mock the repository to throw a DebitCardException indicating that the card is already active
+        when(debitCardRepository.activateStatus(any(), anyLong(), anyLong()))
+                .thenThrow(new DebitCardException("Card is already active"));
+
+        // Perform the request to activate the card
+        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.put("/debitcard/activate/123456789")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{}"))
+                .andExpect(MockMvcResultMatchers.status().isForbidden()) // Expecting HTTP 400 Bad Request status
+                .andReturn();
+
+        // Assertions
+        String response = result.getResponse().getContentAsString();
+        assertEquals("Card is already active", response); // Verify the error message
+    }
 
 }
 

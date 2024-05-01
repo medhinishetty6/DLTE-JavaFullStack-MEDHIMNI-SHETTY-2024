@@ -41,11 +41,14 @@ public class CardSecurityServices implements UserDetailsService {
         List<CardSecurity> filteredCustomers = customerList.stream()
                 .filter(customer -> customer.getUsername().equals(username))
                 .collect(Collectors.toList());
+        if(filteredCustomers==null)
+            throw new UsernameNotFoundException(username);
         if (!filteredCustomers.isEmpty()) {
             return filteredCustomers.get(0); // Return the first matching customer
         } else {
             return null; // Return null if no customer found
         }
+
     }
 //    public CardSecurity findByUserName(String username){
 //        CardSecurity cardSecurity = jdbcTemplate.queryForObject("select * from mybank_app_customer where username = ?",new Object[]{username},new BeanPropertyRowMapper<>(CardSecurity.class));

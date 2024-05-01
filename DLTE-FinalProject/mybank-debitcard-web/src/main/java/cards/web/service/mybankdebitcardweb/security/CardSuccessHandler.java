@@ -21,7 +21,7 @@ public class CardSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
     CardSecurityServices cardSecurityServices;
 
     Logger logger= LoggerFactory.getLogger(CardSuccessHandler.class);
-    ResourceBundle resourceBundle= ResourceBundle.getBundle("application");
+    ResourceBundle resourceBundle= ResourceBundle.getBundle("card");
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
@@ -31,11 +31,11 @@ public class CardSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
                 cardSecurity.setAttempts(1);
                 cardSecurityServices.updateAttempts(cardSecurity);
             }
-           super.setDefaultTargetUrl("/debitcardrepo/debitcard.wsdl");
+           super.setDefaultTargetUrl("/web/dashboard");
         }
         else{
             logger.warn(resourceBundle.getString("account.redeem"));
-            super.setDefaultTargetUrl("/login");
+            super.setDefaultTargetUrl("/web/?errors="+resourceBundle.getString("account.redeem"));
         }
         super.onAuthenticationSuccess(request, response, authentication);
     }

@@ -20,18 +20,3 @@ public interface DebitCardRepository {
 
 
 
-
-
-
-
-
-
-
-
-//// Repository interface for accessing debit card data
-//@Repository
-//public interface DebitCardRepository {
-//
-//    // Method to retrieve debit card data
-//    List<DebitCard> getDebitCard() throws SQLException, DebitCardException;
-//}
