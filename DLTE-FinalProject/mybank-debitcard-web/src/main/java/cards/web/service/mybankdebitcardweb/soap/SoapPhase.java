@@ -13,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -35,7 +37,7 @@ public class SoapPhase {
 
     // Dependency injection of DebitCardService
     @Autowired
-    private DebitCardRepository debitCardService;
+    private DebitCardRepository debitCardRepository;
 
     ResourceBundle resourceBundle = ResourceBundle.getBundle("card");
 
@@ -49,8 +51,11 @@ public class SoapPhase {
         ViewDebitCardResponse viewDebitCardResponse = new ViewDebitCardResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
         try {
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+            String username = authentication.getName();
             List<DebitCard> debitCardList = new ArrayList<>();             // Initialize a list to store DebitCard objects
-            List<list.cards.mybankdebitcarddao.entities.DebitCard> debitCardsDao = debitCardService.getDebitCard();            // Retrieve DebitCard entities from the service
+            List<list.cards.mybankdebitcarddao.entities.DebitCard> debitCardsDao = debitCardRepository.getDebitCard(username);            // Retrieve DebitCard entities from the service
 
             // Convertion of DebitCard entities to DebitCard objects
             debitCardsDao.forEach(debitCard -> {
@@ -58,6 +63,7 @@ public class SoapPhase {
                 BeanUtils.copyProperties(debitCard, currentDebitCard);
                 debitCardList.add(currentDebitCard);
             });
+            debitCardList.forEach(System.out::println);
 
             serviceStatus.setStatus(HttpServletResponse.SC_OK);
             viewDebitCardResponse.getDebitCard().addAll(debitCardList);          // here you will be adding the DebitCard objects

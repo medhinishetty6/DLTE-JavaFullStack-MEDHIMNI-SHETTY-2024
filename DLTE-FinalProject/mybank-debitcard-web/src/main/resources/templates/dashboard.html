@@ -1,181 +1,181 @@
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Dashboard - MY BANK</title>
+    <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>-->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link th:href="@{'/styles/style.css'}" type="text/css" th:rel="stylesheet"/>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{'/css/dashboard.css'}">
+    <script th:src="@{'/js/dashboard.js'}"></script>
 </head>
+<div th:fragment="header">
+    <nav>
+        <ul class="nav">
+            <li class="nav-item d-flex ml-3 mt-3">
+                <img class="logo" src="/images/logo.png"/>
+                <h2 id="myBank" class="justify-content-start "> MyBank</h2>
+            </li>
 
+            <li class="nav-item  ml-auto mt-3">
+                <h4 class="justify-content-end" th:id="Username"></h4>
+                <!--Name should be dynamically given need to change in the -->
+            </li>
+            <div class="loginButton  ml-3">
+                <button class="rounded-5 border-0 col-10 text-white "> <a class="nav-link text-white" th:href="@{'/logout'}">Logout</a></button>
+            </div>
+        </ul>
+    </nav>
+
+
+    <!-- Second nabar-->
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown ml-3" aria-haspopup="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="accountsDropdownToggle" role="button"
+                           data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                            Accounts <i class="bi bi-chevron-down"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown ml-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="depositsDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Deposits <i class="bi bi-chevron-down"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown ml-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="paymentsDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Payments <i class="bi bi-chevron-down"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown ml-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="loansDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Loans <i class="bi bi-chevron-down"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown ml-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="cardsDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Cards <i class="bi bi-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu" style="min-width: 3rem;">
+                            <a class="dropdown-item" th:href="@{'/card/account'}">View Cards</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown ml-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="insuranceDropdown" role="button"
+                           data-toggle="dropdown">
+                            Insurance <i class="bi bi-chevron-down"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</div>
 <body>
 
 
-<!-- Navbar 1 Main Heading-->
+<!--Caurosel-->
 
-<nav>
-    <ul class="nav">
-        <li class="nav-item d-flex ml-3 mt-3">
-            <img class="logo" src="/images/logo.png" />
-            <h2 id="myBank" class="justify-content-start "> MyBank</h2>
-        </li>
-        <li class="nav-item  ml-auto mt-3">
-            <h4 class="justify-content-end">Hey, </h4>
-        </li>
-        <li class="nav-item   mt-3">
-            <h4 class="justify-content-end">Medhini</h4>
-            <!--Name should be dynamically given need to change in the -->
-        </li>
-        <div class="loginButton  ml-3">
-            <button class="rounded-5 border-0 col-10 text-white ">Logout</button>
-        </div>
+<div id="depositesSlide" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#depositesSlide" data-slide-to="0" class="active"></li>
+        <li data-target="#depositesSlide" data-slide-to="1"></li>
+        <li data-target="#depositesSlide" data-slide-to="2"></li>
+        <li data-target="#depositesSlide" data-slide-to="3"></li>
     </ul>
-</nav>
 
-
-<!-- Second nabar-->
-
-
-
-<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown ml-3" aria-haspopup="false">
-                    <a class="nav-link dropdown-toggle" href="#" id="accountsDropdownToggle" role="button"
-                       data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                        Accounts <i class="bi bi-chevron-down"></i>
-                    </a>
-                </li>
-
-                <li class="nav-item dropdown ml-3">
-                    <a class="nav-link dropdown-toggle" href="#" id="depositsDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Deposits <i class="bi bi-chevron-down"></i>
-                    </a>
-                </li>
-
-                <li class="nav-item dropdown ml-3">
-                    <a class="nav-link dropdown-toggle" href="#" id="paymentsDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Payments <i class="bi bi-chevron-down"></i>
-                    </a>
-                </li>
-
-                <li class="nav-item dropdown ml-3">
-                    <a class="nav-link dropdown-toggle" href="#" id="loansDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Loans <i class="bi bi-chevron-down"></i>
-                    </a>
-                </li>
-
-                <li class="nav-item dropdown ml-3">
-                    <a class="nav-link dropdown-toggle" href="#" id="cardsDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Cards <i class="bi bi-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu" style="min-width: 3rem;">
-                        <a class="dropdown-item" href="#">View Cards</a>
-                    </div>
-                </li>
-
-                <li class="nav-item dropdown ml-3">
-                    <a class="nav-link dropdown-toggle" href="#" id="insuranceDropdown" role="button"
-                       data-toggle="dropdown">
-                        Insurance <i class="bi bi-chevron-down"></i>
-                    </a>
-                </li>
-            </ul>
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="/images/slide1.jpg" alt="Slide 1" style="height: 400px; width:100%">
+        </div>
+        <div class="carousel-item">
+            <img src="/images/slide2.jpg" alt="Slide 2" style="height: 400px; width: 100%;">
+        </div>
+        <div class="carousel-item">
+            <img src="/images/slide3.jpg" alt="Slide 3" style="height: 400px; width: 100%;">
         </div>
     </div>
-</nav>
 
-
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div id="carouselSlide" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ul class="carousel-indicators">
-                    <li data-target="#carouselSlide" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselSlide" data-slide-to="1"></li>
-                    <li data-target="#carouselSlide" data-slide-to="2"></li>
-                </ul>
-
-                <!-- The slideshow -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/images/slide1.jpg" alt="Slide 1" class="d-block w-100" style="height: 400px;">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/images/slide2.jpg" alt="Slide 2" style="height: 400px; width: 100%;">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/images/slide3.jpg" alt="Slide 3" style="height: 400px; width: 100%;">
-                    </div>
-                </div>
-
-                <!-- Left and right controls -->
-                <a class="carousel-control-prev" href="#carouselSlide" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#carouselSlide" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
-            </div>
-        </div>
-    </div>
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#depositesSlide" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#depositesSlide" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
 </div>
 
+</body>
 <!--footer section-->
 
-<footer class="footer text-white text-center py-3 mt-4"  style="border-radius: 20px 20px 20px 20px;">
-    <li class="nav-item d-flex ml-3 mt-3">
-        <img class="logo" src="/images/logo.png" />
-        <h2 id="myBankFooter" class="justify-content-start " style="color: #f8f9fa;"> MyBank</h2>
-    </li>
-    <div class="row justify-content-end mr-5">
+<div th:fragment="footer">
+    <footer class="footer text-white text-center py-3 mt-4" style="border-radius: 35px 35px 0 0;">
+        <li class="nav-item d-flex ml-3 mt-3">
+            <img class="logo" src="/images/logo.png"/>
+            <h2 id="myBankFooter" class="justify-content-start " style="color: #f8f9fa;"> MyBank</h2>
+        </li>
+        <div class="row justify-content-end mr-5">
 
-        <ul  style="list-style-type: none;">
-            <li><h5>Company</h5></li>
-            <li><h6>Home</h6></li>
-            <li><h6>about</h6></li>
-            <li><h6>Solution</h6></li>
-            <li><h6>Pricing</h6></li>
-            <li><h6>Team</h6></li>
-            <li><h6>Career</h6></li>
-        </ul>
-        <ul style="list-style-type: none;">
-            <li><h5>Documentation</h5></li>
-            <li><h6>Help Center</h6></li>
-            <li><h6>Contact</h6></li>
-            <li><h6>FAQ</h6></li>
-            <li><h6>Privacy Policy</h6></li>
-        </ul>
-        <ul style="list-style-type: none;">
-            <li><h5>Social</h5></li>
-            <li><h6>Facebook</h6></li>
-            <li><h6>Instagram</h6></li>
-            <li><h6>Youtube</h6></li>
-            <li><h6>Twitter</h6></li>
-        </ul>
-    </div>
-    <hr class="bg-white mt-0" />
-    <div class="col-12 d-flex justify-content-between">
-        <span>© 2024 MyBank. All rights reserved.</span>
-        <span>Terms & Conditions</span>
-    </div>
-</footer>
-</body>
+            <ul style="list-style-type: none;">
+                <li><h5>Company</h5></li>
+                <li><h6>Home</h6></li>
+                <li><h6>About</h6></li>
+                <li><h6>Solution</h6></li>
+                <li><h6>Pricing</h6></li>
+                <li><h6>Team</h6></li>
+                <li><h6>Career</h6></li>
+            </ul>
+            <ul style="list-style-type: none;">
+                <li><h5>Documentation</h5></li>
+                <li><h6>Help Center</h6></li>
+                <li><h6>Contact</h6></li>
+                <li><h6>FAQ</h6></li>
+                <li><h6>Privacy Policy</h6></li>
+            </ul>
+            <ul style="list-style-type: none;">
+                <li><h5>Social</h5></li>
+                <li><h6>Facebook</h6></li>
+                <li><h6>Instagram</h6></li>
+                <li><h6>Youtube</h6></li>
+                <li><h6>Twitter</h6></li>
+            </ul>
+        </div>
+        <hr class="bg-white mt-0"/>
+
+        <div class="col-12 d-flex justify-content-between">
+            <span>MyBank Inc. All rights reserved 2024</span>
+            <span>Terms & Conditions</span>
+        </div>
+
+    </footer>
+</div>
 </html>

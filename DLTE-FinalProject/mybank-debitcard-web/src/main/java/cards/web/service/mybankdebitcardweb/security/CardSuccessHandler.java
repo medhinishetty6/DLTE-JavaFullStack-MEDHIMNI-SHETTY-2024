@@ -31,11 +31,14 @@ public class CardSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
                 cardSecurity.setAttempts(1);
                 cardSecurityServices.updateAttempts(cardSecurity);
             }
-           super.setDefaultTargetUrl("/web/dashboard");
+            else if(cardSecurity.getCustomerStatus().equals("active")){
+                super.setDefaultTargetUrl("/card/dashboard");
+            }
+            super.setDefaultTargetUrl("/card/dashboard");
         }
         else{
             logger.warn(resourceBundle.getString("account.redeem"));
-            super.setDefaultTargetUrl("/web/?errors="+resourceBundle.getString("account.redeem"));
+            super.setDefaultTargetUrl("/card/login/?errors="+resourceBundle.getString("account.redeem"));
         }
         super.onAuthenticationSuccess(request, response, authentication);
     }

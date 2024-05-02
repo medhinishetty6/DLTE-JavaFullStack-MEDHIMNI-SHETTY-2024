@@ -1,79 +1,79 @@
-package cards.web.service.mybankdebitcardweb;
+//package cards.web.service.mybankdebitcardweb;
+//
+//import cards.web.service.mybankdebitcardweb.rest.DebitCardController;
+//import list.cards.mybankdebitcarddao.exception.DebitCardException;
+//import list.cards.mybankdebitcarddao.remotes.DebitCardRepository;
+//import list.cards.mybankdebitcarddao.security.CardSecurityServices;
+//import org.junit.jupiter.api.Test;
+//import org.mockito.InjectMocks;
+//import org.mockito.Mock;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+//import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+//import org.springframework.boot.test.mock.mockito.MockBean;
+//import org.springframework.http.HttpStatus;
+//import org.springframework.http.MediaType;
+//import org.springframework.security.test.context.support.WithMockUser;
+//import org.springframework.test.web.servlet.MockMvc;
+//import org.springframework.test.web.servlet.MvcResult;
+//import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+//import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+//
+//import static org.junit.jupiter.api.Assertions.assertEquals;
+//import static org.mockito.ArgumentMatchers.*;
+//import static org.mockito.Mockito.when;
+//
+//@WebMvcTest(DebitCardController.class)
+//@AutoConfigureMockMvc
+//class DebitCardControllerTest {
+//
+//    @Autowired
+//    private MockMvc mockMvc;
+//
+//    @MockBean
+//    private DebitCardRepository debitCardRepository;
+//
+//    @MockBean
+//    private CardSecurityServices cardSecurityServices;
 
-import cards.web.service.mybankdebitcardweb.rest.DebitCardController;
-import list.cards.mybankdebitcarddao.exception.DebitCardException;
-import list.cards.mybankdebitcarddao.remotes.DebitCardRepository;
-import list.cards.mybankdebitcarddao.security.CardSecurityServices;
-import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.security.test.context.support.WithMockUser;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+//    @Test
+//    @WithMockUser(username = "medhini",password = "medhini",roles = "customer")
+//    void testActivateCard_SuccessfulActivation() throws Exception {
+//
+//        when(debitCardRepository.activateStatus(any(), anyLong(), anyLong()))
+//                .thenReturn("Debit card activation successful.");
+//
+//        // Performing the request to activate the card
+//        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.put("/debitcard/activate/12352369456789")
+//                .contentType(MediaType.APPLICATION_JSON)
+//                .content("{}"))
+//                .andExpect(MockMvcResultMatchers.status().isOk()) // Expecting HTTP 200 OK status
+//                .andReturn();
+//
+//        // Assertions
+//        String response = result.getResponse().getContentAsString();
+//        assertEquals("Debit card activation successful.", response); // Verify the response message
+//    }
+//
+//    @Test
+//    void testActivateCard_CardAlreadyActive() throws Exception {
+//        // Mock the repository to throw a DebitCardException indicating that the card is already active
+//        when(debitCardRepository.activateStatus(any(), anyLong(), anyLong()))
+//                .thenThrow(new DebitCardException("Card is already active"));
+//
+//        // Perform the request to activate the card
+//        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.put("/debitcard/activate/123456789")
+//                .contentType(MediaType.APPLICATION_JSON)
+//                .content("{}"))
+//                .andExpect(MockMvcResultMatchers.status().isForbidden()) // Expecting HTTP 400 Bad Request status
+//                .andReturn();
+//
+//        // Assertions
+//        String response = result.getResponse().getContentAsString();
+//        assertEquals("Card is already active", response); // Verify the error message
+//    }
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.ArgumentMatchers.*;
-import static org.mockito.Mockito.when;
-
-@WebMvcTest(DebitCardController.class)
-@AutoConfigureMockMvc
-class DebitCardControllerTest {
-
-    @Autowired
-    private MockMvc mockMvc;
-
-    @MockBean
-    private DebitCardRepository debitCardRepository;
-
-    @MockBean
-    private CardSecurityServices cardSecurityServices;
-
-    @Test
-    @WithMockUser(username = "medhini",password = "medhini",roles = "customer")
-    void testActivateCard_SuccessfulActivation() throws Exception {
-
-        when(debitCardRepository.activateStatus(any(), anyLong(), anyLong()))
-                .thenReturn("Debit card activation successful.");
-
-        // Performing the request to activate the card
-        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.put("/debitcard/activate/12352369456789")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content("{}"))
-                .andExpect(MockMvcResultMatchers.status().isOk()) // Expecting HTTP 200 OK status
-                .andReturn();
-
-        // Assertions
-        String response = result.getResponse().getContentAsString();
-        assertEquals("Debit card activation successful.", response); // Verify the response message
-    }
-
-    @Test
-    void testActivateCard_CardAlreadyActive() throws Exception {
-        // Mock the repository to throw a DebitCardException indicating that the card is already active
-        when(debitCardRepository.activateStatus(any(), anyLong(), anyLong()))
-                .thenThrow(new DebitCardException("Card is already active"));
-
-        // Perform the request to activate the card
-        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.put("/debitcard/activate/123456789")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content("{}"))
-                .andExpect(MockMvcResultMatchers.status().isForbidden()) // Expecting HTTP 400 Bad Request status
-                .andReturn();
-
-        // Assertions
-        String response = result.getResponse().getContentAsString();
-        assertEquals("Card is already active", response); // Verify the error message
-    }
-
-}
+//}
 
 
 

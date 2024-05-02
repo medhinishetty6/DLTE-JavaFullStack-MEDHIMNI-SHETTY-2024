@@ -1,5 +1,6 @@
 package list.cards.mybankdebitcarddao.services;
 
+import list.cards.mybankdebitcarddao.entities.Account;
 import list.cards.mybankdebitcarddao.entities.DebitCard;
 import list.cards.mybankdebitcarddao.exception.CardNotEditableException;
 import list.cards.mybankdebitcarddao.exception.DebitCardException;
@@ -29,11 +30,29 @@ public class DebitCardService implements DebitCardRepository {
 
     // debit card data is fetched from the database
     @Override
+
+    public List<DebitCard> getDebitCard(String username) {
+        List<DebitCard> debitCardList = null;
+        try {
+            debitCardList = jdbcTemplate.query("SELECT d.debitcard_number,d.account_number,d.customer_id,d.debitcard_cvv,d.debitcard_pin,d.debitcard_expiry,d.debitcard_status,d.debitcard_domestic_limit,d.debitcard_international_limit FROM mybank_app_debitcard d JOIN mybank_app_customer c ON d.customer_id = c.customer_id JOIN mybank_app_account a on a.account_number=d.account_number WHERE  debitcard_status = 'Inactive' AND  a.account_status='Active'  AND c.customer_status='Active' AND c.username = ?", new Object[]{username}, new DebitCardMapper());
+            logger.info(resourceBundle.getString("card.fetch.success"));
+        } catch (DataAccessException sqlException) {
+            logger.error(resourceBundle.getString("sql.syntax.invalid"));
+            throw new DebitCardException(resourceBundle.getString("sql.syntax.invalid"));
+        }
+        if (debitCardList.size() == 0) {
+            logger.warn(resourceBundle.getString("card.list.null"));
+            throw new DebitCardNullException();
+        }
+        return debitCardList;
+    }
+
+
     public List<DebitCard> getDebitCard() throws SQLSyntaxErrorException, DebitCardException {
         List<DebitCard> debitCardList = null;
         try {
 
-            debitCardList = jdbcTemplate.query("SELECT * FROM mybank_app_debitcard where not debitcard_status='Blocked'", new DebitCardMapper());
+            debitCardList = jdbcTemplate.query("SELECT * FROM mybank_app_debitcard where  debitcard_status='inactive'", new DebitCardMapper());
             logger.info(resourceBundle.getString("card.fetch.success"));
         } catch (DataAccessException sqlException) {
             logger.error(resourceBundle.getString("sql.syntax.invalid"));
@@ -48,8 +67,26 @@ public class DebitCardService implements DebitCardRepository {
     }
 
 
-
     @Override
+
+    public List<Account> accountList(String username) throws SQLSyntaxErrorException {
+        List<Account> accountList = null;
+        try {
+            accountList = jdbcTemplate.query("SELECT * FROM mybank_app_account a JOIN mybank_app_customer c ON a.customer_id = c.customer_id  WHERE NOT a.account_status='Blocked' AND c.username = ?", new Object[]{username}, new AccountMapper());
+            logger.info(resourceBundle.getString("account.fetch.success"));
+        } catch (DataAccessException sqlException) {
+            logger.error(resourceBundle.getString("sql.syntax.invalid"));
+            sqlException.printStackTrace();
+            throw new SQLSyntaxErrorException(resourceBundle.getString("sql.syntax.invalid"));
+        }
+        if (accountList.size() == 0) {
+            logger.warn(resourceBundle.getString("account.list.null"));
+            throw new DebitCardException(resourceBundle.getString("account.list.null"));
+        }
+        return accountList;
+    }
+
+
     public String activateStatus(DebitCard debitCard, Long debitCardNumber, Long customerId) throws SQLSyntaxErrorException, DebitCardException, DebitCardNullException {
         // Preparing the call to the stored procedure
         CallableStatementCreator creator = con -> {
@@ -93,7 +130,6 @@ public class DebitCardService implements DebitCardRepository {
     }
 
 
-
     //  Maping ResultSet to DebitCard object
     public class DebitCardMapper implements RowMapper<DebitCard> {
         @Override
@@ -109,6 +145,20 @@ public class DebitCardService implements DebitCardRepository {
             debitCard.setDomesticLimit(rs.getDouble(8));
             debitCard.setInternationalLimit(rs.getDouble(9));
             return debitCard;
+        }
+    }
+
+    public class AccountMapper implements RowMapper<Account> {
+        @Override
+        public Account mapRow(ResultSet rs, int rowNum) throws SQLException {
+            Account account = new Account();
+            account.setAccountId(rs.getInt(1));
+            account.setCustomerId(rs.getInt(2));
+            account.setAccountType(rs.getString(3));
+            account.setAccountNumber(rs.getLong(4));
+            account.setAccountStatus(rs.getString(5));
+            account.setAccountBalance(rs.getDouble(6));
+            return account;
         }
     }
 }

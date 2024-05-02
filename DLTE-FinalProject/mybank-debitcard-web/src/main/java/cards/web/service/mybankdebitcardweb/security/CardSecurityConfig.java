@@ -56,10 +56,10 @@ public class CardSecurityConfig {
         httpSecurity.cors();
         httpSecurity.authorizeRequests().antMatchers("/profile/register").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/v3/api-docs").permitAll();
-        httpSecurity.authorizeRequests().antMatchers("/web/**").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/card/login/**").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/images/**").permitAll();
-        httpSecurity.authorizeRequests().antMatchers("/styles/**").permitAll();
-        httpSecurity.formLogin().loginPage("/web/")
+        httpSecurity.authorizeRequests().antMatchers("/css/**").permitAll();
+        httpSecurity.formLogin().loginPage("/card/login")
                 .usernameParameter("username")
                 .failureHandler(cardFailureHandler).
                 successHandler(cardSuccessHandler);

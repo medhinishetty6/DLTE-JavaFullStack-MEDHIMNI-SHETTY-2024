@@ -41,28 +41,28 @@ public class CardFailureHandler extends SimpleUrlAuthenticationFailureHandler {
                         exception = new LockedException(leftAttempts - cardSecurity.getAttempts() + " " + resourceBundle.getString("attempts.taken"));
                         String error = cardSecurity.getAttempts() + " "+ exception.getMessage();
                         logger.warn(error);
-                        setDefaultFailureUrl("/web/?error=" + exception.getMessage());
+                        setDefaultFailureUrl("/card/login/?error=" + exception.getMessage());
                     } else {
                         cardSecurityServices.updateStatus(cardSecurity);
                         logger.warn(resourceBundle.getString("account.suspend"));
                         exception = new LockedException(resourceBundle.getString("account.suspend"));
-                        setDefaultFailureUrl("/web/?error=" + exception.getMessage());
+                        setDefaultFailureUrl("/card/login/?error=" + exception.getMessage());
                     }
                 } else {
                     logger.warn(resourceBundle.getString("account.redeem"));
-                    super.setDefaultFailureUrl("/web/?error=" + exception.getMessage());
+                    super.setDefaultFailureUrl("/card/login/?error=" + exception.getMessage());
                 }
             }else {
                 logger.warn(resourceBundle.getString("account.suspend"));
-                exception = new LockedException("no account");
-                super.setDefaultFailureUrl("/web/?error=" + exception.getMessage());
+                exception = new LockedException("username does not exist");
+                super.setDefaultFailureUrl("/card/login/?error=" + exception.getMessage());
             }
 
         }catch (UsernameNotFoundException e){
                 logger.info(e.toString());
                 logger.warn(resourceBundle.getString("account.suspend"));
                 exception = new LockedException(resourceBundle.getString("incorrect.username"));
-                super.setDefaultFailureUrl("/web/?error=" + exception.getMessage());
+                super.setDefaultFailureUrl("/card/login/?error=" + exception.getMessage());
             }
         super.onAuthenticationFailure(request, response, exception);
     }
