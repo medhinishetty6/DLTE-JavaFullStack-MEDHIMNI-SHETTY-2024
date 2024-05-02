@@ -46,9 +46,9 @@ public class CardController {
         return "view";
     }
 
-    @RequestMapping(value = "/update",method = RequestMethod.GET)
-    public String updateCardLimit(){
-        return "update";
+    @RequestMapping(value = "/activate",method = RequestMethod.GET)
+    public String activateCardDetails(){
+        return "activate";
     }
 
     @GetMapping("/name")
