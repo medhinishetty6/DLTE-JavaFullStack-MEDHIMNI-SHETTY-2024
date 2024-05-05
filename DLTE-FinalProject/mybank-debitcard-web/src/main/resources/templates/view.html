@@ -29,6 +29,25 @@
     <h2>Debit Card Details</h2>
     <div class="row justify-content-around" id="debit"></div>
 </div>
+<div class="modal" id="updateModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header justify-content-center">
+                <img th:src="@{'/images/tick.png'}" alt="Alert Image">
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body text-center">
+                <p id="successMessage" style="color: #182052; font-family: 'Poppins', sans-serif;">Debit Card Updated Successfully </p>
+                <p>Click <span style="color: #182052; font-family: 'Poppins', sans-serif;">Back to Dashboard</span> to go back to Dashboard</p>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="col-4 btn btn-outline-white rounded-pill" th:href="@{'/card/dashboard'}" id="backHome" >Back to Home</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script th:src="@{'/js/view.js'}"></script>
 </body>
 <div th:include="dashboard :: footer"></div>

@@ -1,4 +1,37 @@
 
+
+function ActiveDetails(){
+
+    const debitCard = {
+        "debitCardNumber":debitCardNumber,
+        "accountNumber":accountNumber,
+        "debitCardCvv":debitCardCvv,
+        "debitCardPin":debitCardPin,
+        "debitCardExpiry":debitCardExpiry,
+        "debitCardStatus":debitCardStatus,
+        "domesticLimit":domesticLimit,
+        "internationalLimit":internationalLimit
+    };
+
+    console.log("Debit Card Data:", debitCard);
+    $.ajax({
+        url:"http://localhost:8083/debitcard/activate/"+debitCardNumber,
+        type:"PUT",
+        dataType:"text",
+        contentType:"application/json;charset=utf-8",
+        data:JSON.stringify(debitCard),
+        success:function(response){
+            alert("success")
+            $("#successMessage").text(`Debit Card Activated Successfully`);
+            $("#updateModal").modal("show");
+        },
+        error:function(err){
+            let element = $("#status")
+            element.append(`<h1>${err.status}</h1>`)
+        }
+    });
+}
+
 function getDebitCardDetails(){
     let soapRequest = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:deb="http://debitcard.links">
             <soapenv:Header/>
@@ -43,7 +76,7 @@ function getDebitCardDetails(){
                                     <p class="card-text text-light">Domestic Limit: ${domesticLimit}</p>
                                     <p class="card-text text-light">International Limit: ${internationalLimit}</p>
                                     <div class="row justify-between">
-                                     <button type="submit" id="update" onclick="ActiveDetails()" class="btn mb-3"><a href="/card/activate/${debitCardNumber}">Activate</a></button>
+                                     <button type="submit" id="update" onclick="ActiveDetails()" class="btn mb-3"><a href="/card/view">Activate</a></button>
                                      <button type="submit" class="btn mb-3">Update</button>
                                      <button type="submit"  class="btn mb-3">Block</button>
                                     </div>

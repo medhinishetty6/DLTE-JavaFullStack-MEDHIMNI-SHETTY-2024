@@ -22,8 +22,12 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -38,6 +42,7 @@ public class SoapPhase {
     // Dependency injection of DebitCardService
     @Autowired
     private DebitCardRepository debitCardRepository;
+
 
     ResourceBundle resourceBundle = ResourceBundle.getBundle("card");
 
@@ -60,6 +65,14 @@ public class SoapPhase {
             // Convertion of DebitCard entities to DebitCard objects
             debitCardsDao.forEach(debitCard -> {
                 links.debitcard.DebitCard currentDebitCard = new links.debitcard.DebitCard();
+                Date date = debitCard.getDebitCardExpiry();
+                XMLGregorianCalendar xmlCalendar = null;
+                try {
+                    xmlCalendar = DatatypeFactory.newInstance().newXMLGregorianCalendar(date.toString());
+                } catch (DatatypeConfigurationException e) {
+                    e.printStackTrace();
+                }
+                currentDebitCard.setDebitCardExpiry(xmlCalendar);
                 BeanUtils.copyProperties(debitCard, currentDebitCard);
                 debitCardList.add(currentDebitCard);
             });
