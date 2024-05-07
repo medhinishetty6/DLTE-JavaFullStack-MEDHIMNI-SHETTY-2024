@@ -1,5 +1,3 @@
-
-
 function ActiveDetails(){
 
     const debitCard = {
@@ -21,9 +19,11 @@ function ActiveDetails(){
         contentType:"application/json;charset=utf-8",
         data:JSON.stringify(debitCard),
         success:function(response){
-            alert("success")
-            $("#successMessage").text(`Debit Card Activated Successfully`);
-            $("#updateModal").modal("show");
+            // Update card status to "activated"
+            $('#status_' + debitCardNumber).text('Status: Active');
+
+            // Replace activate button with a paragraph message
+            $('#activate_button_' + debitCardNumber).replaceWith('<p class="card-text text-success">DebitCard activated successfully</p>');
         },
         error:function(err){
             let element = $("#status")
@@ -41,17 +41,30 @@ function getDebitCardDetails(){
         </soapenv:Envelope>`;
 
     $.ajax({
-        url: "http://localhost:8083/debitcardrepo/debitcard.wsdl",
+        url: "http://localhost:8083/debitcardrepo",
         type: "POST",
         dataType: "xml",
         contentType: "text/xml;charset=utf-8",
         data: soapRequest,
         success: function(response) {
             // Clear existing cards
+
             $('#debit').empty();
 
-            // Parse XML response
+            const debitCard = $(response).find('ns2\\:debitCard');
+
+            if(debitCard.length==0){
+             window.location.href = `error?code=400&message=Requested page is not available, Page Under Construction`; }
+
+                    var exceptionRegex = /EXC00\d\s*:/;
             $(response).find('ns2\\:debitCard').each(function() {
+                        if(exceptionRegex.test($(this).find('ns2\\:message').text())) {
+                            var errorMessage = $(this).find('ns2\\:message').text().replace(exceptionRegex, '').trim();
+                            $("#modalhead").text(`No cards available `);
+                            $("#message").text(errorMessage);
+                            $("#showmodal").modal("show");
+                        }
+
                 // Extract debit card details
                 window.debitCardNumber = $(this).find('ns2\\:debitCardNumber').text();
                 window.accountNumber = $(this).find('ns2\\:accountNumber').text();
@@ -72,13 +85,13 @@ function getDebitCardDetails(){
                                     <p class="card-text text-light">Account Number: ${accountNumber}</p>
                                     <p class="card-text text-light">Card Cvv: ${debitCardCvv}</p>
                                     <p class="card-text text-light">Expiry: ${debitCardExpiry}</p>
-                                    <p class="card-text text-light">Status: ${debitCardStatus}</p>
+                                    <p id="status_${debitCardNumber}" class="card-text text-light">Status: ${debitCardStatus}</p>
                                     <p class="card-text text-light">Domestic Limit: ${domesticLimit}</p>
                                     <p class="card-text text-light">International Limit: ${internationalLimit}</p>
                                     <div class="row justify-between">
-                                     <button type="submit" id="update" onclick="ActiveDetails()" class="btn mb-3"><a href="/card/view">Activate</a></button>
-                                     <button type="submit" class="btn mb-3">Update</button>
-                                     <button type="submit"  class="btn mb-3">Block</button>
+                                     <button id="activate_button_${debitCardNumber}" type="button" class="btn mb-3" onclick="ActiveDetails()">Activate</button>
+                                     <button type="submit" class="btn mb-3" onclick="errorPage()">Update</button>
+                                     <button type="submit" class="btn mb-3" onclick="errorPage()">Block</button>
                                     </div>
                                 </div>
                             </div>
@@ -88,10 +101,17 @@ function getDebitCardDetails(){
                 $('#debit').append(cardHtml);
             });
         },
+
         error: function(xhr, status, error) {
             console.error(xhr.responseText);
         }
     });
+}
+
+function errorPage(){
+    const errorMessage = "Page under construction";
+    window.location.href = `error?message=${encodeURIComponent(errorMessage)}`;
+
 }
 
 
@@ -99,5 +119,3 @@ function getDebitCardDetails(){
 $(document).ready(function() {
     getDebitCardDetails();
 });
-
-

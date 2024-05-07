@@ -36,24 +36,20 @@ public class CardController {
         return "dashboard";
     }
 
-    @RequestMapping(value = "/account",method = RequestMethod.GET)
-    public String accountView() {
-        return "account";
-    }
 
     @RequestMapping(value = "/view",method = RequestMethod.GET)
     public String debitCardDetails(){
         return "view";
     }
 
-    @RequestMapping(value = "/activate",method = RequestMethod.GET)
-    public String activateCardDetails(){
-        return "activate";
+    @RequestMapping(value = "/error",method = RequestMethod.GET)
+    public String error(){
+        return "error";
     }
 
     @GetMapping("/name")
     @ResponseBody
-    public String Customername(){
+    public String CustomerName(){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String name = authentication.getName();
         CardSecurity cardSecurity = cardSecurityServices.findByUserName(name);

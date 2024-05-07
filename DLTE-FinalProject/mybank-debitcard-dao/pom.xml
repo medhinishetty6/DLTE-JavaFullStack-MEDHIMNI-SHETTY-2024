@@ -10,7 +10,7 @@
     </parent>
     <groupId>list.cards</groupId>
     <artifactId>mybank-debitcard-dao</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <name>mybank-debitcard-dao</name>
     <description>Service List cards soap api</description>
     <properties>

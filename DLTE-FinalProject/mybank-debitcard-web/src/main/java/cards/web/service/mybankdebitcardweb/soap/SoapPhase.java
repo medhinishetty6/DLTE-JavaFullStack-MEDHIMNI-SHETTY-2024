@@ -5,6 +5,7 @@ import links.debitcard.ServiceStatus;
 import links.debitcard.ViewDebitCardRequest;
 import links.debitcard.ViewDebitCardResponse;
 import list.cards.mybankdebitcarddao.exception.DebitCardException;
+import list.cards.mybankdebitcarddao.exception.DebitCardNullException;
 import list.cards.mybankdebitcarddao.remotes.DebitCardRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -79,17 +80,24 @@ public class SoapPhase {
             debitCardList.forEach(System.out::println);
 
             serviceStatus.setStatus(HttpServletResponse.SC_OK);
-            viewDebitCardResponse.getDebitCard().addAll(debitCardList);          // here you will be adding the DebitCard objects
-        } catch (DebitCardException e) {
+            serviceStatus.setMessage("cards retrieved");
+            viewDebitCardResponse.getDebitCard().addAll(debitCardList);
+            viewDebitCardResponse.setServiceStatus(serviceStatus);
+            return viewDebitCardResponse;// here you will be adding the DebitCard objects
+        } catch (DebitCardNullException e) {
+            serviceStatus.setStatus(HttpServletResponse.SC_OK);
+            logger.error(resourceBundle.getString("error.one")+resourceBundle.getString("Debitcard.error"));
+            serviceStatus.setMessage(resourceBundle.getString("error.one")+resourceBundle.getString("Debitcard.error"));
+//            serviceStatus.setMessage(e.toString());
+//            logger.error(resourceBundle.getString("Debitcard.error"));
+            viewDebitCardResponse.setServiceStatus(serviceStatus);
 
-            serviceStatus.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            serviceStatus.setMessage(e.toString());
-            logger.error(resourceBundle.getString("Debitcard.error"));
+            return viewDebitCardResponse;
         }
 
         // here set the service status in the response and return it
-        viewDebitCardResponse.setServiceStatus(serviceStatus);
-        return viewDebitCardResponse;
+
+
     }
 
 

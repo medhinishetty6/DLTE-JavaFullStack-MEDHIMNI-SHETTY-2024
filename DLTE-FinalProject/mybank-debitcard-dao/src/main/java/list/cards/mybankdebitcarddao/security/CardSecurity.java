@@ -27,26 +27,7 @@ public class CardSecurity implements UserDetails {
         this.customerId = customerId;
     }
 
-    public CardSecurity(String customerName, String customerAddress, String customerStatus, Long customerContact, String username, String password, Integer attempts) {
-        this.customerName = customerName;
-        this.customerAddress = customerAddress;
-        this.customerStatus = customerStatus;
-        this.customerContact = customerContact;
-        this.username = username;
-        this.password = password;
-        this.attempts = attempts;
-    }
 
-    public CardSecurity(Long customerId, String customerName, String customerAddress, String customerStatus, Long customerContact, String username, String password, Integer attempts) {
-        this.customerId = customerId;
-        this.customerName = customerName;
-        this.customerAddress = customerAddress;
-        this.customerStatus = customerStatus;
-        this.customerContact = customerContact;
-        this.username = username;
-        this.password = password;
-        this.attempts = attempts;
-    }
 
     public String getCustomerName() {
         return customerName;

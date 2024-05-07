@@ -58,8 +58,8 @@ public class CardFailureHandler extends SimpleUrlAuthenticationFailureHandler {
                 super.setDefaultFailureUrl("/card/login/?error=" + exception.getMessage());
             }
 
-        }catch (UsernameNotFoundException e){
-                logger.info(e.toString());
+        }catch (UsernameNotFoundException userNameNotFoundException){
+                logger.info(userNameNotFoundException.toString());
                 logger.warn(resourceBundle.getString("account.suspend"));
                 exception = new LockedException(resourceBundle.getString("incorrect.username"));
                 super.setDefaultFailureUrl("/card/login/?error=" + exception.getMessage());

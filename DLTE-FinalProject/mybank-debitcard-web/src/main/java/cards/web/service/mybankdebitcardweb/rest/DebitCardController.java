@@ -70,7 +70,7 @@ public class DebitCardController {
             }
         } catch (CardNotEditableException error) {
             logger.error(resourceBundle.getString("account.not.editable"));   //user does not have access to this account
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(resourceBundle.getString("account.not.editable"));
+            return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString("account.not.editable"));
         } catch (SQLSyntaxErrorException syntaxError) {
             logger.error(resourceBundle.getString("internal.error"));
             return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString("internal.error"));

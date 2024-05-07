@@ -1,8 +1,6 @@
 package list.cards.mybankdebitcarddao.entities;
 
-
 import org.hibernate.validator.constraints.Range;
-
 import javax.validation.constraints.*;
 import java.util.Date;
 
@@ -57,17 +55,6 @@ public class DebitCard {
         this.debitCardNumber = debitCardNumber;
         this.accountNumber = accountNumber;
         this.customerId = customerId;
-        this.debitCardCvv = debitCardCvv;
-        this.debitCardPin = debitCardPin;
-        this.debitCardExpiry = debitCardExpiry;
-        this.debitCardStatus = debitCardStatus;
-        this.domesticLimit = domesticLimit;
-        this.internationalLimit = internationalLimit;
-    }
-
-    public DebitCard(@NotNull(message = "{card.number.null}") @Digits(integer = 16, fraction = 0, message = "{card.number.invalid}") Long debitCardNumber, @NotNull(message = "{account.number.null}") @Digits(integer = 14, fraction = 0, message = "{account.number.invalid}") Long accountNumber, @NotNull(message = "{card.cvv.null}") @Digits(integer = 3, fraction = 0, message = "{card.cvv.invalid}") Integer debitCardCvv, @NotNull(message = "{card.pin.null}") @Digits(integer = 4, fraction = 0, message = "{card.pin.invalid}") Integer debitCardPin, @NotNull(message = "{card.expiry.null}") Date debitCardExpiry, @NotNull(message = "{card.status.null}") @Pattern(regexp = "^[a-zA-Z]+$", message = "{card.status.invalid}") String debitCardStatus, @NotNull(message = "{card.domestic.null}") Double domesticLimit, @NotNull(message = "{card.international.null}") Double internationalLimit) {
-        this.debitCardNumber = debitCardNumber;
-        this.accountNumber = accountNumber;
         this.debitCardCvv = debitCardCvv;
         this.debitCardPin = debitCardPin;
         this.debitCardExpiry = debitCardExpiry;

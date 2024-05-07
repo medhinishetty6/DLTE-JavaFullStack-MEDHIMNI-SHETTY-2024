@@ -1,0 +1,188 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: DebitCardController</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">cards.web.service.mybankdebitcardweb.rest</a> ]
+</div>
+
+<h1>Coverage Summary for Class: DebitCardController (cards.web.service.mybankdebitcardweb.rest)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">DebitCardController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    25%
+  </span>
+  <span class="absValue">
+    (1/ 4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    8.3%
+  </span>
+  <span class="absValue">
+    (3/ 36)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package cards.web.service.mybankdebitcardweb.rest;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import io.swagger.v3.oas.annotations.responses.ApiResponse;
+<i>4</i>&nbsp;import io.swagger.v3.oas.annotations.responses.ApiResponses;
+<i>5</i>&nbsp;import links.debitcard.ServiceStatus;
+<i>6</i>&nbsp;import list.cards.mybankdebitcarddao.entities.DebitCard;
+<i>7</i>&nbsp;import list.cards.mybankdebitcarddao.exception.CardNotEditableException;
+<i>8</i>&nbsp;import list.cards.mybankdebitcarddao.exception.DebitCardException;
+<i>9</i>&nbsp;import list.cards.mybankdebitcarddao.exception.DebitCardNullException;
+<i>10</i>&nbsp;import list.cards.mybankdebitcarddao.remotes.DebitCardRepository;
+<i>11</i>&nbsp;import list.cards.mybankdebitcarddao.security.CardSecurity;
+<i>12</i>&nbsp;import list.cards.mybankdebitcarddao.security.CardSecurityServices;
+<i>13</i>&nbsp;import org.slf4j.Logger;
+<i>14</i>&nbsp;import org.slf4j.LoggerFactory;
+<i>15</i>&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+<i>16</i>&nbsp;import org.springframework.http.HttpStatus;
+<i>17</i>&nbsp;import org.springframework.http.ResponseEntity;
+<i>18</i>&nbsp;import org.springframework.security.core.Authentication;
+<i>19</i>&nbsp;import org.springframework.security.core.context.SecurityContextHolder;
+<i>20</i>&nbsp;import org.springframework.validation.FieldError;
+<i>21</i>&nbsp;import org.springframework.web.bind.MethodArgumentNotValidException;
+<i>22</i>&nbsp;import org.springframework.web.bind.annotation.*;
+<i>23</i>&nbsp;
+<i>24</i>&nbsp;import javax.validation.Valid;
+<i>25</i>&nbsp;import java.sql.SQLSyntaxErrorException;
+<i>26</i>&nbsp;import java.util.HashMap;
+<i>27</i>&nbsp;import java.util.Map;
+<i>28</i>&nbsp;import java.util.ResourceBundle;
+<i>29</i>&nbsp;
+<i>30</i>&nbsp;@RestController
+<i>31</i>&nbsp;@RequestMapping(&quot;/debitcard&quot;)
+<b class="fc"><i>32</i>&nbsp;public class DebitCardController {</b>
+<i>33</i>&nbsp;
+<i>34</i>&nbsp;
+<i>35</i>&nbsp;    @Autowired
+<i>36</i>&nbsp;    private DebitCardRepository debitCardRepository;
+<i>37</i>&nbsp;    @Autowired
+<i>38</i>&nbsp;    CardSecurityServices services;
+<i>39</i>&nbsp;
+<b class="fc"><i>40</i>&nbsp;    ResourceBundle resourceBundle = ResourceBundle.getBundle(&quot;card&quot;);</b>
+<i>41</i>&nbsp;
+<b class="fc"><i>42</i>&nbsp;    private Logger logger = LoggerFactory.getLogger(DebitCardController.class);</b>
+<i>43</i>&nbsp;
+<i>44</i>&nbsp;    // endpoint to activate debit card
+<i>45</i>&nbsp;    @PutMapping(&quot;/activate/{cardNumber}&quot;)
+<i>46</i>&nbsp;    @ApiResponses(value = {
+<i>47</i>&nbsp;            @ApiResponse(responseCode = &quot;404&quot;, description = &quot;Debit card does not exist or request body is empty&quot;),
+<i>48</i>&nbsp;            @ApiResponse(responseCode = &quot;400&quot;, description = &quot;Debit card is already active or debit card number is wrong&quot;),
+<i>49</i>&nbsp;    })
+<i>50</i>&nbsp;    public ResponseEntity&lt;String&gt; activateCard(@Valid @RequestBody DebitCard debitCard, @PathVariable(&quot;cardNumber&quot;) Long debitCardNumber) {
+<i>51</i>&nbsp;        try {
+<i>52</i>&nbsp;            // Getting the authentication details
+<b class="nc"><i>53</i>&nbsp;            Authentication authentication= SecurityContextHolder.getContext().getAuthentication();</b>
+<b class="nc"><i>54</i>&nbsp;            String username=authentication.getName();</b>
+<b class="nc"><i>55</i>&nbsp;            CardSecurity card=services.findByUserName(username);   //searching card details for the particular username</b>
+<i>56</i>&nbsp;
+<b class="nc"><i>57</i>&nbsp;            if (debitCard == null) {</b>
+<b class="nc"><i>58</i>&nbsp;                throw new IllegalArgumentException(resourceBundle.getString(&quot;empty.body&quot;));</b>
+<i>59</i>&nbsp;            }
+<i>60</i>&nbsp;
+<i>61</i>&nbsp;            // Activating the debit card
+<b class="nc"><i>62</i>&nbsp;            String response = debitCardRepository.activateStatus(debitCard,debitCardNumber,card.getCustomerId());</b>
+<b class="nc"><i>63</i>&nbsp;            logger.info(response);</b>
+<i>64</i>&nbsp;            // Returning the response based on activation status
+<b class="nc"><i>65</i>&nbsp;            if (response.equals(resourceBundle.getString(&quot;card.active&quot;))) {</b>
+<b class="nc"><i>66</i>&nbsp;                logger.info(resourceBundle.getString(&quot;card.active&quot;));</b>
+<b class="nc"><i>67</i>&nbsp;                return ResponseEntity.ok(response);</b>
+<i>68</i>&nbsp;            } else {
+<b class="nc"><i>69</i>&nbsp;                throw new DebitCardNullException(resourceBundle.getString(&quot;activation.fail&quot;));</b>
+<i>70</i>&nbsp;            }
+<b class="nc"><i>71</i>&nbsp;        } catch (CardNotEditableException error) {</b>
+<b class="nc"><i>72</i>&nbsp;            logger.error(resourceBundle.getString(&quot;account.not.editable&quot;));   //user does not have access to this account</b>
+<b class="nc"><i>73</i>&nbsp;            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(resourceBundle.getString(&quot;account.not.editable&quot;));</b>
+<b class="nc"><i>74</i>&nbsp;        } catch (SQLSyntaxErrorException syntaxError) {</b>
+<b class="nc"><i>75</i>&nbsp;            logger.error(resourceBundle.getString(&quot;internal.error&quot;));</b>
+<b class="nc"><i>76</i>&nbsp;            return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString(&quot;internal.error&quot;));</b>
+<b class="nc"><i>77</i>&nbsp;        } catch (DebitCardException debitCardException) {</b>
+<b class="nc"><i>78</i>&nbsp;            logger.error(resourceBundle.getString(&quot;debitCard.already.active&quot;));   //if the debit card is already active</b>
+<b class="nc"><i>79</i>&nbsp;            return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString(&quot;debitCard.already.active&quot;));</b>
+<b class="nc"><i>80</i>&nbsp;        } catch (DebitCardNullException debitCardNullException) {</b>
+<b class="nc"><i>81</i>&nbsp;            logger.error(resourceBundle.getString(&quot;activation.fail&quot;));       //debit card does not exist</b>
+<b class="nc"><i>82</i>&nbsp;            return ResponseEntity.status(HttpStatus.OK).body(resourceBundle.getString(&quot;activation.fail&quot;));</b>
+<b class="nc"><i>83</i>&nbsp;        } catch (IllegalArgumentException illegalArgumentException) {</b>
+<b class="nc"><i>84</i>&nbsp;            logger.error(resourceBundle.getString(&quot;empty.body&quot;));       //if request body is empty</b>
+<b class="nc"><i>85</i>&nbsp;            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(resourceBundle.getString(&quot;empty.body&quot;));</b>
+<i>86</i>&nbsp;        }
+<i>87</i>&nbsp;    }
+<i>88</i>&nbsp;
+<i>89</i>&nbsp;    //  Handling validation exceptions
+<i>90</i>&nbsp;    @ResponseStatus(HttpStatus.BAD_REQUEST)
+<i>91</i>&nbsp;    @ExceptionHandler(MethodArgumentNotValidException.class)
+<i>92</i>&nbsp;    public Map&lt;String, String&gt; handleValidationExceptions(MethodArgumentNotValidException ex) {
+<b class="nc"><i>93</i>&nbsp;        Map&lt;String, String&gt; errors = new HashMap&lt;&gt;();</b>
+<i>94</i>&nbsp;        // Extracting field errors and their error messages
+<b class="nc"><i>95</i>&nbsp;        ex.getBindingResult().getAllErrors().forEach((error) -&gt; {</b>
+<b class="nc"><i>96</i>&nbsp;            String fieldName = ((FieldError) error).getField();</b>
+<b class="nc"><i>97</i>&nbsp;            String errorMessage = error.getDefaultMessage();</b>
+<b class="nc"><i>98</i>&nbsp;            errors.put(fieldName, errorMessage);</b>
+<b class="nc"><i>99</i>&nbsp;        });</b>
+<b class="nc"><i>100</i>&nbsp;        return errors;</b>
+<i>101</i>&nbsp;    }
+<i>102</i>&nbsp;}
+<i>103</i>&nbsp;
+<i>104</i>&nbsp;
+<i>105</i>&nbsp;
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-05-06 19:17</div>
+</div>
+</body>
+</html>
