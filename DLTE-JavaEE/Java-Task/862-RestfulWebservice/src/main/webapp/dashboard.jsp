@@ -56,6 +56,9 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="transaction.jsp">Transfer Amount</a>
                 </li>
+                <div class="loginButton  ml-3">
+                    <button class="rounded-5 border-0 col-10 text-white "> <a class="nav-link text-white" th:href="@{'/logout'}">Logout</a></button>
+                </div>
             </ul>
         </div>
     </div>
