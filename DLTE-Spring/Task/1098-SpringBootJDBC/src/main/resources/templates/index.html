@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" th:href="@{'/transaction.css'}">
 </head>
 <body>
 <div th:fragment="collapse">
@@ -22,11 +23,23 @@
             <div class="collapse navbar-collapse" id="myBankMenu">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="view btn btn-outline-primary rounded-5 me-2"  th:href="@{'/newTransaction'}" >New Transaction</a>
+                        <a class="view btn btn-outline-primary rounded-5 me-2"  th:href="@{'/web/newTransaction'}" >New Transaction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="view btn btn-outline-primary rounded-5 me-2"  th:href="@{'/web/sname'}" >Sender</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="view btn btn-outline-primary rounded-5 me-2"  th:href="@{'/web/rname'}" >Receiver</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="view btn btn-outline-primary rounded-5 me-2"  th:href="@{'/web/price'}" >Amount</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="view btn btn-outline-primary rounded-5 me-2"  th:href="@{'/web/date'}" >Remove Dates</a>
                     </li>
                     </li>
                     <li class="nav-item">
-                        <button class="logout btn btn-outline-primary rounded-5 me-2"><span class="bi bi-box-arrow-right"></span> Logout</button>
+                        <button class="logout btn btn-outline-primary rounded-5 me-2">  <a class="nav-link" th:href="@{'/logout'}">Logout</a></button>
                     </li>
                 </ul>
             </div>
